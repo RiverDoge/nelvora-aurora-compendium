@@ -269,7 +269,191 @@
 
     <element name="Ik’héthagma" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_IKHETHAGMA">
         <description>
-            <p>Believed to be descendant from fish capable of flight, the most sea capable of Nelvora’s races. Mechanics pending.</p>
+            <p>The dominant people of Fraebur are the Ik’héthagma, a unique humanoid race believed to be descended from ancient beings who commanded both the sky and the sea. Their physiology is remarkably adapted to their current maritime environment. Most Ik’héthagma possess the ability to breathe underwater for significant periods. It is also whispered in port tales and ancient lore that some, through deep connection to the ocean or by some forgotten art, can achieve a more fully fishlike state, though such transformations are rarely, if ever, witnessed.</p>
+            <p>Their appearance is often androgynous, and they are distinguished by a spectrum of vibrant, iridescent scales that adorn their limbs, torsos, and sometimes their faces. These scales, seen by other races as almost as priceless as gems, are not merely for protection or display. Fraeburan lore suggests that the specific colour, lustre, and pattern of an Ik’héthagma’s scales may grant them subtle affinities or minor innate abilities related to the sea’s humours, the prediction of weather, or the empathy with marine creatures.</p>
+            <p>It is also not uncommon for an Ik’héthagma to develop new hues or for existing scales to gain an additional colour or two throughout their long lives. This process is seen as them maturing into their full potential or reflecting significant life experiences and the deepening of their connection to their inherent powers. The Ik’héthagma are known for their notably long lifespans compared to most other races of Nelvora, and they possess a fairly ageless appearance, retaining a striking measure of youthfulness even into their venerable years.</p>
+            <p>It is spoken of in legends, and recorded in the most sacred of their sea-chants, that some Ik’héthagma are born marked for an extraordinary destiny by their Goddess Caeplithias. These chosen individuals may, over time or through great trials, develop wings. While these majestic appendages typically grant the ability to glide with unparalleled grace and speed across the ocean's surface and to descend safely from perilous heights, true sustained flight is another matter. The legends further tell that the most exceptionally blessed among the winged, those whose scales shimmer with an entire rainbow of colours, a breathtakingly rare sight, might reclaim the power of true, albeit limited, flight. This ability would echo the capabilities of their most ancient, sky-dwelling ancestors. Such individuals, especially if winged, are revered as living embodiments of Caeplithias's will and hope. Their vibrant scales are considered more valuable than any earthly treasure.</p>
+            <h4>Ik’héthagma Traits</h4>
+            <p>Your connection to the ancient seas grants you the following abilities.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Dexterity score increases by 2, and your Charisma score increases by 1.</p>
+            <p class="indent"><strong>Age.</strong> Ik’héthagma possess notably long lifespans and retain a striking youthfulness even into their venerable years.</p>
+            <p class="indent"><strong>Size.</strong> Your size is Medium.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet. You also have a swimming speed of 30 feet.</p>
+            <p class="indent"><strong>Amphibious.</strong> You can breathe air and water.</p>
+            <p class="indent"><strong>Douse.</strong> You have an innate connection to the sea's humours, allowing you to manipulate localized moisture. You know the custom Douse cantrip. Further augments to this ability are dictated by your scale colors.</p>
+            <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Aquan.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" />
+            <stat name="innate speed:swim" value="30" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <grant type="Language" id="ID_LANGUAGE_AQUAN" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_AMPHIBIOUS" />
+
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE" />
+        </rules>
+    </element>
+
+    <element name="Amphibious" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_AMPHIBIOUS">
+        <description>
+            <p>You can breathe air and water.</p>
+        </description>
+        <sheet>
+            <description>You can breathe air and water.</description>
+        </sheet>
+    </element>
+
+    <element name="Ik’héthagma Lineage" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE">
+        <supports>Klirsaer Hybrid Trait</supports>
+        <description>
+            <p>Your iridescent scales grant you an innate connection to the sea's humours, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
+        </description>
+        <sheet>
+            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_NELVORA_SPELL_DOUSE" />
+            <stat name="douse:die_size" value="8" />
+            <stat name="douse:bonus" value="0" />
+
+            <select type="Sub Race" name="Scale Lineage" supports="Ikhethagma Lineage" />
+        </rules>
+    </element>
+
+    <element name="Monoscale" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_MONOSCALE">
+        <supports>Ikhethagma Lineage</supports>
+        <description>
+            <p>You bear a single, vibrant scale color, representing a focused and potent magical lineage tied directly to a specific aspect of the sea.</p>
+        </description>
+        <rules>
+            <select type="Racial Trait" name="Scale Color" supports="Ikhethagma Scale" number="1" />
+        </rules>
+    </element>
+
+    <element name="Duoscale" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_DUOSCALE">
+        <supports>Ikhethagma Lineage</supports>
+        <description>
+            <p>A rare phenomenon, your scales blend two distinct colors and magical resonances. This dual nature allows you to draw upon multiple facets of ancient aquatic power.</p>
+        </description>
+        <rules>
+            <select type="Racial Trait" name="Scale Colors" supports="Ikhethagma Scale" number="2" />
+        </rules>
+    </element>
+    
+    <element name="Triscale" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_TRISCALE">
+        <supports>Ikhethagma Lineage</supports>
+        <description>
+            <p>An exceptionally rare occurrence, you possess three distinct scale colors, granting you a wide array of affinities. You are often viewed as a spiritual leader or a herald of great change.</p>
+        </description>
+        <rules>
+            <select type="Racial Trait" name="Scale Colors" supports="Ikhethagma Scale" number="3" />
+        </rules>
+    </element>
+
+    <element name="Chosen of Caeplithias" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_CHOSEN_CAEPLITHIAS">
+        <supports>Ikhethagma Lineage</supports>
+        <description>
+            <p>Blessed by the Goddess of Hope, your scales reflect a prismatic array of power. Marked for an extraordinary destiny, your shimmering, rainbow-hued form is revered as a living embodiment of the divine.</p>
+        </description>
+        <rules>
+            <select type="Racial Trait" name="Prismatic Scales" supports="Ikhethagma Scale" number="4" />
+        </rules>
+    </element>
+
+    <element name="Amethyst Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_AMETHYST">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>The Amethyst scale resonates with the deep, crushing pressure of the abyssal trenches and the ancient history of the seas. Those who bear this royal purple hue possess an unnatural awareness of their surroundings and a mind shielded by the weight of the ocean.</p>
+            <p><strong>Passive:</strong> You have Expertise in Perception, and a +2 bonus to History checks.</p>
+            <p><strong>Active (Force Barrier):</strong> Once per long rest, you can create a barrier of force. It has its own health pool, which scales up with your level, but can absorb one whole hit at minimum. Some abilities and beings can penetrate it, but that would be rare. While this is active, anyone who strikes you needs to make a Wisdom check, or become disoriented.</p>
+            <p><strong>Augment (Douse):</strong> You can now dispel certain magical effects instead of dealing damage. At higher levels, casting this allows you to displace yourself to a new location.</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>Force Barrier: Create a scaling health pool barrier. Attackers must make a Wisdom check or become disoriented.</description>
+        </sheet>
+        <sheet action="Action">
+            <description>Douse (Amethyst Augment): Instead of dealing damage, target a magical effect to dispel it (DM discretion on level/potency). At 11th level, casting Douse in any form allows you to instantly teleport up to 30 feet to an unoccupied space you can see.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            <stat name="perception:proficiency:multiplier" value="2" />
+            <stat name="history" value="2" />
+        </rules>
+    </element>
+
+    <element name="Emerald Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_EMERALD">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>The Emerald scale hums with the vibrant, restorative energy of the ocean's blooming flora. Bearers of this bright green mantle are naturally resilient to toxins and carry the revitalizing breath of the sea wherever they walk.</p>
+            <p><strong>Passive:</strong> You have resistance to poison damage.</p>
+            <p><strong>Augment (Douse):</strong> Your douse ability has healing properties now and can potentially remove the poisoned status. Additionally, you can cause plants and other life to grow more quickly and vigorously.</p>
+        </description>
+        <sheet action="Action">
+            <description>You have poison resistance. 
+            Douse (Emerald Augment): Instead of dealing damage, you can cleanse the poisoned condition, and accelerate plant growth.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+
+    <element name="Diamond Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_DIAMOND">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p><strong>Passive:</strong> You are immune to almost all cold damage sources.</p>
+            <p><strong>Active (Glacial Bulwark):</strong> As a Reaction when an ally within 30 feet is hit by an attack, you can cause a barrier of spectral ice to erupt, granting them +4 AC against that one attack.</p>
+            <p><strong>Augment (Douse):</strong> Your connection to the eternal ice makes your saltwater lethally cold. The damage die of your Douse spell increases, and you add your Constitution modifier to the damage.</p>
+        </description>
+        <sheet action="Reaction" usage="{{proficiency}}/Long Rest">
+            <description>Glacial Bulwark: When an ally within 30 feet is hit, cause a barrier of spectral ice to erupt, granting them +4 AC against that attack.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
+            <stat name="douse:die_size" value="2" />
+            <stat name="douse:bonus" value="constitution:modifier" />
+        </rules>
+    </element>
+
+    <element name="Ruby Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_RUBY">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>A brilliant, deep crimson scale that pulses with the hidden geothermal heat of underwater volcanic vents. Those bearing this hue often exhibit fiery passions and an affinity for the raw, destructive forces of nature.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+
+    <element name="Sapphire Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SAPPHIRE">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>A pristine, ocean-blue scale that seems to capture the essence of a tranquil, sunlit sea. It is whispered that these scales grant unparalleled grace in the water and a serene, unclouded mind.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+
+    <element name="Golden Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_GOLDEN">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>A radiant, sun-touched scale that glimmers even in the darkest depths. Highly sought after, this scale is often associated with the majestic power of the surface dawn and a charismatic, inspiring presence.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+
+    <element name="Obsidian Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_OBSIDIAN">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>A dark, light-absorbing scale born from the rapid cooling of magma in the deep sea. It represents absolute finality, offering its bearer a connection to shadows and the unseen aspects of the world.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+
+    <element name="Silver Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SILVER">
+        <supports>Ikhethagma Scale</supports>
+        <description>
+            <p>A shining, metallic scale that resembles the flash of a predator darting through the water. Bearers of the silver scale are known for their blinding speed and elusive, fluid movements.</p>
         </description>
         <sheet display="false" />
     </element>
