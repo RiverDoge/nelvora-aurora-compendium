@@ -107,7 +107,7 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Proficiency" name="Humble Stock" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS, ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES, ID_PROFICIENCY_SKILL_PERSUASION" number="2" />
+            <select type="Proficiency" name="Humble Stock" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS | ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES | ID_PROFICIENCY_SKILL_PERSUASION" number="2" />
         </rules>
     </element>
 
@@ -819,7 +819,7 @@
             <description>Gain proficiency/expertise in Deception or Persuasion. Cast Mirror Image 1/long rest. Bonus action: Send Mirror Image 10ft away. If it provokes opportunity attack, use Illusory Strike on target. If attack misses, teleport 10ft for free. If Illusion survives, you can teleport to its location (duplicate expended).</description>
         </sheet>
         <rules>
-            <select type="Proficiency" name="Queen’s Veil" supports="ID_PROFICIENCY_SKILL_DECEPTION, ID_PROFICIENCY_SKILL_PERSUASION" />
+            <select type="Proficiency" name="Queen’s Veil" supports="ID_PROFICIENCY_SKILL_DECEPTION | ID_PROFICIENCY_SKILL_PERSUASION" />
         </rules>
     </element>
 
