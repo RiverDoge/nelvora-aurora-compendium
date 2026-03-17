@@ -5,7 +5,7 @@
         <description>All custom races for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
         <update version="1.0.0">
-            <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-races.xml" />
+            <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-races.xml" />
         </update>
     </info>
 
