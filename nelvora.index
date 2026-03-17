@@ -9,9 +9,9 @@
 		</update>
     </info>
     <files>
-        <file name="nelvora-deities.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-deities.xml" />
-        <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-item.xml" />
-        <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-races.xml" />
-        <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-spell-fixes.xml" />
+        <file name="nelvora-deities.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-deities.xml" />
+        <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-item.xml" />
+        <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-races.xml" />
+        <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-spell-fixes.xml" />
     </files>
 </index>
