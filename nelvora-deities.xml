@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+        <name>Nelvora Deities</name>
+        <description>Custom deities for the Nelvora setting.</description>
+        <author>RiverDoge</author>
+    </info>
+
 	<element name="Caeplithias" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_CAEPLITHIAS">
 		<description>
 			<p class="flavor">Goddess of Hope</p>

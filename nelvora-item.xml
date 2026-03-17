@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+        <name>Nelvora Items</name>
+        <description>Custom items for the Nelvora setting.</description>
+        <author>RiverDoge</author>
+    </info>
+
 	<!-- light armor -->
 	<element name="Chiton of Caeplithias" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_CHITON_OF_CAEPLITHIAS">
 		<supports>ID_INTERNAL_ARMOR_GROUP_LIGHT</supports>
