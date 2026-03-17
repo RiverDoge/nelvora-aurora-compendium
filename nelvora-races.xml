@@ -270,7 +270,7 @@
     <element name="Ik’héthagma" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_IKHETHAGMA">
         <description>
             <p>The dominant people of Fraebur are the Ik’héthagma, a unique humanoid race believed to be descended from ancient beings who commanded both the sky and the sea. Their physiology is remarkably adapted to their current maritime environment. Most Ik’héthagma possess the ability to breathe underwater for significant periods. It is also whispered in port tales and ancient lore that some, through deep connection to the ocean or by some forgotten art, can achieve a more fully fishlike state, though such transformations are rarely, if ever, witnessed.</p>
-            <p>Their appearance is often androgynous, and they are distinguished by a spectrum of vibrant, iridescent scales that adorn their limbs, torsos, and sometimes their faces. These scales, seen by other races as almost as priceless as gems, are not merely for protection or display. Fraeburan lore suggests that the specific colour, lustre, and pattern of an Ik’héthagma’s scales may grant them subtle affinities or minor innate abilities related to the sea’s humours, the prediction of weather, or the empathy with marine creatures.</p>
+            <p>Their appearance is often androgynous, and they are distinguished by a spectrum of vibrant, iridescent scales that adorn their limbs, torsos, and sometimes their faces. These scales, seen by other races as almost as priceless as gems, are not merely for protection or display. Fraeburan lore suggests that the specific colour, lustre, and pattern of an Ik’héthagma’s scales may grant them subtle affinities or minor innate abilities related to the sea, the prediction of weather, or the empathy with marine creatures.</p>
             <p>It is also not uncommon for an Ik’héthagma to develop new hues or for existing scales to gain an additional colour or two throughout their long lives. This process is seen as them maturing into their full potential or reflecting significant life experiences and the deepening of their connection to their inherent powers. The Ik’héthagma are known for their notably long lifespans compared to most other races of Nelvora, and they possess a fairly ageless appearance, retaining a striking measure of youthfulness even into their venerable years.</p>
             <p>It is spoken of in legends, and recorded in the most sacred of their sea-chants, that some Ik’héthagma are born marked for an extraordinary destiny by their Goddess Caeplithias. These chosen individuals may, over time or through great trials, develop wings. While these majestic appendages typically grant the ability to glide with unparalleled grace and speed across the ocean's surface and to descend safely from perilous heights, true sustained flight is another matter. The legends further tell that the most exceptionally blessed among the winged, those whose scales shimmer with an entire rainbow of colours, a breathtakingly rare sight, might reclaim the power of true, albeit limited, flight. This ability would echo the capabilities of their most ancient, sky-dwelling ancestors. Such individuals, especially if winged, are revered as living embodiments of Caeplithias's will and hope. Their vibrant scales are considered more valuable than any earthly treasure.</p>
             <h4>Ik’héthagma Traits</h4>
@@ -280,8 +280,8 @@
             <p class="indent"><strong>Size.</strong> Your size is Medium.</p>
             <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet. You also have a swimming speed of 30 feet.</p>
             <p class="indent"><strong>Amphibious.</strong> You can breathe air and water.</p>
-            <p class="indent"><strong>Douse.</strong> You have an innate connection to the sea's humours, allowing you to manipulate localized moisture. You know the custom Douse cantrip. Further augments to this ability are dictated by your scale colors.</p>
-            <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Aquan.</p>
+            <p class="indent"><strong>Douse.</strong> You have an innate connection to the sea, allowing you to manipulate localized moisture. You know the custom Douse cantrip. Further augments to this ability are dictated by your scale colors.</p>
+            <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Ik’héthagma.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -291,7 +291,7 @@
             <stat name="innate speed:swim" value="30" />
             <grant type="Size" id="ID_SIZE_MEDIUM" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
-            <grant type="Language" id="ID_LANGUAGE_AQUAN" />
+            <grant type="Language" id="ID_NELVORA_LANGUAGE_Ikhethagma" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_AMPHIBIOUS" />
 
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE" />
@@ -310,10 +310,10 @@
     <element name="Ik’héthagma Lineage" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE">
         <supports>Klirsaer Hybrid Trait</supports>
         <description>
-            <p>Your iridescent scales grant you an innate connection to the sea's humours, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
+            <p>Your iridescent scales grant you an innate connection to the sea, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
         </description>
         <sheet>
-            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell.</description>
+            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell. Douse (Spell Attack): +{{spellcasting:attack}} to hit, range 30ft. Hit: {{cantrip:dice}}d{{douse:die_size}} + {{douse:bonus}} cold damage. Quenches flames.</description>
         </sheet>
         <rules>
             <grant type="Spell" id="ID_NELVORA_SPELL_DOUSE" />

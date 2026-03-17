@@ -34,14 +34,13 @@
 	<element name="Douse" type="Spell" source="Aurora: Nelvora" id="ID_NELVORA_SPELL_DOUSE">
         <supports>Racial Spell</supports>
         <description>
-            <p>The ocean's spray conceals a cold and callous nature. You gesture, summoning a splash of saltwater to fall upon a creature or object within range. Flames are instantly quenched, and objects targeted by this spell cannot be ignited for at least one minute.</p>
-            <p>If you target a creature, you can choose to have the saltwater be bone-chillingly cold. The target must make a Constitution saving throw. If they fail, they take {{cantrip:dice}}d{{douse:die_size}} + {{douse:bonus}} cold damage.</p>
+            <p>You summon a splash of saltwater to fall upon a creature or object within range. Flames are instantly quenched. If you target a creature, you make a ranged spell attack. On a hit, the target takes cold damage as determined by your Ik’héthagma Lineage.</p>
         </description>
         <setters>
             <set name="level">0</set>
             <set name="school">Conjuration</set>
             <set name="time">1 action</set>
-            <set name="range">30 feet</set>
+            <set name="range">60 feet</set>
             <set name="hasVerbalComponent">false</set>
             <set name="hasSomaticComponent">true</set>
             <set name="hasMaterialComponent">false</set>
