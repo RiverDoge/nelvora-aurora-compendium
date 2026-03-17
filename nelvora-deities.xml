@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<element name="Caeplithias" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_CAEPLITHIAS">
+		<description>
+			<p class="flavor">Goddess of Hope</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LG</set>
+			<set name="domains">Tempest, Morning, Hope</set>
+			<set name="symbol">Dragon curled to form a frame around a blazing ornate eye.</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Silver Dragon of the Sunrise, Goddess of Hope, and Trusted Friend of the Blazing Jewel.</description>
+		</sheet>
+	</element>
+	<element name="Blazing Jewel" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_BLAZING_JEWEL">
+		<description>
+			<p class="flavor">Light of Eternity</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LG</set>
+			<set name="domains">Sun, Divination, Death</set>
+			<set name="symbol">Ornate blazing eye, set in a diamond shaped frame.</set>
+			<set name="gender">male</set>
+		</setters>
+		<sheet>
+			<description>Light of Eternity. The Watchful Eye, Guardian of the Sky, and Shepherd of the Dead.</description>
+		</sheet>
+	</element>
+	<element name="Voroth" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_VOROTH">
+		<description>
+			<p class="flavor">Lord of the End</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LE</set>
+			<set name="domains">Fire, Obliteration, Sunset</set>
+			<set name="symbol">Spiral of flames, or a setting sun.</set>
+			<set name="gender">male</set>
+		</setters>
+		<sheet>
+			<description>Lord of the End. Herald of the Cataclysm, and Caeplithias’s Abhorred Brother.</description>
+		</sheet>
+	</element>
+	<element name="Zor'Cuth" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_ZOR_CUTH">
+		<description>
+			<p class="flavor">Child of the Abyss</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">NE</set>
+			<set name="domains">Abyss, Water, Cold, Abberant</set>
+			<set name="symbol">???</set>
+			<set name="gender">???</set>
+		</setters>
+		<sheet>
+			<description>Child of the Abyss. Godslayer, Blood of the Fallen, and Master of Change.</description>
+		</sheet>
+	</element>
+	<element name="Cruxia Imortus" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_CRUXIA_IMORTUS">
+		<description>
+			<p class="flavor">Spire of the Maw</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">CE</set>
+			<set name="domains">Abyss, Sin, Spite</set>
+			<set name="symbol">???</set>
+			<set name="gender">???</set>
+		</setters>
+		<sheet>
+			<description>Spire of the Maw. Spawn of Sin, and Paragon of Spite.</description>
+		</sheet>
+	</element>
+	<element name="Rungmora" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_RUNGMORA">
+		<description>
+			<p class="flavor">The Great Harvest</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">NG</set>
+			<set name="domains">Harvest, Virtue, Life</set>
+			<set name="symbol">???</set>
+			<set name="gender">male</set>
+		</setters>
+		<sheet>
+			<description>Spire of the Maw. Spawn of Sin, and Paragon of Spite.</description>
+		</sheet>
+	</element>
+	<element name="Namúnnon" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_NAMUNNON">
+		<description>
+			<p class="flavor">Absence</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">CE</set>
+			<set name="domains">Malignence, Absence, Loss, Sorrow</set>
+			<set name="symbol">???</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Absence. Malignance of the Heart.</description>
+		</sheet>
+	</element>
+	<element name="Cévsolen" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_CEVSOLEN">
+		<description>
+			<p class="flavor">Champion of Hope</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">CG</set>
+			<set name="domains">Hope, Justice, Vengence, Retribution</set>
+			<set name="symbol">Radiating bleeding blade engulfed by darkness</set>
+			<set name="gender">male</set>
+		</setters>
+		<sheet>
+			<description>Champion of Hope. Devotee of Caeplithias, and Sword of Retribution.</description>
+		</sheet>
+	</element>
+	<element name="Ephemeros" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_EPHEMEROS">
+		<description>
+			<p class="flavor">Patron of Ingenuity</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">N</set>
+			<set name="domains">Studying, Knowledge, Ingenuity, Mind</set>
+			<set name="symbol">???</set>
+			<set name="gender">male</set>
+		</setters>
+		<sheet>
+			<description>Patron of Ingenuity. God of Learning, and Guide of the Mind.</description>
+		</sheet>
+	</element>
+	<element name="Udra" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_UDRA">
+		<description>
+			<p class="flavor">The Unblemished soul</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LG</set>
+			<set name="domains">Purity, Will, Light, Generosity</set>
+			<set name="symbol">???</set>
+			<set name="gender">male</set>
+		</setters>
+		<sheet>
+			<description>The Unblemished Soul. Hand of Purity, Unbroken Will, and The Purifying Light.</description>
+		</sheet>
+	</element>
+	<element name="Letoria" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_LETORIA">
+		<description>
+			<p class="flavor">Chains of Judgement</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LG</set>
+			<set name="domains">Purity, Will, Light, Generosity</set>
+			<set name="symbol">Ornate chains intertwined with an executioners axe.</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Chains of Judgement. Bane of the Wicked, and Heaven’s Executioner.</description>
+		</sheet>
+	</element>
+	<element name="Ceolelaín" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_CEOLELAIN">
+		<description>
+			<p class="flavor">Lord of Introspection</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">CN</set>
+			<set name="domains">Soul, Introspection, Will, Meditation, Creativity</set>
+			<set name="symbol">???</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Beauty of the Soul, Lord of Introspection, Patron of the Inward Eye.</description>
+		</sheet>
+	</element>
+	<element name="Líleaid" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_LILEAID">
+		<description>
+			<p class="flavor">Lady of Incarnation</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LN</set>
+			<set name="domains">Form, Perfectionism, Corporeality, Physical Art</set>
+			<set name="symbol">???</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Perfection of Form, Lady of Incarnation, Paragon of Corporeality.</description>
+		</sheet>
+	</element>
+	<element name="Lithias" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_LITHIAS">
+		<description>
+			<p class="flavor">Spurned and Forgotten</p>
+		</description>
+		<setters>
+			<set name="setting">NELVORA</set>
+			<set name="alignment">LE</set>
+			<set name="domains">Memory, Pain, Ignorance, Paranoia</set>
+			<set name="symbol">???</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Spurned and Forgotten, Reawakened Sin, and Vengence of the Firstborne</description>
+		</sheet>
+	</element>
+</elements>

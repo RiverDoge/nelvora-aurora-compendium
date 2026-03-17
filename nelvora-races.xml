@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Nelvora Races</name>
+        <description>All custom races for the Nelvora setting.</description>
+        <author url="">Custom</author>
+        <update version="1.0.0">
+            <file name="nelvora-races.xml" url="" />
+        </update>
+    </info>
+
+    <element name="Gaerant" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_GAERANT">
+        <description>
+            <p>Môille mature at the same rate as humans but can live slightly longer, up to 120 years. They average about 3 feet tall and weigh between 30 and 40 pounds.</p>
+            <h4>Gaerant Traits</h4>
+            <p>Your Gaerant character has a variety of natural abilities derived from their deepcavern origins.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Dexterity score increases by 2, and your Constitution score increases by 2.</p>
+            <p class="indent"><strong>Age.</strong> Môille mature at the same rate as humans but can live slightly longer, up to 120 years.</p>
+            <p class="indent"><strong>Size.</strong> Môille average about 3 feet tall and weigh between 30 and 40 pounds. Your size is Small.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 25 feet.</p>
+            <p class="indent"><strong>Superior Darkvision.</strong> Adapted to lightless caverns, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.</p>
+            <p class="indent"><strong>Mild Sunlight Sensitivity.</strong> Your people's time in the deep has made you unaccustomed to the harsh surface world. You have disadvantage on Wisdom (Perception) checks that rely on sight when you or whatever you are trying to perceive is in direct sunlight.</p>
+            <p class="indent"><strong>Fate of the Lost.</strong> When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.</p>
+            <p class="indent"><strong>Unassuming Presence.</strong> Your small stature and quiet movements make you difficult to pin down. You can take the Disengage action as a bonus action on each of your turns.</p>
+            <p class="indent"><strong>Fungal Fortitude.</strong> Your ancestors were exposed to countless magical fungi during their long internment. You have advantage on saving throws against poison, and you have resistance to poison damage.</p>
+            <p class="indent"><strong>Humble Stock.</strong> Your people have a long tradition of making the most of scarce resources, fostering community through hearth and craft. You gain proficiency with your choice of two of the following: Cook's Utensils, Brewer's Supplies, or the Persuasion skill.</p>
+            <p class="indent"><strong>Deepcavern Apothecary.</strong> Your people's long isolation forced an innate understanding of subterranean flora. You have proficiency with the Herbalism Kit. As an action, you can metabolize ambient fungal spores or use hidden stores to induce a rapid, controlled adaptation within your own body. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. You cannot choose the same effect more than once per long rest. When you use this trait, you choose one of the following effects, which lasts for 10 minutes:</p>
+            <ul>
+                <li><strong>Ironshroom.</strong> Your skin hardens with tough, fungal plates. You gain a +1 bonus to your AC. Level 5: When you activate this effect, you also gain temporary hit points equal to 1d10 + your Constitution modifier. Level 7: The AC bonus increases to +2.</li>
+                <li><strong>Shadow-eye.</strong> The fungi sharpen your senses beyond the physical. You can see normally in darkness, both magical and nonmagical, to the distance of your Superior Darkvision. Level 5: You gain proficiency in the Perception skill. If you are already proficient, your proficiency bonus is doubled for any Wisdom (Perception) check you make. Level 7: You gain Blindsight with a range of 10 feet.</li>
+                <li><strong>Mind-spore.</strong> Your mind attunes to the subtle chemical and biological signals of other creatures. You have advantage on Wisdom (Insight) checks. Level 5: You can telepathically communicate with any creature you can see within 30 feet of you. You do not need to share a language, but the creature must understand at least one language. Level 7: The range of this telepathy increases to 60 feet.</li>
+                <li><strong>Venom-cap.</strong> A mild, acrid toxin coats your items. Once per turn, when you hit a creature with a weapon attack, that attack deals an extra 1d4 poison damage. Level 5: This extra damage increases to 1d4 + your proficiency bonus. Level 7: This extra damage increases to 3d4.</li>
+                <li><strong>Gripping-moss.</strong> Tacky, gripping filaments grow on your hands and feet. You gain a climbing speed equal to your walking speed. Level 5: You have advantage on ability checks and saving throws made to avoid being grappled or restrained. Level 7: Your walking speed increases by 10 feet for the duration.</li>
+                <li><strong>Gloom-bloom.</strong> Your skin takes on a shifting, shadowy pattern that blends into the dark. You have advantage on Dexterity (Stealth) checks. Level 5: You can attempt to hide even when you are only lightly obscured. Level 7: If you are hidden, you can move up to 10 feet in the open without revealing yourself if you end your move in a position where you are not clearly visible.</li>
+            </ul>
+            <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Récuann.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="25" />
+            <grant type="Size" id="ID_SIZE_SMALL" />
+            <grant type="Vision" id="ID_VISION_SUPERIOR_DARKVISION" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_NELVORA_LANGUAGE_RECUANN" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MILD_SUNLIGHT_SENSITIVITY" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FATE_OF_THE_LOST" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_UNASSUMING_PRESENCE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FUNGAL_FORTITUDE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HUMBLE_STOCK" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_DEEPCAVERN_APOTHECARY" />
+        </rules>
+    </element>
+
+    <element name="Récuann (Language)" type="Language" source="Aurora: Nelvora" id="ID_NELVORA_LANGUAGE_RECUANN">
+        <description>
+            <p>The native tongue of the Gaerant.</p>
+        </description>
+        <setters>
+            <set name="speakers">Gaerant</set>
+        </setters>
+    </element>
+
+    <element name="Mild Sunlight Sensitivity" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_MILD_SUNLIGHT_SENSITIVITY">
+        <description>
+            <p>Your people's time in the deep has made you unaccustomed to the harsh surface world. You have disadvantage on Wisdom (Perception) checks that rely on sight when you or whatever you are trying to perceive is in direct sunlight.</p>
+        </description>
+        <sheet>
+            <description>You have disadvantage on Wisdom (Perception) checks that rely on sight when you or your target is in direct sunlight.</description>
+        </sheet>
+    </element>
+
+    <element name="Fate of the Lost" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_FATE_OF_THE_LOST">
+        <description>
+            <p>When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.</p>
+        </description>
+        <sheet>
+            <description>When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.</description>
+        </sheet>
+    </element>
+
+    <element name="Unassuming Presence" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_UNASSUMING_PRESENCE">
+        <description>
+            <p>Your small stature and quiet movements make you difficult to pin down. You can take the Disengage action as a bonus action on each of your turns.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>You can take the Disengage action as a bonus action.</description>
+        </sheet>
+    </element>
+
+    <element name="Fungal Fortitude" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_FUNGAL_FORTITUDE">
+        <description>
+            <p>Your ancestors were exposed to countless magical fungi during their long internment. You have advantage on saving throws against poison, and you have resistance to poison damage.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against poison, and resistance to poison damage.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+
+    <element name="Humble Stock" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HUMBLE_STOCK">
+        <description>
+            <p>Your people have a long tradition of making the most of scarce resources, fostering community through hearth and craft. You gain proficiency with your choice of two of the following: Cook's Utensils, Brewer's Supplies, or the Persuasion skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Humble Stock" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS, ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES, ID_PROFICIENCY_SKILL_PERSUASION" number="2" />
+        </rules>
+    </element>
+
+    <element name="Deepcavern Apothecary" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_DEEPCAVERN_APOTHECARY">
+        <description>
+            <p>Your people's long isolation forced an innate understanding of subterranean flora. You have proficiency with the Herbalism Kit. As an action, you can metabolize ambient fungal spores or use hidden stores to induce a rapid, controlled adaptation within your own body.</p>
+            <p>You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. You cannot choose the same effect more than once per long rest. When you use this trait, you choose one of the following effects, which lasts for 10 minutes:</p>
+            <ul>
+                <li>Ironshroom: Your skin hardens with tough, fungal plates. You gain a +1 bonus to your AC. Level 5: You also gain temporary hit points equal to 1d10 + your Constitution modifier. Level 7: The AC bonus increases to +2.</li>
+                <li>Shadow-eye: You can see normally in darkness, both magical and nonmagical, to the distance of your Superior Darkvision. Level 5: You gain proficiency in Perception (or double proficiency if already proficient). Level 7: You gain Blindsight with a range of 10 feet.</li>
+                <li>Mind-spore: You have advantage on Wisdom (Insight) checks. Level 5: You can telepathically communicate with any creature you can see within 30 feet of you. Level 7: Telepathy range increases to 60 feet.</li>
+                <li>Venom-cap: Once per turn, when you hit a creature with a weapon attack, that attack deals an extra 1d4 poison damage. Level 5: Extra damage increases to 1d4 + your proficiency bonus. Level 7: Extra damage increases to 3d4.</li>
+                <li>Gripping-moss: You gain a climbing speed equal to your walking speed. Level 5: Advantage on checks/saves to avoid being grappled or restrained. Level 7: Walking speed increases by 10 feet.</li>
+                <li>Gloom-bloom: You have advantage on Dexterity (Stealth) checks. Level 5: Attempt to hide when only lightly obscured. Level 7: If hidden, move up to 10 feet in the open without revealing yourself.</li>
+            </ul>
+        </description>
+        <sheet action="Action" usage="{{proficiency}}/Long Rest">
+            <description>Metabolize spores for a 10-minute adaptation. Choose one effect (cannot repeat the same effect per long rest):
+            Ironshroom: +1 AC. (Lvl 5: Gain 1d10+{{constitution:modifier}} temp HP. Lvl 7: AC bonus becomes +2).
+            Shadow-eye: See in magical/nonmagical darkness up to 120ft. (Lvl 5: Gain/double Perception prof. Lvl 7: 10ft Blindsight).
+            Mind-spore: Adv. on Insight. (Lvl 5: 30ft Telepathy. Lvl 7: 60ft Telepathy).
+            Venom-cap: 1/turn on hit, +1d4 poison damage. (Lvl 5: +1d4+{{proficiency}} poison dmg. Lvl 7: +3d4 poison dmg).
+            Gripping-moss: Gain climb speed equal to walk speed. (Lvl 5: Adv. vs grapple/restrain. Lvl 7: +10ft walk speed).
+            Gloom-bloom: Adv. on Stealth. (Lvl 5: Hide lightly obscured. Lvl 7: Move 10ft in open while hidden).</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+        </rules>
+    </element>
+
+    <element name="Scánarth" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_SCANARTH">
+        <description>
+            <p>Flame-Scale invaders from a distant land. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+    
+    <element name="Skordgur" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_SKORDGUR">
+        <description>
+            <p>Originally citizens of the great Suurtukoz Empire. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Tukavkoz" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_TUKAVKOZ">
+        <description>
+            <p>Descendants of the fallen Suurtukoz Empire and long-lost kin to the Skordgur. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Okhërûl" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_OKHERUL">
+        <description>
+            <p>Founding and dominant race of the Laitherian Empire, the Okhërûl were turned into a race of magic fueled beings by their ruler and former Ascendant, Tálume. Replacing many of their biological facilities, magical leylines now flow throughout their bodies.</p>
+            <p>The Okhërûl empire is built on a rigid, hierarchical society where status is visibly marked by one's leylines. Their administration views hybrid offspring as sacrilegious. They tend strongly toward lawful alignments.</p>
+            <h4>Okhërûl Traits</h4>
+            <p>Your Okhërûl character has a variety of natural abilities derived from their transmogrification and the leylines flowing through them.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Intelligence score increases by 3, your Constitution score increases by 3, and your Charisma score increases by 3.</p>
+            <p class="indent"><strong>Age.</strong> Okhërûl mature at the same rate as humans but live many times longer, with lifespans often exceeding 750 years.</p>
+            <p class="indent"><strong>Alignment.</strong> They tend strongly toward lawful alignments.</p>
+            <p class="indent"><strong>Size.</strong> Okhërûl are Medium size.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet.</p>
+            <p class="indent"><strong>Arcane Sustenance.</strong> Sustained by leylines, your physical form does not require food or drink, though you still require sleep.</p>
+            <p class="indent"><strong>Magical Siphon.</strong> When you take damage from a spell, you gain resistance to that damage type until the start of your next turn.</p>
+            <p class="indent"><strong>Leyline Reservoir.</strong> Your leylines store a vast internal well of magical power represented by a pool of Sidérea. Your Sidérea maximum is equal to your character level multiplied by 5. You can expend Sidérea to cast spells you know from your Arcane Repertoire trait. The Sidérea cost equals the spell's level. You choose Intelligence, Constitution, or Charisma as your spellcasting ability for these spells. Your spell save DC equals 8 + your proficiency bonus + your chosen modifier.</p>
+            <p class="indent"><strong>Arcane Repertoire.</strong> You can learn spells from the Sorcerer, Warlock, or Wizard spell lists. At 1st level, you learn one 1st level spell. You learn another spell at 2nd level and every even level thereafter. A spell you choose must be of a level no higher than half your character level (rounded up). At 20th level, you learn one final spell of any level.</p>
+            <p class="indent"><strong>The Shackle.</strong> Your Sidérea does not recharge on a short or long rest. It can only be replenished by undertaking a pilgrimage to an active leyline node.</p>
+            <p class="indent"><strong>The Diminishing.</strong> You must complete a pilgrimage at least once every 10 years or your leylines begin to decay. While decaying, you cannot heal, and your hit point maximum is reduced by 1d10 each day. While diminishing, your Intelligence, Constitution, and Charisma scores are reduced by 2. However, you gain a +1 bonus to your Wisdom, Dexterity, and Strength scores.</p>
+            <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Okhërûl.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="intelligence" value="3" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="constitution" value="3" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma" value="3" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_NELVORA_LANGUAGE_OKHERUL" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARCANE_SUSTENANCE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MAGICAL_SIPHON" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_LEYLINE_RESERVOIR" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARCANE_REPERTOIRE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_THE_SHACKLE" />
+        </rules>
+    </element>
+
+    <element name="Okhërûl (Language)" type="Language" source="Aurora: Nelvora" id="ID_NELVORA_LANGUAGE_OKHERUL">
+        <description>
+            <p>The native tongue of the Okhërûl.</p>
+        </description>
+        <setters>
+            <set name="speakers">Okhërûl</set>
+        </setters>
+    </element>
+
+    <element name="Arcane Sustenance" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_ARCANE_SUSTENANCE">
+        <description>
+            <p>Sustained by leylines, your physical form does not require food or drink, though you still require sleep.</p>
+        </description>
+        <sheet>
+            <description>You do not require food or drink, but you still require sleep.</description>
+        </sheet>
+    </element>
+
+    <element name="Magical Siphon" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_MAGICAL_SIPHON">
+        <description>
+            <p>When you take damage from a spell, you gain resistance to that damage type until the start of your next turn.</p>
+        </description>
+        <sheet>
+            <description>When you take damage from a spell, you gain resistance to that damage type until the start of your next turn.</description>
+        </sheet>
+    </element>
+
+    <element name="Leyline Reservoir" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_LEYLINE_RESERVOIR">
+        <description>
+            <p>Your leylines store a vast internal well of magical power represented by a pool of Sidérea.</p>
+        </description>
+        <sheet>
+            <description>You have a pool of Sidérea equal to {{level}} times 5. You can expend Sidérea (cost = spell level) to cast spells from your Arcane Repertoire. Spell save DC: 8 + proficiency bonus + your chosen modifier (Int, Con, or Cha).</description>
+        </sheet>
+    </element>
+
+    <element name="Arcane Repertoire" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_ARCANE_REPERTOIRE">
+        <description>
+            <p>You can learn spells from the Sorcerer, Warlock, or Wizard spell lists.</p>
+        </description>
+        <sheet>
+            <description>You learn spells from the Sorcerer, Warlock, or Wizard lists at 1st, 2nd, and every even level (max spell level = half character level rounded up), plus one spell at 20th level.</description>
+        </sheet>
+    </element>
+
+    <element name="The Shackle" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_THE_SHACKLE">
+        <description>
+            <p>Your Sidérea does not recharge on a short or long rest. It can only be replenished by undertaking a pilgrimage to an active leyline node.</p>
+        </description>
+        <sheet>
+            <description>Sidérea only replenishes via pilgrimage to a leyline node. Failing to pilgrimage every 10 years causes The Diminishing (no healing, max HP drops 1d10/day, Int/Con/Cha -2, Wis/Dex/Str +1).</description>
+        </sheet>
+    </element>
+
+    <element name="Dour" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_DOUR">
+        <description>
+            <p>A human group known most for being the founders of the diminishing Dothoren kingdom. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Ik’héthagma" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_IKHETHAGMA">
+        <description>
+            <p>Believed to be descendant from fish capable of flight, the most sea capable of Nelvora’s races. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Klírsaer" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_KLIRSAER">
+        <description>
+            <p>Thought to all be descendants of the Heran, founder of Heranthor, the Klírsaer are renowned as his most durable lineage. They are easily recognized by their striking blue hair and resilient physical traits.</p>
+            <p>As true hybrids, the Klírsaer inherit not only the enduring blood of Heran but also distinct traits from their secondary parentage, making them incredibly versatile and unique individuals.</p>
+            <h4>Klírsaer Traits</h4>
+            <p>Your Klírsaer character has the following traits based on their distinct lineage.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Wisdom score increases by 1, and you can choose to increase either your Dexterity or Constitution score by 2.</p>
+            <p class="indent"><strong>Size.</strong> Your size is Medium.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet.</p>
+            <p class="indent"><strong>Hybrid Inheritance.</strong> Because Klírsaer are hybrids, you inherit a distinct feature from your secondary race. To represent this versatility, you gain one Feat of your choice. (Sue me, this isn't easy to add)</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <select type="Racial Trait" name="Ability Score Increase" supports="Klírsaer ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HYBRID_INHERITANCE" />
+        </rules>
+    </element>
+
+    <element name="Dexterity Increase" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_KLIRSAER_ASI_DEX">
+        <supports>Klírsaer ASI</supports>
+        <description>
+            <p>Your Dexterity score increases by 2.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity" value="2" />
+        </rules>
+    </element>
+
+    <element name="Constitution Increase" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_KLIRSAER_ASI_CON">
+        <supports>Klírsaer ASI</supports>
+        <description>
+            <p>Your Constitution score increases by 2.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="constitution" value="2" />
+        </rules>
+    </element>
+
+    <element name="Hybrid Inheritance" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HYBRID_INHERITANCE">
+        <description>
+            <p>Because Klírsaer are hybrids, you inherit a distinct feature from your secondary race. To represent this versatility, you gain one Feat of your choice.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Feat" name="Hybrid Inheritance" supports="Feat" />
+        </rules>
+    </element>
+
+    <element name="Súryanda" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_SURYANDA">
+        <description>
+            <p>Known primarily as the protectors of the world tree Ormaldë, the Súryanda are a proud noble race who rarely entreats outsiders.</p>
+            <h4>Súryanda Traits</h4>
+            <p>Your Súryanda character has a variety of natural abilities derived from their deep connection to the World Tree.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Dexterity score increases by 2, your Wisdom score increases by 1, and your Charisma score increases by 1.</p>
+            <p class="indent"><strong>Age.</strong> Súryanda mature slower than humans, but live far longer, with averages approaching 500 years or more.</p>
+            <p class="indent"><strong>Size.</strong> Súryanda are Medium size.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 35 feet.</p>
+            <p class="indent"><strong>Forest Senses.</strong> Accustomed to the deep shade of the Farangroth forest, you have a heightened awareness of your surroundings. You have proficiency in the Perception skill.</p>
+            <p class="indent"><strong>Súryanda Weapon Training.</strong> The Súryanda are respected as a powerful martial race with a mastery of the blade. You have proficiency with longswords, rapiers, shortswords, and scimitars. Additionally, you have proficiency with longbows and shortbows.</p>
+            <p class="indent"><strong>Breath of Ormaldë.</strong> Your soul is intrinsically tied to the unwavering essence of the World Tree, granting you profound mental resilience. You have advantage on saving throws against being charmed, and magic cannot put you to sleep.</p>
+            <p class="indent"><strong>Whispers of the Wind.</strong> You have an innate ability to command the winds, a gift from Ormaldë itself. You know the Gust cantrip. At 3rd level, you can cast Feather Fall once with this trait and regain the ability to do so when you finish a long rest. At 5th level, you can cast Levitate (self only) once with this trait and regain the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells.</p>
+            <p class="indent"><strong>Aeolian Signature.</strong> Every Súryanda has a "true name," a unique Wind-Psalm that is a complex pattern of sound intrinsically tied to your soul. You conceal this name, using a common "use-name" for daily life. This signature is both your greatest strength and a profound vulnerability. If a creature learns your Wind-Psalm, it holds a fundamental key to your being. That creature has advantage on all spell attack rolls against you, and you have disadvantage on saving throws against all spells and magical effects originating from it. To share this name is an act of ultimate trust.</p>
+            <h4>Psalms of the Soul Wind</h4>
+            <p>While an Aeolian Signature is unique to each individual, there are broad categories of Psalms documented in Súryanda lore:</p>
+            <ul>
+                <li>Psalm of the Gale</li>
+                <li>Psalm of the Heartwood</li>
+                <li>Psalm of the Scouring Ash</li>
+                <li>Psalm of the Frigid Mist</li>
+                <li>Psalm of the Hallowed Breath (Extremely Rare)</li>
+                <li>Psalm of the Abyssal Wretch (Non-existent)</li>
+            </ul>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="35" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FOREST_SENSES" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_SURYANDA_WEAPON_TRAINING" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_BREATH_OF_ORMALDE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_WHISPERS_OF_THE_WIND" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_AEOLIAN_SIGNATURE" />
+            <select type="Racial Trait" name="Soul Wind Psalm" supports="Suryanda Psalm" />
+        </rules>
+    </element>
+
+    <element name="Forest Senses" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_FOREST_SENSES">
+        <description>
+            <p>Accustomed to the deep shade of the Farangroth forest, you have a heightened awareness of your surroundings. You have proficiency in the Perception skill.</p>
+        </description>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+        </rules>
+    </element>
+
+    <element name="Súryanda Weapon Training" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SURYANDA_WEAPON_TRAINING">
+        <description>
+            <p>The Súryanda are respected as a powerful martial race with a mastery of the blade. You have proficiency with longswords, rapiers, shortswords, and scimitars. Additionally, you have proficiency with longbows and shortbows.</p>
+        </description>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGSWORD" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_RAPIER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SCIMITAR" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGBOW" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTBOW" />
+        </rules>
+    </element>
+
+    <element name="Breath of Ormaldë" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_BREATH_OF_ORMALDE">
+        <description>
+            <p>Your soul is intrinsically tied to the unwavering essence of the World Tree, granting you profound mental resilience. You have advantage on saving throws against being charmed, and magic cannot put you to sleep.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against being charmed, and magic cannot put you to sleep.</description>
+        </sheet>
+    </element>
+
+    <element name="Whispers of the Wind" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_WHISPERS_OF_THE_WIND">
+        <description>
+            <p>You have an innate ability to command the winds, a gift from Ormaldë itself. You know the Gust cantrip. At 3rd level, you can cast Feather Fall once with this trait and regain the ability to do so when you finish a long rest. At 5th level, you can cast Levitate (self only) once with this trait and regain the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells.</p>
+        </description>
+        <sheet>
+            <description>You know the Gust cantrip. At 3rd level, you can cast Feather Fall once per long rest. At 5th level, you can cast Levitate (self only) once per long rest. Wisdom is your spellcasting ability.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_SPELL_GUST" />
+        </rules>
+    </element>
+
+    <element name="Aeolian Signature" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_AEOLIAN_SIGNATURE">
+        <description>
+            <p>Every Súryanda has a "true name," a unique Wind-Psalm that is a complex pattern of sound intrinsically tied to your soul. You conceal this name, using a common "use-name" for daily life. This signature is both your greatest strength and a profound vulnerability. If a creature learns your Wind-Psalm, it holds a fundamental key to your being. That creature has advantage on all spell attack rolls against you, and you have disadvantage on saving throws against all spells and magical effects originating from it. To share this name is an act of ultimate trust.</p>
+        </description>
+        <sheet>
+            <description>If a creature learns your true Wind-Psalm, it has advantage on spell attacks against you, and you have disadvantage on saving throws against its spells.</description>
+        </sheet>
+    </element>
+	
+	<element name="Psalm of the Gale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_PSALM_OF_THE_GALE">
+        <supports>Suryanda Psalm</supports>
+        <description>
+            <p>Your true name resonates with the sweeping, forceful winds of the open sky.</p>
+        </description>
+        <sheet>
+            <description>Your Aeolian Signature is a Psalm of the Gale.</description>
+        </sheet>
+    </element>
+
+    <element name="Psalm of the Heartwood" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_PSALM_OF_THE_HEARTWOOD">
+        <supports>Suryanda Psalm</supports>
+        <description>
+            <p>Your true name resonates with the deep, enduring roots of the forest.</p>
+        </description>
+        <sheet>
+            <description>Your Aeolian Signature is a Psalm of the Heartwood.</description>
+        </sheet>
+    </element>
+
+    <element name="Psalm of the Scouring Ash" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_PSALM_OF_THE_SCOURING_ASH">
+        <supports>Suryanda Psalm</supports>
+        <description>
+            <p>Your true name resonates with the harsh, cleansing winds of destruction and rebirth.</p>
+        </description>
+        <sheet>
+            <description>Your Aeolian Signature is a Psalm of the Scouring Ash.</description>
+        </sheet>
+    </element>
+
+    <element name="Psalm of the Frigid Mist" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_PSALM_OF_THE_FRIGID_MIST">
+        <supports>Suryanda Psalm</supports>
+        <description>
+            <p>Your true name resonates with the biting, obscuring chill of winter.</p>
+        </description>
+        <sheet>
+            <description>Your Aeolian Signature is a Psalm of the Frigid Mist.</description>
+        </sheet>
+    </element>
+
+    <element name="Psalm of the Hallowed Breath" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_PSALM_OF_THE_HALLOWED_BREATH">
+        <supports>Suryanda Psalm</supports>
+        <description>
+            <p>Your true name is exceptionally rare, resonating with a sacred and ancient divine.</p>
+        </description>
+        <sheet>
+            <description>Your Aeolian Signature is a Psalm of the Hallowed Breath (Extremely Rare).</description>
+        </sheet>
+    </element>
+
+    <element name="Psalm of the Abyssal Wretch" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_PSALM_OF_THE_ABYSSAL_WRETCH">
+        <supports>Suryanda Psalm</supports>
+        <description>
+            <p>A name that should not exist, resonating with the suffocating abyssal wastes</p>
+        </description>
+        <sheet>
+            <description>Your Aeolian Signature is a Psalm of the Abyssal Wretch (Non-existent).</description>
+        </sheet>
+    </element>
+
+    <element name="Zereith" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_ZEREITH">
+        <description>
+            <p>Guardians of Nekhzun, the Zereith are a race of humanoids with gruesome arachnid traits. Their history is shrouded in mystery, and they are governed by an unseen group called the Rekae-Neket, who are known only for their long lifespans, and wicked rituals.</p>
+            <p>Once a mighty empire inhabited their lands and built great wonders amongst the lush life, but the shattering completely buried their achievements, leaving only a few desolate ruins in their wake. In contrast to their fearsome appearance though, the Zereith are accommodating to guests, and more than willing to trade with their neighbors. This culture of commerce and hospitality has led to the slow but steady growth of their markets, and revitalization of the "Blasted Wastes".</p>
+            <p>Depending on their attire, the Zereith can appear to be completely regular, though conspicuous, humans... or their silhouette can be that of nightmares, with arachnid legs protruding from their backs, or even the vicious maws of various insects adorning their faces on rare occasion. Typically though, their features are either repressed by their innate illusion magic, or simply due to having more subtle features such as a fine carapace along their arms and legs. One less noticeable, but highly valuable adaptation though, is their ability to go a significant amount of time without water, and regulate their body temperature in order to survive the intense heat of Nekhzun.</p>
+            <h4>Zereith Traits</h4>
+            <p>Your Zereith character has a variety of natural abilities derived from their desert origins and arachnid heritage.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Constitution score increases by 2, and your Wisdom score increases by 1.</p>
+            <p class="indent"><strong>Age.</strong> Zereith mature at a rate similar to humans but live longer, often reaching 150 years.</p>
+            <p class="indent"><strong>Size.</strong> Your size is Medium.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet.</p>
+            <p class="indent"><strong>Desert Adaptation.</strong> You are highly adapted to the intense heat of Nekhzun. You have resistance to fire damage, and Dexterity saves against burning effects.</p>
+            <p class="indent"><strong>Arid Resilience.</strong> Your body is adapted to the Blasted Wastes. You are not slowed by non-magical difficult terrain caused by sand, rubble, or dunes. Additionally, you have advantage on Wisdom (Survival) checks in desert environments.</p>
+            <p class="indent"><strong>Twinned Visage.</strong> You have a dual nature: a Veiled Form and a Revealed Form.</p>
+            <ul>
+                <li><strong>Veiled Form (Action).</strong> You can use an action to magically disguise your true arachnid features, allowing you to appear as a human of your general build. This illusion lasts until you use a bonus action to end it (see Unveiling Burst), you are incapacitated, you die, or it is broken by an external effect (see Forceful Unveiling).</li>
+                <li><strong>Unveiling Burst (Bonus Action).</strong> As a bonus action, you can end your Veiled Form and unleash your true nature. When you do so, you gain temporary hit points equal to 1d11 + your proficiency bonus.</li>
+                <li><strong>Frightful Reveal (Passive).</strong> When your Veiled Form ends, your terrifying true form is revealed. <em>Intentional:</em> If you ended your veil with your Unveiling Burst, each hostile creature within 10 feet of you must succeed on a Wisdom saving throw or be Frightened of you until the start of your next turn. <em>Forceful:</em> If your veil was broken by an external magical effect, each creature within 10 feet of you (including allies) must succeed on a Wisdom saving throw or be Frightened of you until the start of your next turn. <em>Saving Throw DC:</em> The saving throw DC for your Frightful Reveal is 8 + your proficiency bonus + your Wisdom modifier. Anyone who has knowledge of your true form has advantage on this Wisdom save.</li>
+                <li><strong>Re-Veiling (Cooldown).</strong> You cannot use an action to re-apply your Veiled Form for a period of time after it ends. If you ended your veil intentionally, you cannot re-veil for 10 minutes. If your veil was broken forcefully, you cannot re-veil for 1 hour.</li>
+            </ul>
+            <p class="indent"><strong>Veiled Form Traits.</strong> While in your Veiled Form, you gain the following traits:</p>
+            <ul>
+                <li><strong>Accommodating Host.</strong> Your mastery of the veiled guise allows you to navigate social interactions with ease. You gain proficiency in the Persuasion skill. If you are already proficient, you can obtain expertise with this skill.</li>
+                <li><strong>Veiled Influence.</strong> Your illusory guise subtly shields your thoughts and sharpens your perception of others. You have advantage on Wisdom (Insight) checks made to discern a creature's true intentions. Level 5: You gain resistance to psychic damage. Level 7: You have advantage on saving throws against charm and fear effects.</li>
+                <li><strong>Appraiser's Eye.</strong> You can use an action to focus your senses on a single non-magical object you can see within 5 feet of you. You instantly learn its rough monetary values. This can initially only be used once per long rest, until level 7. Level 5: This ability now works on magical items, and you also learn whether it is magical and the school of magic it belongs to, if any. Level 7: You can use this ability a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</li>
+                <li><strong>Subtle Weaving.</strong> You can weave small, magical deceptions into your illusion. You know the Message cantrip. Level 5: You can cast the Charm Person spell once with this trait and regain the ability to do so when you finish a long rest. Level 7: You can cast the Suggestion spell once with this trait and regain the ability to do so when you finish a long rest.</li>
+            </ul>
+            <p class="indent"><strong>Revealed Form.</strong> While your true arachnid features are revealed, you gain the following traits:</p>
+            <ul>
+                <li><strong>Fearsome Visage.</strong> The terror of your true form is a weapon. You gain proficiency in the Intimidation skill. If you are already proficient, you gain expertise in the Intimidation skill.</li>
+                <li><strong>Arachnid Carapace.</strong> Your arachnid chitin hardens, providing a physical defense that your illusion cannot. You gain a +1 bonus to your AC. Level 5: You gain resistance to poison damage. Level 7: You have advantage on Strength saving throws.</li>
+                <li><strong>Vicious Maw.</strong> Your insectoid jaws are a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike. Level 5: Your maw attacks are considered magical for the purpose of overcoming resistance and immunity. Level 7: The damage die for your maw attack increases to 1d8.</li>
+                <li><strong>Predator's Weaving.</strong> You can manifest your innate, predatory magic to ensnare your prey. You know the Poison Spray cantrip. Level 5: You can cast the Web spell once with this trait and regain the ability to do so when you finish a long rest. Level 7: You can cast the Invisibility spell (targeting yourself only) once with this trait and regain the ability to do so when you finish a long rest.</li>
+            </ul>
+            <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Zereithian.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_NELVORA_LANGUAGE_ZEREITHIAN" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_DESERT_ADAPTATION" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARID_RESILIENCE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_TWINNED_VISAGE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_VEILED_FORM_TRAITS" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_REVEALED_FORM_TRAITS" />
+        </rules>
+    </element>
+
+    <element name="Zereithian" type="Language" source="Aurora: Nelvora" id="ID_NELVORA_LANGUAGE_ZEREITHIAN">
+        <description>
+            <p>The native tongue of the Zereith.</p>
+        </description>
+        <setters>
+            <set name="speakers">Zereith</set>
+        </setters>
+    </element>
+
+    <element name="Desert Adaptation" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_DESERT_ADAPTATION">
+        <description>
+            <p>You are highly adapted to the intense heat of Nekhzun.</p>
+        </description>
+        <sheet>
+            <description>You have resistance to fire damage, and Dexterity saves against burning effects.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+        </rules>
+    </element>
+
+    <element name="Arid Resilience" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_ARID_RESILIENCE">
+        <description>
+            <p>Your body is adapted to the Blasted Wastes.</p>
+        </description>
+        <sheet>
+            <description>You are not slowed by non-magical difficult terrain caused by sand, rubble, or dunes. You have advantage on Wisdom (Survival) checks in desert environments.</description>
+        </sheet>
+    </element>
+
+    <element name="Twinned Visage" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_TWINNED_VISAGE">
+        <description>
+            <p>You have a dual nature: a Veiled Form and a Revealed Form.</p>
+        </description>
+        <sheet>
+            <description>Action: magically disguise your arachnid features as human.
+            Bonus Action: Unveiling Burst. End Veiled Form to gain 1d11+PB temp HP.
+            Passive: Frightful Reveal. When Veiled Form ends intentionally, hostile creatures within 10ft make DC {{dc:wisdom}} Wis save or are Frightened until your next turn. If ended forcefully, all creatures within 10ft must save. (Advantage on save if they know your true form).
+            Cooldown: Cannot re-veil for 10 mins (if intentional) or 1 hour (if forceful).</description>
+        </sheet>
+    </element>
+
+    <element name="Veiled Form Traits" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_VEILED_FORM_TRAITS">
+        <description>
+            <p>Traits granted while in your Veiled Form.</p>
+        </description>
+        <sheet>
+            <description>While Veiled:
+            Accommodating Host: Gain Persuasion proficiency (or expertise if already proficient).
+            Veiled Influence: Advantage on Insight checks to discern true intentions. (Lvl 5: psychic resistance. Lvl 7: advantage vs charm/fear).
+            Appraiser's Eye (Action): Learn rough value of non-magical object within 5ft. 1/Long Rest. (Lvl 5: works on magic items, revealing school. Lvl 7: Usage becomes PB/Long Rest).
+            Subtle Weaving: Know Message cantrip. (Lvl 5: Charm Person 1/Long Rest. Lvl 7: Suggestion 1/Long Rest).</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            <grant type="Spell" id="ID_SPELL_MESSAGE" />
+        </rules>
+    </element>
+
+    <element name="Revealed Form Traits" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_REVEALED_FORM_TRAITS">
+        <description>
+            <p>Traits granted while your true arachnid features are revealed.</p>
+        </description>
+        <sheet>
+            <description>While Revealed:
+            Fearsome Visage: Gain Intimidation proficiency (or expertise if already proficient).
+            Arachnid Carapace: +1 AC. (Lvl 5: poison resistance. Lvl 7: advantage on Str saves).
+            Vicious Maw: Unarmed strike deals 1d6+Str piercing. (Lvl 5: counts as magical. Lvl 7: damage becomes 1d8+Str).
+            Predator's Weaving: Know Poison Spray cantrip. (Lvl 5: Web 1/Long Rest. Lvl 7: Invisibility (self only) 1/Long Rest).</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <grant type="Spell" id="ID_SPELL_POISON_SPRAY" />
+        </rules>
+    </element>
+
+    <element name="Diudán" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_DIUDAN">
+        <description>
+            <p>Isolated residents of the Marrow Woods who have transcended their flesh. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Récuann" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_RECUANN">
+        <description>
+            <p>Majority population of the Kingdom of Fiscathia. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Môille" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_MOILLE">
+        <description>
+            <p>Aberrated Récuanni known as the Servants of the Dark. Mechanics pending.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Zan-Ki" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_ZANKI">
+        <description>
+            <p>Zan-Ki mature at the same rate as Hwamin but their lifespans are volatile. Depending on their bloodline and how well they bond with their heritage, they can live several times longer.</p>
+            <h4>Zan-Ki Traits</h4>
+            <p>Your maligned heritage grants you a complex set of abilities and burdens.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Constitution score increases by 2.</p>
+            <p class="indent"><strong>Size.</strong> Zan-Ki have varying forms, but tend to be broader than the average Hwamin. Your size is Medium.</p>
+            <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet.</p>
+            <p class="indent"><strong>Darkvision.</strong> The corruption in your veins grants you sight that pierces the gloom. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of red and grey.</p>
+            <p class="indent"><strong>Heritage of Sin.</strong> You have advantage against any non-physical saving throw that is derived from Magatsu. Additionally, you have a weakness to radiant damage, and any attack from a Kiyozumi is treated as a weakness, but you also incur this same penalty onto any Kiyozumi you encounter, as your competing natures clash.</p>
+            <p class="indent"><strong>Blood-Brood.</strong> Zan-Ki of the same descent share an intense rivalry. Any attack towards another sharing the same Ancestor is made with advantage. Conversely, they will also have an advantage on you. If you deliver a critical strike against each other, both Zan-Ki must make a Constitution saving throw (DC 10 + opponent's Constitution modifier + proficiency) or enter a bloody frenzy.</p>
+            <p class="indent"><strong>Heritage of the Feast.</strong> Zan-Ki are said to be borne from the sin of a great ancestor. In an act of desperation, or in the flawed pursuit of power, they partook in a profane ritual, consuming a Magatsu or lesser divine being. Your heritage shapes your physical form and innate abilities.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HERITAGE_OF_SIN" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_BLOOD_BROOD" />
+            <select type="Sub Race" name="Heritage of the Feast" supports="Zan-Ki" />
+        </rules>
+    </element>
+
+    <element name="Heritage of Sin" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HERITAGE_OF_SIN">
+        <description>
+            <p>Due to their maligned heritage, Zan-Ki have a complex relationship with both the malevolent forces, namely Magatsu, and the benevolent Kiyozumi.</p>
+        </description>
+        <sheet>
+            <description>You have advantage against non-physical saves from Magatsu. You have a weakness to radiant damage. Attacks from/against Kiyozumi are treated as a weakness.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_VULNERABILITY_RADIANT" />
+        </rules>
+    </element>
+
+    <element name="Blood-Brood" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_BLOOD_BROOD">
+        <description>
+            <p>Zan-Ki of the same descent share an intense rivalry. Any attack towards another sharing the same Ancestor is made with advantage. Conversely, they will also have an advantage on you. If you deliver a critical strike against each other, both Zan-Ki must make a DC (10 + Constitution modifier + proficiency of the opposing Zan-Ki) constitution saving throw, or enter a bloody frenzy.</p>
+            <p>While in this frenzy, you are forced to attack a random creature within 60 feet every turn, moving within 5 feet, and incurring any opportunity attacks along the way. To determine which creature you target, roll a dice equal to the number of creatures within 60 feet, and round up. If it lands on the rounded up value, you temporarily regain your senses. This effect lasts for 2 rounds, you take over half your maximum health value, or until you go unconscious (whichever happens first).</p>
+        </description>
+        <sheet>
+            <description>Advantage on attacks against Zan-Ki of your exact descent (they also have advantage against you). Critical hits against each other trigger a blood frenzy (DC 10+Con+Prof Con save). In frenzy: attack random creature within 60ft for 2 rounds, until taking half max HP damage, or unconscious.</description>
+        </sheet>
+    </element>
+
+    <element name="Sik-Hyeol" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_SIK_HYEOL">
+        <supports>Zan-Ki</supports>
+        <description>
+            <p><strong>Ancestry.</strong> Your ancestor feasted on the remains of Kam-Kui, an Oni reviled as the God-Eater. So great was their hunger, that normal beasts could not satisfy them. Instead they used their insurmountable might to challenge the Divine, slaying numerous lesser deities, and Divine Guardians. It took the intervention of countless great heroes and the Heavenly Court to bring them down, after which their body was lost to time.</p>
+            <p><strong>Physical Traits.</strong> Descendants bearing Sik-Hyeol often have blood-red, or ashen grey grotesque horns, denoting their legacy. While not always the case, they also tend to range on the larger end of Zan-Ki, and have metallic tinted skin (most often crimson tints). Often the most unsettling aspect however, is their searing red eyes, often a deep bloody tone, or even shifting as if they contain flowing magma.</p>
+            <p><strong>Kam-Kui's Inheritance.</strong> Your instincts recall Kam-Kui's thirst for Divine blood. None are better suited to hunt what should be normally profane.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Strength score increases by 2, and your Charisma score increases by 2.</p>
+            <p class="indent"><strong>Shunned by the Heavens (Level 1).</strong> You have an innate weakness to radiant damage, and all Celestial beings with knowledge of your bloodline have advantage on attack rolls against you. If you already have weakness to radiant damage, you move as if in difficult terrain, and cannot regain hit points while within 30 feet of a Celestial being.</p>
+            <p class="indent"><strong>Grasp of the Usurper (Level 1).</strong> You possess the arrogant strength of the God-Eater. You can wield a weapon with the Two-Handed property in one hand, and still retain the benefits of Two-Handing, provided you are not wielding a shield or another weapon in your other hand.</p>
+            <p class="indent"><strong>Sunder the Sacred (Level 5).</strong> When you hit a Celestial, Magatsu, or Kiyozumi with a melee weapon attack, you deal an additional 1d8 necrotic damage. Additionally, your attacks against these creatures ignore Resistance or Immunity to non-magical bludgeoning, piercing, slashing, and necrotic damage.</p>
+            <p class="indent"><strong>Halted Divinity (Level 7).</strong> When you deal damage to a creature that triggers your Sunder the Sacred feature, that creature cannot take Reactions until the start of your next turn. If the creature's CR is higher than your level, they can make a DC (10 + your Constitution modifier + proficiency) Constitution saving throw to resist this effect.</p>
+            <p class="indent"><strong>True Gluttony.</strong> When you reduce a Celestial or Kiyozumi to 0 hit points, you attempt to feast upon their broken form. Roll a d20, and gain one thing from their stat block that you lack, either increasing a value of your own, or gaining something new entirely. This can be almost anything, barring legendary, mythical, or lair actions. The reward should be directly proportional to your roll, with the DM deriving your reward from it.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="strength" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_SHUNNED_BY_THE_HEAVENS" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_GRASP_OF_THE_USURPER" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_SUNDER_THE_SACRED" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HALTED_DIVINITY" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_TRUE_GLUTTONY" />
+        </rules>
+    </element>
+
+    <element name="Shunned by the Heavens" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SHUNNED_BY_THE_HEAVENS">
+        <description>
+            <p>The sins of the malevolent being your ancestor consumed continue to haunt you.</p>
+        </description>
+        <sheet>
+            <description>Celestials with knowledge of your bloodline have advantage on attack rolls against you. While within 30 feet of a Celestial, you move as if in difficult terrain and cannot regain hit points.</description>
+        </sheet>
+    </element>
+
+    <element name="Grasp of the Usurper" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_GRASP_OF_THE_USURPER">
+        <description>
+            <p>You possess the arrogant strength of the God-Eater.</p>
+        </description>
+        <sheet>
+            <description>You can wield a Two-Handed weapon in one hand and retain Two-Handing benefits, provided your other hand is empty (no shield or secondary weapon).</description>
+        </sheet>
+    </element>
+
+    <element name="Sunder the Sacred" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SUNDER_THE_SACRED">
+        <description>
+            <p>Your strikes are capable of tearing through divine protection.</p>
+        </description>
+        <sheet>
+            <description>Level 5: Hits against Celestials, Magatsu, or Kiyozumi deal +1d8 necrotic damage and ignore resistance/immunity to non-magical bludgeoning, piercing, slashing, and necrotic damage.</description>
+        </sheet>
+    </element>
+
+    <element name="Halted Divinity" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HALTED_DIVINITY">
+        <description>
+            <p>Your blows rattle the very essence of the spirit, preventing their escape.</p>
+        </description>
+        <sheet>
+            <description>Level 7: Creatures damaged by Sunder the Sacred lose their Reaction until your next turn (If CR is higher than your level, they can make a DC {{dc:constitution}} Con save to resist).</description>
+        </sheet>
+    </element>
+
+    <element name="True Gluttony" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_TRUE_GLUTTONY">
+        <description>
+            <p>Your hunger surpasses the urge for physical sustenance. This craving can only be sated with the essence of Divine or Spiritual beings. Since the corruption of the Magatsu ruins your palate, this only applies to Celestial or Kiyozumi.</p>
+            <p>When you reduce a Celestial or Kiyozumi to 0 hit points, you attempt to feast upon their broken form. Roll a D20, and gain one thing from their statblock that you lack, either increasing a value of your own, or gaining something new entirely. This can be almost anything, barring legendary, mythical, or lair actions. The reward should be directly proportional to your roll, with the DM deriving your reward from it.</p>
+        </description>
+        <sheet>
+            <description>When reducing a Celestial or Kiyozumi to 0 HP, roll a d20 to feast upon them and permanently gain an aspect from their statblock at the DM's discretion.</description>
+        </sheet>
+    </element>
+	
+	<element name="Yō-Su" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_YO_SU">
+        <supports>Zan-Ki</supports>
+        <description>
+            <p><strong>Ancestry.</strong> It is said that your Ancestor unwillingly devoured the heart of Hwan-Hee, most often known as the Queen of Dreams. Hwan-Hee, unlike the others labeled Magatsu, was once a Kiyozumi of great renown, known for weaving beautiful illusions to comfort the weary. Either through coercion, or an illusion gone wrong, your ancestor feasted on this benevolent being, forever marring your bloodline with their frightening power. Now it is up to you whether this power is used to protect Tessayan, or reshape it in your twisted image.</p>
+            <p><strong>Physical Traits.</strong> Much like the Kamen-Shi, descendants with Yō-Su heritage possess an impossible, almost unsettling beauty. They often have vertical, slit pupils like a fox, and their movements leave faint, ghostly trails in the air. For those particularly bonded to their bloodline, the mere act of casting magic or feeling intense emotion can cause ghostly tails to briefly appear behind them, the number of which often denoting the strength of their blood.</p>
+            <p><strong>Hwan-Hee's Inheritance.</strong> Your blood carries the illusory essence of the Queen of Dreams. While not ill-suited for direct conflict, your power excels in the slow dismantling of your opponents' defenses.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Charisma score increases by 3, and your Wisdom score increases by 1.</p>
+            <p class="indent"><strong>Waning Dream (Level 1).</strong> Because your soul is bound to a stolen dream, the tether to your physical form is extremely fragile to psychological effects. You have an innate weakness to Psychic damage, and any effect that would unmask a shapechanger forces you to make a DC 15 Constitution saving throw, which leaves you stunned until your next turn on a failure. The first time a target with True Sight intently gazes at you, or a spell such as Moonbeam would trigger this. If you succeed your saving throw, you have advantage against any subsequent effects until you complete a long rest, and are immune to effects such as True Sight for the same duration.</p>
+            <p class="indent"><strong>Guise of the Kiyozumi (Level 1).</strong> You possess the elusive nature of the Sovereign. You can cast Disguise Self at will, without expending a spell slot. Furthermore, while disguised, your body is partially comprised of spirit-mist; you can move through other creatures and objects as if they were difficult terrain until the start of your next turn. If you end your turn inside an object, you take 1d10 force damage and are ejected to the nearest unoccupied space. You cannot pass through walls or dense objects, as well as anything made of iron. This feature can be used a number of times equal to your proficiency modifier, and refreshes on a long rest.</p>
+            <p class="indent"><strong>Illusory Strike (Level 5).</strong> Through your heritage, you have obtained a fragment of the Queen’s spectral white-flame, used to conceal truth. When a creature misses you with an attack action, you can use your reaction to teleport up to 10 feet to an unoccupied space you can see. If you do, you can immediately make one spell attack or weapon attack (in range) against the triggering creature with Advantage.</p>
+            <p class="indent"><strong>Queen’s Veil (Level 7).</strong> Your presence is that of a dream to those you encounter, both lowering their guard, and easing their memory of you. You gain proficiency in the Deception or Persuasion skill, or expertise if you are already proficient. Additionally, you can cast Mirror Image once per long rest. As a bonus action, you can send out one of your Mirror Images up to 10 feet away. If this provokes an opportunity attack, you can use Illusory Strike, treating the illusion as if it was you, and allowing you to attack in their place on the target, whether or not it successfully hits your illusion. If their attack misses, you can cast this strike for free, and teleport up to 10 feet away from your current position. If the attack is a success, you expend a use of Illusory Strike, and your reaction for that turn. Additionally, if the Illusion safely makes it the 10 feet you send it, you can choose to teleport to the new location. The Duplicate is expended regardless of outcome. You regain the use of this spell when you finish a Long Rest.</p>
+            <p class="indent"><strong>Hwan-Hee’s Final Grace.</strong> You can trap a creature in a dreamlike state, granting them their heart's desire to remove them from the fight. As an Action, you force a creature you can see within 60 feet to make a Wisdom saving throw (DC 10 + your proficiency bonus + your Charisma modifier). On a failure, the target is Incapacitated, as they are lost in a blissful hallucination. The target can repeat the saving throw at the end of each of its turns, or whenever it takes damage. If the effect ends because the duration expires (but not if they take damage), they take 5d10 + your Charisma modifier Psychic damage as the beautiful lie shatters. If the effect expires because they succeed the saving throw, they take half as much damage. You can use this feature once per Long Rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="charisma" value="3" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_WANING_DREAM" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_GUISE_OF_THE_KIYOZUMI" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ILLUSORY_STRIKE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_QUEENS_VEIL" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HWAN_HEES_FINAL_GRACE" />
+        </rules>
+    </element>
+
+    <element name="Waning Dream" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_WANING_DREAM">
+        <description>
+            <p>Because your soul is bound to a stolen dream, the tether to your physical form is extremely fragile to psychological effects.</p>
+        </description>
+        <sheet>
+            <description>You have a weakness to Psychic damage. Any effect that unmasks a shapechanger (like True Sight or Moonbeam) forces a DC 15 Con save or you are stunned until next turn. On success, advantage against subsequent effects and immunity to True Sight until long rest.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_VULNERABILITY_PSYCHIC" />
+        </rules>
+    </element>
+
+    <element name="Guise of the Kiyozumi" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_GUISE_OF_THE_KIYOZUMI">
+        <description>
+            <p>You possess the elusive nature of the Sovereign.</p>
+        </description>
+        <sheet usage="{{proficiency}}/Long Rest">
+            <description>You can cast Disguise Self at will. While disguised, you can move through creatures/objects as difficult terrain until your next turn. Ending turn inside object deals 1d10 force damage and ejects you. Cannot pass through walls, dense objects, or iron.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_SPELL_DISGUISE_SELF" />
+        </rules>
+    </element>
+
+    <element name="Illusory Strike" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_ILLUSORY_STRIKE">
+        <description>
+            <p>Level 5: Through your heritage, you have obtained a fragment of the Queen’s spectral white-flame, used to conceal truth.</p>
+        </description>
+        <sheet action="Reaction">
+            <description>When a creature misses you with an attack, teleport up to 10ft to an unoccupied space. You can immediately make one spell or weapon attack against them with Advantage.</description>
+        </sheet>
+    </element>
+
+    <element name="Queen’s Veil" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_QUEENS_VEIL">
+        <description>
+            <p>Level 7: Your presence is that of a dream to those you encounter.</p>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>Gain proficiency/expertise in Deception or Persuasion. Cast Mirror Image 1/long rest. Bonus action: Send Mirror Image 10ft away. If it provokes opportunity attack, use Illusory Strike on target. If attack misses, teleport 10ft for free. If Illusion survives, you can teleport to its location (duplicate expended).</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Queen’s Veil" supports="ID_PROFICIENCY_SKILL_DECEPTION, ID_PROFICIENCY_SKILL_PERSUASION" />
+        </rules>
+    </element>
+
+    <element name="Hwan-Hee’s Final Grace" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HWAN_HEES_FINAL_GRACE">
+        <description>
+            <p>You can trap a creature in a dreamlike state, granting them their heart's desire to remove them from the fight.</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>Target within 60ft makes Wis save (DC 10+PB+Cha). Failure: Incapacitated (blissful hallucination). Repeat save end of turns/when taking damage. If duration expires without damage: take 5d10+{{charisma:modifier}} Psychic damage. If save successful: take half damage.</description>
+        </sheet>
+    </element>
+	
+	<element name="Ho-Jo" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_HO_JO">
+        <supports>Zan-Ki</supports>
+        <description>
+            <p><strong>Ancestry.</strong> Starving and weary, your ancestor happened upon the martyred form of Bae-Kho the White Celestial Tiger. Both tragic victims of Kam-Kui's tyranny. The benevolent beast, once known as Heaven's Fangs, willingly offered up its heart, so that the great devourer could not claim its power. Consequently, now wielding the power of wind, and the might of a great beast, your Ancestor is said to have dealt a crucial blow to Kam-Kui, resulting in the God-Eater's demise.</p>
+            <p><strong>Physical Traits.</strong> Descendants bearing Ho-Jo possess a regal, but threatening presence. They typically possess stark white or silver hair, regardless of age, and their skin often bears faint, jagged stripe-markings that glow soft blue during thunderstorms. Their eyes are piercing, resembling polished sapphires or topazes that seem to track movement faster than a Hwamin ever could.</p>
+            <p><strong>Bae-Kho's Inheritance.</strong> Your blood carries the power of wind, and the fury of the Celestial Tiger. While other Zan-Ki feed their own desires, you feel a constant draw to protect the weak, and hunt out evil, as to deliver swift unwavering judgement.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Strength score increases by 2, and your Dexterity score increases by 2.</p>
+            <p class="indent"><strong>Heaven-Touched.</strong> Bae-Kho's blood has not only off-set your weakness to radiant damage, but granted you resistance. Conversely, the beast's tragic fate has left you with a weakness towards necrotic damage.</p>
+            <p class="indent"><strong>Faltered-Stride (Level 1).</strong> Just as the White-Fang stalked the God-Eater, your steps make no sound. You gain proficiency in the Stealth skill. If you are already proficient, you gain expertise. Though as a bitter irony, this effect is nullified in the presence of those bearing Kam-Kui's blood, and you have disadvantage on stealth checks against them.</p>
+            <p class="indent"><strong>Wind-Blessed (Level 1).</strong> Wherever you travel, the western-winds grace your step, as they owe eternal loyalty to Bae-Kho. Your walking speed is increased by 10 feet, and you ignore difficult terrain caused by wind or weather. Additionally, any such effect actually increases this bonus to 20 feet while you are afflicted.</p>
+            <p class="indent"><strong>Thunderous-Judgement (Level 5).</strong> You can channel the storm into your momentum to crush your enemies. If you move at least 20 feet consecutively toward a creature and then hit it with a melee weapon attack on the same turn, the attack deals an extra 1d6 per 10 feet Thunder damage. Additionally, the target must succeed on a Strength saving throw (DC 10 + your proficiency bonus + your Strength modifier) or be knocked Prone. Against Magatsu or other evil-aligned creatures, the damage is half-radiant half-thunder.</p>
+            <p class="indent"><strong>Sovereign's Roar (Level 7).</strong> Even in death, the Heavenly Tiger's roar scatters the wicked. As an Action, you let loose an earth-shattering roar. Each creature of your choice within 30 feet of you that can hear you must make a Wisdom saving throw (DC 10 + your proficiency bonus + your Strength modifier). On a failed save, a creature is Frightened of you until the end of your next turn. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can. Additionally, all terrain within 30 feet of you is treated as under the effects of the spell consecration. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
+            <p class="indent"><strong>Flash of the White-Fang (Level ?).</strong> Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="strength" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HEAVEN_TOUCHED" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FALTERED_STRIDE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_WIND_BLESSED" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_THUNDEROUS_JUDGEMENT" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_SOVEREIGNS_ROAR" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FLASH_OF_THE_WHITE_FANG" />
+        </rules>
+    </element>
+
+    <element name="Heaven-Touched" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HEAVEN_TOUCHED">
+        <description>
+            <p>Bae-Kho's blood has not only off-set your weakness to radiant damage, but granted you resistance. Conversely, the beast's tragic fate has left you with a weakness towards necrotic damage.</p>
+        </description>
+        <sheet>
+            <description>You have resistance to radiant damage, and weakness to necrotic damage.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_VULNERABILITY_NECROTIC" />
+        </rules>
+    </element>
+
+    <element name="Faltered-Stride" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_FALTERED_STRIDE">
+        <description>
+            <p>Level 1: Just as the White-Fang stalked the God-Eater, your steps make no sound. You gain proficiency in the Stealth skill. If you are already proficient, you gain expertise. Though as a bitter irony, this effect is nullified in the presence of those bearing Kam-Kui's blood, and you have disadvantage on stealth checks against them.</p>
+        </description>
+        <sheet>
+            <description>You gain proficiency in Stealth. This effect is nullified near those with Kam-Kui's blood, granting disadvantage on Stealth checks against them.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+        </rules>
+    </element>
+
+    <element name="Wind-Blessed" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_WIND_BLESSED">
+        <description>
+            <p>Level 1: Wherever you travel, the western-winds grace your step, as they owe eternal loyalty to Bae-Kho. Your walking speed is increased by 10 feet, and you ignore difficult terrain caused by wind or weather. Additionally, any such effect actually increases this bonus to 20 feet while you are afflicted.</p>
+        </description>
+        <sheet>
+            <description>Your walking speed increases by 10 feet. You ignore difficult terrain caused by wind or weather (if afflicted by such an effect, the bonus speed becomes +20 feet).</description>
+        </sheet>
+        <rules>
+            <stat name="innate speed" value="10" />
+        </rules>
+    </element>
+
+    <element name="Thunderous-Judgement" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_THUNDEROUS_JUDGEMENT">
+        <description>
+            <p>Level 5: You can channel the storm into your momentum to crush your enemies. If you move at least 20 feet consecutively toward a creature and then hit it with a melee weapon attack on the same turn, the attack deals an extra 1d6 per 10 feet Thunder damage. Additionally, the target must succeed on a Strength saving throw (DC 10 + your proficiency bonus + your Strength modifier) or be knocked Prone. Against Magatsu or other evil-aligned creatures, the damage is half-radiant half-thunder.</p>
+        </description>
+        <sheet>
+            <description>If you move 20+ feet straight toward a creature and hit with a melee weapon attack, deal an extra +1d6 Thunder damage per 10 feet moved. Target must make a DC 10 + PB + Str mod Strength save or fall Prone. (Against Magatsu/evil, damage is half radiant/half thunder).</description>
+        </sheet>
+    </element>
+
+    <element name="Sovereign's Roar" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SOVEREIGNS_ROAR">
+        <description>
+            <p>Level 7: Even in death, the Heavenly Tiger's roar scatters the wicked. As an Action, you let loose an earth-shattering roar. Each creature of your choice within 30 feet of you that can hear you must make a Wisdom saving throw (DC 10 + your proficiency bonus + your Strength modifier). On a failed save, a creature is Frightened of you until the end of your next turn. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can. Additionally, all terrain within 30 feet of you is treated as under the effects of the spell consecration. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
+        </description>
+        <sheet action="Action" usage="1/Short Rest">
+            <description>Creatures of choice within 30 feet make a DC 10 + PB + Str mod Wisdom save or are Frightened until the end of your next turn (they must spend turns moving away). Terrain within 30 feet is treated as under the Consecration spell.</description>
+        </sheet>
+    </element>
+
+    <element name="Flash of the White-Fang" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_FLASH_OF_THE_WHITE_FANG">
+        <description>
+            <p>Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>Teleport up to 60 feet adjacent to a creature and make a melee weapon attack with Advantage. On a hit, it is a Critical Hit and incurs Thunderous-Judgement effects as if moving 60 feet (+6d6 Thunder).</description>
+        </sheet>
+    </element>
+	
+	<element name="Gol-Su" type="Sub Race" source="Aurora: Nelvora" id="ID_NELVORA_SUB_RACE_GOL_SU">
+        <supports>Zan-Ki</supports>
+        <description>
+            <p><strong>Ancestry.</strong> Subject of a horrific ritual, your ancestor was forcefully imbued with the essence of Muguro, a terrifying calamity that arose during a bloody war which predates the Shattered Sky. An amalgamation of grief and fractured corpses, the Carrion Lord was more an unliving mountain, than a Magatsu to slay or seal. In a last-ditch effort to preserve Tessayan, your ancestor was, willingly or not, forced to house the heart of this plague. While this made them into a cold-hearted vessel, their sacrifice protected the world from a terrifying fate.</p>
+            <p><strong>Physical Traits.</strong> Descendants bearing Gol-Su are terrifying to behold. Their skin is often chalk-white or corpselike grey, pulling tight against their skeleton. Many grow external bone ridges or spurs along their spine, shoulders, and knuckles. They are cold to the touch, rarely blink, and their breath is always visible, misting as if in the dead of winter regardless of the climate. Usually perceived as blank sockets, those who witness their eyes often fall into a rigid state, as they perceive small fragments of Muguro within those fragile windows.</p>
+            <p><strong>Muguro's Inheritance.</strong> Bearing the curse of your ancestor, while now a mere fragment, is still an immense burden on your degraded form. However, though fragile in appearance, descendants of Gol-Su are amongst the most durable of all Zan-Ki, at least as far as physical ailments go.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Constitution score increases by 2, your Strength score increases by 1, and your Wisdom score increases by 1.</p>
+            <p class="indent"><strong>Living Sepulcher (Level 1).</strong> The degrading physical acclimations of the undead have left you forever changed. You have resistance to Necrotic and Poison damage, and you have Advantage on saving throws against disease and being poisoned. However, this affinity for death makes you brittle to the purity of life; you have an unremovable weakness to Radiant damage, and most healing applied to you restores at only half effectiveness.</p>
+            <p class="indent"><strong>Ossified Armor (Level 1).</strong> Your bones are denser than iron, and in some places, they grow through the skin to form natural plating. When you aren't wearing armor, your AC equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit. Additionally, you cannot be critically hit by non-magical slashing or bludgeoning damage, as your reinforced skeletal structure absorbs the impact. For most armor, you can add your constitution modifier to the AC value.</p>
+            <p class="indent"><strong>Withering Touch (Level 5).</strong> Your very presence accelerates entropy. When you hit a creature with a melee weapon attack, you can channel the rot of Muguro. The attack deals an extra 1d8 Necrotic damage. Additionally, the target must succeed on a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, the creature is inflicted with Necrosis until the end of your next turn. While affected, the creature cannot regain hit points, and if it takes damage, it takes an additional 1d4 Necrotic damage. You can use this feature a number of times equal to your proficiency modifier, and regain the use of it when you finish a Long Rest.</p>
+            <p class="indent"><strong>Aura of the Yellow Spring (Level 7).</strong> You can exhale the miasma of death to choke the life from your surroundings. As an Action, you unleash a 15-foot radius aura choking grey mist, which permeates from your form, that lasts for 1 minute. The area is heavily obscured for creatures other than you. Any creature that starts its turn in the mist takes Necrotic damage equal to your Constitution modifier. Additionally, the ground within the aura is difficult terrain for all creatures other than you, as spectral hands claw at their ankles. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
+            <p class="indent"><strong>Muguro's Vessel (Level ?).</strong> You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own. As an Action, you force all creatures within 30 feet of you to make a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, a creature takes 4d10 Necrotic damage, and you gain Temporary Hit Points equal to half the total damage dealt. On a successful save, they take half damage, and you gain no Temporary Hit Points. If this damage reduces a creature to 0 hit points, their body disintegrates into ash, preventing anything lesser than true resurrection. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="strength" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_LIVING_SEPULCHER" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_OSSIFIED_ARMOR" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_WITHERING_TOUCH" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_AURA_OF_THE_YELLOW_SPRING" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MUGUROS_VESSEL" />
+        </rules>
+    </element>
+
+    <element name="Living Sepulcher" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_LIVING_SEPULCHER">
+        <description>
+            <p>The degrading physical acclimations of the undead have left you forever changed.</p>
+        </description>
+        <sheet>
+            <description>You have resistance to Necrotic and Poison damage, and Advantage on saving throws against disease and being poisoned. You have an unremovable weakness to Radiant damage, and healing restores at half effectiveness.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+
+    <element name="Ossified Armor" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_OSSIFIED_ARMOR">
+        <description>
+            <p>Your bones are denser than iron, and in some places, they grow through the skin to form natural plating.</p>
+        </description>
+        <sheet>
+            <description>Unarmored AC = 10 + Dex mod + Con mod. You can use a shield. You cannot be critically hit by non-magical slashing or bludgeoning. For most armor, add your Con mod to the AC value.</description>
+        </sheet>
+        <rules>
+            <stat name="ac:calculation" value="constitution:modifier" />
+        </rules>
+    </element>
+
+    <element name="Withering Touch" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_WITHERING_TOUCH">
+        <description>
+            <p>Level 5: Your very presence accelerates entropy.</p>
+        </description>
+        <sheet usage="{{proficiency}}/Long Rest">
+            <description>When you hit a creature with a melee weapon attack, deal an extra 1d8 Necrotic damage. Target must succeed on a DC {{dc:constitution}} Constitution saving throw or be inflicted with Necrosis until the end of your next turn (cannot regain HP, taking damage deals an extra 1d4 Necrotic).</description>
+        </sheet>
+    </element>
+
+    <element name="Aura of the Yellow Spring" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_AURA_OF_THE_YELLOW_SPRING">
+        <description>
+            <p>Level 7: You can exhale the miasma of death to choke the life from your surroundings.</p>
+        </description>
+        <sheet action="Action" usage="1/Short Rest">
+            <description>Unleash a 15-foot radius aura of grey mist for 1 minute. Area is heavily obscured for others. Creatures starting their turn in the mist take {{constitution:modifier}} Necrotic damage. Ground is difficult terrain for others.</description>
+        </sheet>
+    </element>
+
+    <element name="Muguro's Vessel" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_MUGUROS_VESSEL">
+        <description>
+            <p>Level ?: You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own.</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>All creatures within 30 feet make a DC {{dc:constitution}} Con save. Fail: 4d10 Necrotic damage, you gain Temp HP equal to half total damage dealt. Success: half damage, no Temp HP. If reduced to 0 HP, target disintegrates to ash.</description>
+        </sheet>
+    </element>
+</elements>

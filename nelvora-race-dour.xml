@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<!-- Dour -->
+	<element name="Dour" type="Race" source="Aurora: Nelvora" id="ID_RACE_DOUR">
+		<description>
+			<p class="flavor">A humanoid group most well known for being the founders of the diminishing Dothoren kingdom, the Dour are most often noted to be a stoic and righteous people. Many of the Dour have already fallen to the great Aetherian Host to the south, that has been ravaging their lands for almost a century now. This has led to a significant dispersion of their people to other countries, as their current situation is quite dire.</p>
+
+			<h4>Appearance</h4>
+			<p>With little to separate their appearance from the other Dour groups, the Dour’s only differentiating feature are the elaborate facial tattoos they receive during their coming of age ceremonies, which are often designed to depict the job, or role they are destined for.</p>
+
+			<h4>VARIETY IN ALL THINGS</h4>
+			<p>Dour are the most adaptable and ambitious people among the common races. They have widely varying tastes, morals, and customs in the many different lands where they have settled. When they settle, though, they stay: they build cities to last for the ages, and great kingdoms that can persist for long centuries. An individual Dour might have a relatively short life span, but a Dour nation or culture preserves traditions with origins far beyond the reach of any single Dour’s memory. They live fully in the present—making them well suited to the adventuring life—but also plan for the future, striving to leave a lasting legacy. Individually and as a group, Dour are adaptable opportunists, and they stay alert to changing political and social dynamics.</p>
+
+			<h4>LASTING INSTITUTIONS</h4>
+			<p>Where a single elf or dwarf might take on the responsibility of guarding a special location or a powerful secret, Dour found sacred orders and institutions for such purposes. While dwarf clans and halfling elders pass on the ancient traditions to each new generation, Dour temples, governments, libraries, and codes of law fix their traditions in the bedrock of history. Dour dream of immortality, but (except for those few who seek undeath or divine ascension to escape death’s clutches) they achieve it by ensuring that they will be remembered when they are gone.</p>
+			<p class="indent">Although some Dour can be xenophobic, in general their societies are inclusive. Dour lands welcome large numbers of nonDour compared to the proportion of Dour who live in nonDour lands.</p>
+
+			<h4>EXEMPLARS OF AMBITION</h4>
+			<p>Dour who seek adventure are the most daring and ambitious members of a daring and ambitious race. They seek to earn glory in the eyes of their fellows by amassing power, wealth, and fame. More than other people, Dour champion causes rather than territories or groups.</p>
+
+			<h4>Dour TRAITS</h4>
+			<p>It’s hard to make generalizations about Dour, but your Dour character has these traits.</p>
+			<p>
+				<span class="feature">Ability Score Increase.</span>Your ability scores each increase by 1.<br />
+				<span class="feature">Age.</span>Dour reach adulthood in their late teens and live less than a century.<br />
+				<!-- (removed in Errata v3.0) -->
+				<!-- <span class="feature">Alignment.</span>Dour tend toward no particular alignment. The best and the worst are found among them.<br /> -->
+				<span class="feature">Size.</span>Dour vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.<br />
+				<span class="feature">Speed.</span>Your base walking speed is 30 feet.<br />
+				<span class="feature">Languages.</span>You can speak, read, and write Common and one extra language of your choice. Dour typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.<br />
+			</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male">Ander, Blath, Bran, Frath, Geth, Lander, Luth, Malcer, Stor, Taman, Urth</set>
+			<set name="names" type="female">Amafrey, Betha, Cefrey, Kethra, Mara, Olga, Silifrey, Westra</set>
+			<set name="names" type="surname">Brightwood, Helder, Hornraven, Lackman, Stormwind, Windrivver</set>
+			<set name="names-format">{{name}} {{surname}}</set>
+			<set name="height" modifier="2d10">4'8"</set>
+			<set name="weight" modifier="2d4">110 lb.</set>
+		</setters>
+		<rules>
+			<stat name="strength" value="1" />
+			<stat name="dexterity" value="1" />
+			<stat name="constitution" value="1" />
+			<stat name="intelligence" value="1" />
+			<stat name="wisdom" value="1" />
+			<stat name="charisma" value="1" />      
+			<grant type="Size" id="ID_SIZE_MEDIUM"/>
+			<stat name="innate speed" value="30" bonus="base"/>
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language" supports="Custom Race Language" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />	  
+			<select type="Language" name="Language (Dour)" supports="Standard||Exotic" />
+		</rules>
+	</element>
+
+</elements>
