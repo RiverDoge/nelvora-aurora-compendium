@@ -8,7 +8,7 @@
 			<file name="nelvora.index" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora.index" />
 		</update>
     </info>
-    </files>
+    <files>
         <file name="nelvora-deities.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-deities.xml" />
         <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-item.xml" />
         <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-races.xml" />
