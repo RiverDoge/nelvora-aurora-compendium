@@ -41,7 +41,7 @@
             <stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
             <stat name="innate speed" value="25" />
             <grant type="Size" id="ID_SIZE_SMALL" />
-            <grant type="Vision" id="ID_VISION_SUPERIOR_DARKVISION" />
+            <grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" />
             <grant type="Language" id="ID_NELVORA_LANGUAGE_RECUANN" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MILD_SUNLIGHT_SENSITIVITY" />
@@ -407,7 +407,7 @@
             <description>You know the Gust cantrip. At 3rd level, you can cast Feather Fall once per long rest. At 5th level, you can cast Levitate (self only) once per long rest. Wisdom is your spellcasting ability.</description>
         </sheet>
         <rules>
-            <grant type="Spell" id="ID_WOTC_XGTE_SPELL_GUS" />
+            <grant type="Spell" id="ID_PHB_SPELL_GUST_OF_WIND" />
         </rules>
     </element>
 
@@ -587,7 +587,7 @@
         </sheet>
         <rules>
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
-            <grant type="Spell" id="ID_SPELL_MESSAGE" />
+            <grant type="Spell" id="ID_PHB_SPELL_MESSAGE" />
         </rules>
     </element>
 
@@ -604,7 +604,7 @@
         </sheet>
         <rules>
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
-            <grant type="Spell" id="ID_SPELL_POISON_SPRAY" />
+            <grant type="Spell" id="ID_PHB_SPELL_POISON_SPRAY" />
         </rules>
     </element>
 
@@ -798,7 +798,7 @@
             <description>You can cast Disguise Self at will. While disguised, you can move through creatures/objects as difficult terrain until your next turn. Ending turn inside object deals 1d10 force damage and ejects you. Cannot pass through walls, dense objects, or iron.</description>
         </sheet>
         <rules>
-            <grant type="Spell" id="ID_SPELL_DISGUISE_SELF" />
+            <grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" />
         </rules>
     </element>
 
