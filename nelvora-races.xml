@@ -407,7 +407,7 @@
             <description>You know the Gust cantrip. At 3rd level, you can cast Feather Fall once per long rest. At 5th level, you can cast Levitate (self only) once per long rest. Wisdom is your spellcasting ability.</description>
         </sheet>
         <rules>
-            <grant type="Spell" id="ID_SPELL_GUST" />
+            <grant type="Spell" id="ID_WOTC_XGTE_SPELL_GUS" />
         </rules>
     </element>
 
