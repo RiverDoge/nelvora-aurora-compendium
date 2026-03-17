@@ -4,7 +4,7 @@
         <name>Nelvora Races</name>
         <description>All custom races for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.0">
+        <update version="1.0.1">
             <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-races.xml" />
         </update>
     </info>
@@ -538,6 +538,16 @@
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARID_RESILIENCE" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_TWINNED_VISAGE" />
             <select type="Racial Trait" name="Active Form" supports="Zereith Form" />
+        </rules><rules>
+            <stat name="constitution" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <grant type="Language" id="ID_NELVORA_LANGUAGE_ZEREITHIAN" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_DESERT_ADAPTATION" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARID_RESILIENCE" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_TWINNED_VISAGE" />
         </rules>
     </element>
 
@@ -574,7 +584,7 @@
     </element>
 
     <element name="Twinned Visage" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_TWINNED_VISAGE">
-		<supports>Klirsaer Hybrid Trait</supports>
+        <supports>Klirsaer Hybrid Trait</supports>
         <description>
             <p>You have a dual nature: a Veiled Form and a Revealed Form.</p>
         </description>
@@ -584,11 +594,13 @@
             Passive: Frightful Reveal. When Veiled Form ends intentionally, hostile creatures within 10ft make DC {{dc:wisdom}} Wis save or are Frightened until your next turn. If ended forcefully, all creatures within 10ft must save. (Advantage on save if they know your true form).
             Cooldown: Cannot re-veil for 10 mins (if intentional) or 1 hour (if forceful).</description>
         </sheet>
+        <rules>
+            <select type="Racial Trait" name="Active Form" supports="Zereith Form" />
+        </rules>
     </element>
 
     <element name="Veiled Form Traits" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_VEILED_FORM_TRAITS">
-		<supports>Klirsaer Hybrid Trait</supports>
-		<supports>Zereith Form</supports>
+        <supports>Zereith Form</supports>
         <description>
             <p>Traits granted while in your Veiled Form.</p>
         </description>
@@ -609,8 +621,7 @@
     </element>
 
     <element name="Revealed Form Traits" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_REVEALED_FORM_TRAITS">
-		<supports>Klirsaer Hybrid Trait</supports>
-		<supports>Zereith Form</supports>
+        <supports>Zereith Form</supports>
         <description>
             <p>Traits granted while your true arachnid features are revealed.</p>
         </description>
