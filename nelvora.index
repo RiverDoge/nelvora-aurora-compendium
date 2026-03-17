@@ -3,12 +3,13 @@
     <info>
         <name>Aurora: Nelvora Compendium</name>
         <description>The complete custom compendium for the Nelvora setting, including custom races, deities, items, and spell adjustments.</description>
-        <author url="">Custom</author>
+        <author url="">RiverDoge</author>
     </info>
-    <update version="1.0.1">
-        <file name="nelvora-deities.xml" url="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/nelvora-deities.xml" />
-        <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/nelvora-item.xml" />
-        <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/nelvora-races.xml" />
-        <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/nelvora-spell-fixes.xml" />
+    <update version="1.0.2">
+        <file name="nelvora.index" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora.index" />
+        <file name="nelvora-deities.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-deities.xml" />
+        <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-item.xml" />
+        <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-races.xml" />
+        <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-spell-fixes.xml" />
     </update>
 </index>
