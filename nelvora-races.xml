@@ -296,7 +296,6 @@
     </element>
 
     <element name="Dexterity Increase" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_KLIRSAER_ASI_DEX">
-		<supports>Klirsaer Hybrid Trait</supports>
         <supports>Klirsaer ASI</supports>
         <description>
             <p>Your Dexterity score increases by 2.</p>
@@ -308,7 +307,6 @@
     </element>
 
     <element name="Constitution Increase" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_KLIRSAER_ASI_CON">
-		<supports>Klirsaer Hybrid Trait</supports>
         <supports>Klirsaer ASI</supports>
         <description>
             <p>Your Constitution score increases by 2.</p>
@@ -320,7 +318,6 @@
     </element>
 
     <element name="Hybrid Inheritance" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HYBRID_INHERITANCE">
-		<supports>Klirsaer Hybrid Trait</supports>
         <description>
             <p>Because Klírsaer are hybrids, you inherit a distinct feature from your secondary race. To represent this versatility, you gain one Feat of your choice.</p>
         </description>
