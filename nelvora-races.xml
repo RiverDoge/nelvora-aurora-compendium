@@ -291,7 +291,7 @@
             <stat name="innate speed:swim" value="30" />
             <grant type="Size" id="ID_SIZE_MEDIUM" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
-            <grant type="Language" id="ID_NELVORA_LANGUAGE_Ikhethagma" />
+            <grant type="Language" id="ID_NELVORA_LANGUAGE_IKHETHAGMA" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_AMPHIBIOUS" />
 
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE" />
@@ -313,7 +313,7 @@
             <p>Your iridescent scales grant you an innate connection to the sea, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
         </description>
         <sheet>
-            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell. Douse (Spell Attack): +{{spellcasting:attack}} to hit, range 30ft. Hit: {{cantrip:dice}}d{{douse:die_size}} + {{douse:bonus}} cold damage. Quenches flames.</description>
+            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell. Douse (Spell Attack): +{{spellcasting:attack}} to hit, range 60 ft. Hit: {{cantrip:dice}}d$douse:die_size$ + $douse:bonus$ cold damage. Quenches flames.</description></description>
         </sheet>
         <rules>
             <grant type="Spell" id="ID_NELVORA_SPELL_DOUSE" />
