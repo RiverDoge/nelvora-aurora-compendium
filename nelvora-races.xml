@@ -3,9 +3,9 @@
     <info>
         <name>Nelvora Races</name>
         <description>All custom races for the Nelvora setting.</description>
-        <author url="">Custom</author>
+        <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
         <update version="1.0.0">
-            <file name="nelvora-races.xml" url="" />
+            <file name="nelvora-races.xml" url="https://github.com/RiverDoge/nelvora-aurora-compendium/blob/main/nelvora-races.xml" />
         </update>
     </info>
 
@@ -143,8 +143,6 @@
             <p>Flame-Scale invaders from a distant land. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
     
     <element name="Skordgur" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_SKORDGUR">
@@ -152,8 +150,6 @@
             <p>Originally citizens of the great Suurtukoz Empire. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Tukavkoz" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_TUKAVKOZ">
@@ -161,8 +157,6 @@
             <p>Descendants of the fallen Suurtukoz Empire and long-lost kin to the Skordgur. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Okhërûl" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_OKHERUL">
@@ -260,8 +254,6 @@
             <p>A human group known most for being the founders of the diminishing Dothoren kingdom. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Ik’héthagma" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_IKHETHAGMA">
@@ -269,8 +261,6 @@
             <p>Believed to be descendant from fish capable of flight, the most sea capable of Nelvora’s races. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Klírsaer" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_KLIRSAER">
@@ -289,13 +279,13 @@
             <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
             <stat name="innate speed" value="30" />
             <grant type="Size" id="ID_SIZE_MEDIUM" />
-            <select type="Racial Trait" name="Ability Score Increase" supports="Klírsaer ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <select type="Racial Trait" name="Ability Score Increase" supports="Klirsaer ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HYBRID_INHERITANCE" />
         </rules>
     </element>
 
     <element name="Dexterity Increase" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_KLIRSAER_ASI_DEX">
-        <supports>Klírsaer ASI</supports>
+        <supports>Klirsaer ASI</supports>
         <description>
             <p>Your Dexterity score increases by 2.</p>
         </description>
@@ -306,7 +296,7 @@
     </element>
 
     <element name="Constitution Increase" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_KLIRSAER_ASI_CON">
-        <supports>Klírsaer ASI</supports>
+        <supports>Klirsaer ASI</supports>
         <description>
             <p>Your Constitution score increases by 2.</p>
         </description>
@@ -407,7 +397,7 @@
             <description>You know the Gust cantrip. At 3rd level, you can cast Feather Fall once per long rest. At 5th level, you can cast Levitate (self only) once per long rest. Wisdom is your spellcasting ability.</description>
         </sheet>
         <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_GUST_OF_WIND" />
+            <grant type="Spell" id="ID_XGTE_SPELL_GUST" />
         </rules>
     </element>
 
@@ -613,8 +603,6 @@
             <p>Isolated residents of the Marrow Woods who have transcended their flesh. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Récuann" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_RECUANN">
@@ -622,8 +610,6 @@
             <p>Majority population of the Kingdom of Fiscathia. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Môille" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_MOILLE">
@@ -631,8 +617,6 @@
             <p>Aberrated Récuanni known as the Servants of the Dark. Mechanics pending.</p>
         </description>
         <sheet display="false" />
-        <rules>
-        </rules>
     </element>
 
     <element name="Zan-Ki" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_ZANKI">
@@ -844,7 +828,7 @@
             <p class="indent"><strong>Wind-Blessed (Level 1).</strong> Wherever you travel, the western-winds grace your step, as they owe eternal loyalty to Bae-Kho. Your walking speed is increased by 10 feet, and you ignore difficult terrain caused by wind or weather. Additionally, any such effect actually increases this bonus to 20 feet while you are afflicted.</p>
             <p class="indent"><strong>Thunderous-Judgement (Level 5).</strong> You can channel the storm into your momentum to crush your enemies. If you move at least 20 feet consecutively toward a creature and then hit it with a melee weapon attack on the same turn, the attack deals an extra 1d6 per 10 feet Thunder damage. Additionally, the target must succeed on a Strength saving throw (DC 10 + your proficiency bonus + your Strength modifier) or be knocked Prone. Against Magatsu or other evil-aligned creatures, the damage is half-radiant half-thunder.</p>
             <p class="indent"><strong>Sovereign's Roar (Level 7).</strong> Even in death, the Heavenly Tiger's roar scatters the wicked. As an Action, you let loose an earth-shattering roar. Each creature of your choice within 30 feet of you that can hear you must make a Wisdom saving throw (DC 10 + your proficiency bonus + your Strength modifier). On a failed save, a creature is Frightened of you until the end of your next turn. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can. Additionally, all terrain within 30 feet of you is treated as under the effects of the spell consecration. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
-            <p class="indent"><strong>Flash of the White-Fang (Level ?).</strong> Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+            <p class="indent"><strong>Flash of the White-Fang (?).</strong> Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -934,7 +918,7 @@
             <p class="indent"><strong>Ossified Armor (Level 1).</strong> Your bones are denser than iron, and in some places, they grow through the skin to form natural plating. When you aren't wearing armor, your AC equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit. Additionally, you cannot be critically hit by non-magical slashing or bludgeoning damage, as your reinforced skeletal structure absorbs the impact. For most armor, you can add your constitution modifier to the AC value.</p>
             <p class="indent"><strong>Withering Touch (Level 5).</strong> Your very presence accelerates entropy. When you hit a creature with a melee weapon attack, you can channel the rot of Muguro. The attack deals an extra 1d8 Necrotic damage. Additionally, the target must succeed on a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, the creature is inflicted with Necrosis until the end of your next turn. While affected, the creature cannot regain hit points, and if it takes damage, it takes an additional 1d4 Necrotic damage. You can use this feature a number of times equal to your proficiency modifier, and regain the use of it when you finish a Long Rest.</p>
             <p class="indent"><strong>Aura of the Yellow Spring (Level 7).</strong> You can exhale the miasma of death to choke the life from your surroundings. As an Action, you unleash a 15-foot radius aura choking grey mist, which permeates from your form, that lasts for 1 minute. The area is heavily obscured for creatures other than you. Any creature that starts its turn in the mist takes Necrotic damage equal to your Constitution modifier. Additionally, the ground within the aura is difficult terrain for all creatures other than you, as spectral hands claw at their ankles. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
-            <p class="indent"><strong>Muguro's Vessel (Level ?).</strong> You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own. As an Action, you force all creatures within 30 feet of you to make a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, a creature takes 4d10 Necrotic damage, and you gain Temporary Hit Points equal to half the total damage dealt. On a successful save, they take half damage, and you gain no Temporary Hit Points. If this damage reduces a creature to 0 hit points, their body disintegrates into ash, preventing anything lesser than true resurrection. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+            <p class="indent"><strong>Muguro's Vessel (?).</strong> You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own. As an Action, you force all creatures within 30 feet of you to make a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, a creature takes 4d10 Necrotic damage, and you gain Temporary Hit Points equal to half the total damage dealt. On a successful save, they take half damage, and you gain no Temporary Hit Points. If this damage reduces a creature to 0 hit points, their body disintegrates into ash, preventing anything lesser than true resurrection. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -994,7 +978,7 @@
 
     <element name="Muguro's Vessel" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_MUGUROS_VESSEL">
         <description>
-            <p>Level ?: You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own.</p>
+            <p>?: You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>All creatures within 30 feet make a DC {{dc:constitution}} Con save. Fail: 4d10 Necrotic damage, you gain Temp HP equal to half total damage dealt. Success: half damage, no Temp HP. If reduced to 0 HP, target disintegrates to ash.</description>
