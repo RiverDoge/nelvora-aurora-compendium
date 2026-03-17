@@ -954,7 +954,11 @@
             <description>Unarmored AC = 10 + Dex mod + Con mod. You can use a shield. You cannot be critically hit by non-magical slashing or bludgeoning. For most armor, add your Con mod to the AC value.</description>
         </sheet>
         <rules>
-            <stat name="ac:calculation" value="constitution:modifier" />
+            <rules>
+				<stat name="ac:base" value="10" />
+				<stat name="ac:calculation" value="dexterity:modifier" />
+				<stat name="ac:calculation" value="constitution:modifier" />
+			</rules>
         </rules>
     </element>
 
