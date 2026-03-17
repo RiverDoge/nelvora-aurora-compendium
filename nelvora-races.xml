@@ -312,8 +312,8 @@
         <description>
             <p>Your iridescent scales grant you an innate connection to the sea, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
         </description>
-        <sheet>
-            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell. Douse (Spell Attack): +{{spellcasting:attack}} to hit, range 60 ft. Hit: {{cantrip:dice}}d$douse:die_size$ + $douse:bonus$ cold damage. Quenches flames.</description>
+		<sheet action="Action">
+            <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell. Douse (Spell Attack): +{{spellcasting:attack}} to hit, range 60 ft. Hit: {{cantrip:dice}}d{{$stat:douse:die_size}} + {{$stat:douse:bonus}} cold damage. Quenches flames.</description>
         </sheet>
         <rules>
             <grant type="Spell" id="ID_NELVORA_SPELL_DOUSE" />
@@ -360,7 +360,7 @@
             <p>Blessed by the Goddess of Hope, your scales reflect a prismatic array of power. Marked for an extraordinary destiny, your shimmering, rainbow-hued form is revered as a living embodiment of the divine.</p>
         </description>
         <rules>
-            <select type="Racial Trait" name="Prismatic Scales" supports="Ikhethagma Scale" number="4" />
+            <select type="Racial Trait" name="Prismatic Scales" supports="Ikhethagma Scale" number="8" optional="true" />
         </rules>
     </element>
 
