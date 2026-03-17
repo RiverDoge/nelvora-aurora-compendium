@@ -4,7 +4,7 @@
         <name>Nelvora Races</name>
         <description>All custom races for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.1">
+        <update version="1.0.2">
             <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-races.xml" />
         </update>
     </info>
@@ -298,6 +298,15 @@
         </rules>
     </element>
 
+	<element name="Ik’héthagma (Language)" type="Language" source="Aurora: Nelvora" id="ID_NELVORA_LANGUAGE_IKHETHAGMA">
+        <description>
+            <p>The native tongue of the Ik’héthagma, characterized by fluid, melodic vowels and clicking consonants that mimic the sounds of the ocean.</p>
+        </description>
+        <setters>
+            <set name="speakers">Ik’héthagma</set>
+        </setters>
+    </element>
+
     <element name="Amphibious" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_AMPHIBIOUS">
         <description>
             <p>You can breathe air and water.</p>
@@ -360,7 +369,9 @@
             <p>Blessed by the Goddess of Hope, your scales reflect a prismatic array of power. Marked for an extraordinary destiny, your shimmering, rainbow-hued form is revered as a living embodiment of the divine.</p>
         </description>
         <rules>
-            <select type="Racial Trait" name="Prismatic Scales" supports="Ikhethagma Scale" number="8" optional="true" />
+            <select type="Racial Trait" name="Primary Scale" supports="Ikhethagma Scale" number="4" />
+            
+            <select type="Racial Trait" name="Additional Prismatic Scales" supports="Ikhethagma Scale" number="8" optional="true" />
         </rules>
     </element>
 
@@ -393,8 +404,7 @@
             <p><strong>Augment (Douse):</strong> Your douse ability has healing properties now and can potentially remove the poisoned status. Additionally, you can cause plants and other life to grow more quickly and vigorously.</p>
         </description>
         <sheet action="Action">
-            <description>You have poison resistance. 
-            Douse (Emerald Augment): Instead of dealing damage, you can cleanse the poisoned condition, and accelerate plant growth.</description>
+            <description>You have poison resistance. Douse (Emerald Augment): Instead of dealing damage, you can cleanse the poisoned condition, and accelerate plant growth.</description>
         </sheet>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
