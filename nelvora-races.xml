@@ -5,7 +5,7 @@
         <description>All custom races for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
         <update version="1.0.0">
-            <file name="nelvora-races.xml" url="https://github.com/RiverDoge/nelvora-aurora-compendium/blob/main/nelvora-races.xml" />
+            <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-races.xml" />
         </update>
     </info>
 
@@ -954,11 +954,9 @@
             <description>Unarmored AC = 10 + Dex mod + Con mod. You can use a shield. You cannot be critically hit by non-magical slashing or bludgeoning. For most armor, add your Con mod to the AC value.</description>
         </sheet>
         <rules>
-            <rules>
-				<stat name="ac:base" value="10" />
-				<stat name="ac:calculation" value="dexterity:modifier" />
-				<stat name="ac:calculation" value="constitution:modifier" />
-			</rules>
+            <stat name="ac:base" value="10" />
+            <stat name="ac:calculation" value="dexterity:modifier" />
+            <stat name="ac:calculation" value="constitution:modifier" />
         </rules>
     </element>
 
