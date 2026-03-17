@@ -4,7 +4,7 @@
         <name>Nelvora Spell Fixes</name>
         <description>Custom Spells for the Nelvora setting</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.0">
+        <update version="1.0.1">
             <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-spell-fixes.xml" />
         </update>
     </info>
