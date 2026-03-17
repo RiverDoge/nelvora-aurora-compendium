@@ -42,7 +42,7 @@
             <stat name="innate speed" value="25" />
             <grant type="Size" id="ID_SIZE_SMALL" />
             <grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
-            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
             <grant type="Language" id="ID_NELVORA_LANGUAGE_RECUANN" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MILD_SUNLIGHT_SENSITIVITY" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FATE_OF_THE_LOST" />
@@ -107,7 +107,7 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Proficiency" name="Humble Stock" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS | ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES | ID_PROFICIENCY_SKILL_PERSUASION" number="2" />
+            <select type="Proficiency" name="Humble Stock" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS|ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES|ID_PROFICIENCY_SKILL_PERSUASION" number="2" />
         </rules>
     </element>
 
@@ -191,7 +191,7 @@
             <stat name="charisma" value="3" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
             <stat name="innate speed" value="30" />
             <grant type="Size" id="ID_SIZE_MEDIUM" />
-            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
             <grant type="Language" id="ID_NELVORA_LANGUAGE_OKHERUL" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARCANE_SUSTENANCE" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MAGICAL_SIPHON" />
@@ -522,7 +522,7 @@
             <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
             <stat name="innate speed" value="30" />
             <grant type="Size" id="ID_SIZE_MEDIUM" />
-            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
             <grant type="Language" id="ID_NELVORA_LANGUAGE_ZEREITHIAN" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_DESERT_ADAPTATION" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ARID_RESILIENCE" />
@@ -819,7 +819,7 @@
             <description>Gain proficiency/expertise in Deception or Persuasion. Cast Mirror Image 1/long rest. Bonus action: Send Mirror Image 10ft away. If it provokes opportunity attack, use Illusory Strike on target. If attack misses, teleport 10ft for free. If Illusion survives, you can teleport to its location (duplicate expended).</description>
         </sheet>
         <rules>
-            <select type="Proficiency" name="Queen’s Veil" supports="ID_PROFICIENCY_SKILL_DECEPTION | ID_PROFICIENCY_SKILL_PERSUASION" />
+            <select type="Proficiency" name="Queen’s Veil" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_PERSUASION" />
         </rules>
     </element>
 
