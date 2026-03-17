@@ -3,7 +3,10 @@
 	<info>
         <name>Nelvora Items</name>
         <description>Custom items for the Nelvora setting.</description>
-        <author>RiverDoge</author>
+        <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
+        <update version="1.0.0">
+            <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-item.xml" />
+        </update>
     </info>
 
 	<!-- light armor -->

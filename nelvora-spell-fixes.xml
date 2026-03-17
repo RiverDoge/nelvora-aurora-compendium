@@ -4,6 +4,9 @@
         <name>Nelvora Spell Fixes</name>
         <description>Custom Spells for the Nelvora setting</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
+        <update version="1.0.0">
+            <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-spell-fixes.xml" />
+        </update>
     </info>
 
     <element name="Zealous Smite" type="Spell" source="Aurora: Nelvora" id="ID_NELVORA_SPELL_ZEALOUS_SMITE">

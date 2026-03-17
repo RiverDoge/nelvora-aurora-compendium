@@ -3,7 +3,10 @@
 	<info>
         <name>Nelvora Deities</name>
         <description>Custom deities for the Nelvora setting.</description>
-        <author>RiverDoge</author>
+        <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
+        <update version="1.0.0">
+            <file name="nelvora-deities.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-deities.xml" />
+        </update>
     </info>
 
 	<element name="Caeplithias" type="Deity" source="Aurora: Nelvora" id="ID_NELVORA_DEITY_CAEPLITHIAS">

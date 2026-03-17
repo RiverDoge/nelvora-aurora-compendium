@@ -4,6 +4,9 @@
         <name>Nelvora Races</name>
         <description>All custom races for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
+        <update version="1.0.0">
+            <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora-races.xml" />
+        </update>
     </info>
 
     <element name="Gaerant" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_GAERANT">
