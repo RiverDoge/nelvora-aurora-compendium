@@ -4,7 +4,7 @@
         <name>Aurora: Nelvora Compendium</name>
         <description>The incomplete custom compendium for the Nelvora setting, including custom races, deities, items, and spell adjustments.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-		<update version="0.0.5">
+		<update version="0.0.6">
 			<file name="nelvora.index" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/refs/heads/main/nelvora.index" />
 		</update>
     </info>
