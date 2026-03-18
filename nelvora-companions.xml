@@ -8,18 +8,6 @@
 			<file name="nelvora-companions.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-companions.xml" />
 		</update>
 	</info>
-
-	<element name="Magatsu Binder (Playtest)" type="Feat" source="Aurora: Nelvora" id="ID_NELVORA_FEAT_MAGATSU_BINDER_PLAYTEST">
-		<description>
-			<p>A temporary testing feat to grant access to Magatsu companions without needing the full Utsuwa class loaded.</p>
-			<p class="indent">You have forged a deep spiritual connection with multiple phantoms. You may select two Magatsu to bind to your Fuin-Sho.</p>
-		</description>
-		<sheet display="false" />
-		<rules>
-			<select type="Companion" name="Magatsu (First)" supports="Magatsu" number="1" />
-			<select type="Companion" name="Magatsu (Second)" supports="Magatsu" number="1" />
-		</rules>
-	</element>
 	
 	<element name="Mizu-Kagami (The Scalded Mirror)" type="Companion" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_MIZU_KAGAMI">
 		<supports>Magatsu</supports>

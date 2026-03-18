@@ -8,6 +8,22 @@
             <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-item.xml" />
         </update>
     </info>
+	
+	<!-- Testing Stuff -->
+	<element name="Fuin-Sho" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_FUIN_SHO">
+		<description>
+			<p>A specialized vessel utilized by the Utsuwa. This particular Fuin-Sho has the capacity to bind and hold up to three distinct Magatsu.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="rarity">Rare</set>
+		</setters>
+		<rules>
+			<select type="Companion" name="Magatsu (First)" supports="Magatsu" />
+			<select type="Companion" name="Magatsu (Second)" supports="Magatsu" />
+			<select type="Companion" name="Magatsu (Third)" supports="Magatsu" />
+		</rules>
+	</element>
 
 	<!-- Rings -->
 	<element name="Signet of the Phantom Ember" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_SIGNET_OF_THE_PHANTOM_EMBER">
