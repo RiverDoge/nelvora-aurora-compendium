@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Nelvora Companions</name>
+		<description>Custom companions, familiars, and Magatsu for the Nelvora setting.</description>
+		<author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
+		<update version="1.0.0">
+			<file name="nelvora-companions.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-companions.xml" />
+		</update>
+	</info>
+
+	<element name="Magatsu Binder (Playtest)" type="Feat" source="Aurora: Nelvora" id="ID_NELVORA_FEAT_MAGATSU_BINDER_PLAYTEST">
+		<description>
+			<p>A temporary testing feat to grant access to Magatsu companions without needing the full Utsuwa class loaded.</p>
+			<p class="indent">You have forged a deep spiritual connection with multiple phantoms. You may select two Magatsu to bind to your Fuin-Sho.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Companion" name="Magatsu (First)" supports="Magatsu" number="1" />
+			<select type="Companion" name="Magatsu (Second)" supports="Magatsu" number="1" />
+		</rules>
+	</element>
+	
+	<element name="Mizu-Kagami (The Scalded Mirror)" type="Companion" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_MIZU_KAGAMI">
+		<supports>Magatsu</supports>
+		<description>
+			<p>Mizu-Kagami is a Magatsu uniquely bound to an Utsuwa. Also known as the Steam Princess, she draws power from scalding moisture to execute devastating, evasive attacks.</p>
+		</description>
+		<setters>
+			<set name="size">Small</set>
+			<set name="type">Yuge-Hime (SteamPrincess)</set>
+			<set name="alignment">Any alignment</set>
+			<set name="ac">12 + PB</set>
+			<set name="hp">39</set>
+			<set name="speed">10 ft., fly 40 ft.</set>
+			<set name="strength">12</set>
+			<set name="dexterity">18</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">10</set>
+			<set name="wisdom">10</set>
+			<set name="charisma">10</set>
+			<set name="savingThrows">Wis +3, Cha +3</set>
+			<set name="skills">Acrobatics +7</set>
+			<set name="damageVulnerabilities">cold, thunder</set>
+			<set name="damageResistances">fire, necrotic</set>
+			<set name="damageImmunities">poison; bludgeoning, piercing, and slashing from nonmagical attacks</set>
+			<set name="conditionImmunities">blinded, charmed, grappled, paralyzed, petrified, poisoned, unconscious</set>
+			<set name="senses">darkvision 120 ft., passive Perception 10</set>
+			<set name="languages">Understands ???? and Utsuwa's Languages</set>
+			<set name="challenge">6</set>
+			<set name="traits">ID_NELVORA_COMPANION_TRAIT_MIZU_KAGAMI_MAGATSU_SPELLS,ID_NELVORA_COMPANION_TRAIT_MIZU_KAGAMI_STEAM_PRINCESS,ID_NELVORA_COMPANION_TRAIT_MIZU_KAGAMI_MIZUS_ENERVATION</set>
+			<set name="actions">ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_MULTIATTACK,ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_REFRACTING_FROST_NEEDLES,ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_THOUSAND_PETAL_LOTUS_BLOOM,ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_DROWNING_EMBRACE,ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_VAPOR_STEP</set>
+			<set name="reactions">ID_NELVORA_COMPANION_REACTION_MIZU_KAGAMI_MISTBORNE_REPRISE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="12" />
+			<stat name="companion:ac" value="companion:proficiency" />
+			<stat name="companion:hp:max" value="39" bonus="base" />
+			<stat name="companion:speed" value="10" bonus="base" />
+			<stat name="companion:speed:fly" value="40" bonus="base" />
+			<stat name="companion:wisdom:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:charisma:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:acrobatics:proficiency" value="companion:proficiency" bonus="base" />
+		</rules>
+	</element>
+	<element name="Magatsu Spells" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_MIZU_KAGAMI_MAGATSU_SPELLS">
+		<description>
+			<p>The Mizu-Kagami (The Scalded Mirror) provides their Utsuwa with the following spells:</p>
+			<ul>
+				<li><strong>Cantrips:</strong> <em>Frostbite</em>, <em>Ray of Frost</em></li>
+				<li><strong>1st level:</strong> <em>Sleep</em></li>
+				<li><strong>2nd level:</strong> <em>Heartstop</em></li>
+				<li><strong>3rd level:</strong> <em>Boil</em></li>
+				<li><strong>4th level:</strong> <em>Steam Blast</em></li>
+				<li><strong>5th level:</strong> <em>Prismatic Ray</em></li>
+			</ul>
+		</description>
+		<sheet>
+			<description>The Mizu-Kagami provides their Utsuwa with the following spells: Cantrips (Frostbite, Ray of Frost), 1st (Sleep), 2nd (Heartstop), 3rd (Boil), 4th (Steam Blast), 5th (Prismatic Ray).</description>
+		</sheet>
+	</element>
+	
+	<element name="Steam Princess" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_MIZU_KAGAMI_STEAM_PRINCESS">
+		<description>
+			<p>Mizu-Kagami has an immense affinity for drawing power from steam, or other water-adjacent forms of heat. When immersed in such an element, her abilities gain additional strength, and she gains the ability to use "Thousand-Petal Lotus-Bloom".</p>
+		</description>
+		<sheet>
+			<description>When immersed in steam or water-adjacent heat, Mizu's abilities gain additional strength, and she unlocks the Thousand-Petal Lotus-Bloom action.</description>
+		</sheet>
+	</element>
+	
+	<element name="Mizu's Enervation" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_MIZU_KAGAMI_MIZUS_ENERVATION">
+		<description>
+			<p>Your attacks are imbued with the soul-sapping strength of a Yuge-Hime. You gain 1d4 cold damage to your attacks. Additionally, if your attack lands, you can force your opponent to make a Wisdom saving throw, or have their very life essence absorbed into your Fuin-Sho. On a failure, the enemy takes 1d10 cold damage + your Wisdom modifier, and you heal for that same amount. This ability can be used once per short rest, or once per-turn if Mizu is manifested (which upon dismissal, counts as your one use).</p>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>Attacks deal +1d4 cold damage. On a hit, force a Wis save. On failure: target takes 1d10 + Wis Mod cold damage, and you heal for that amount. Usable 1/short rest, or 1/turn while Mizu is manifested (dismissing her consumes the rest use).</description>
+		</sheet>
+	</element>
+
+	<element name="Multiattack" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_MULTIATTACK">
+		<description>
+			<p>Mizu can make two Refracting-Frost Needle attacks per turn. If Steam Princess is active, this second attack may be a "Thousand-Petal Lotus-Bloom" attack.</p>
+		</description>
+		<sheet>
+			<description>Mizu makes two Refracting-Frost Needle attacks. If Steam Princess is active, the second attack can be Thousand-Petal Lotus-Bloom.</description>
+		</sheet>
+	</element>
+	
+	<element name="Refracting-Frost Needles" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_REFRACTING_FROST_NEEDLES">
+		<description>
+			<p><em>Ranged Spell Attack:</em> Utsuwa's Spell Attack to hit, range 60 ft., one target. <em>Hit:</em> 2d8 cold damage. If Steam Princess is active, this attack attempts to refract into an additional target. Make another Spell Attack roll, with advantage, towards any target within 30 ft of the original. This attack deals 1d8 cold damage.</p>
+		</description>
+		<sheet>
+			<description>Ranged Spell Attack: Utsuwa's Spell Attack to hit, range 60 ft., one target. Hit: 2d8 cold damage. If Steam Princess is active, refract to an additional target within 30 ft of the original (make a new attack roll with advantage). Hit: 1d8 cold damage.</description>
+		</sheet>
+	</element>
+	
+	<element name="Thousand-Petal Lotus-Bloom (Recharge 6)" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_THOUSAND_PETAL_LOTUS_BLOOM">
+		<description>
+			<p>While fully immersed in steam, Mizu-Kagami can compress the steam into a superheated Lotus, and explode it around her OR she can attempt to fling the Lotus at an enemy. If Mizu explodes the flower on herself, it deals 4d12 fire damage to all enemies within 15 ft, and 2d12 fire damage to herself. This attack ignores resistances to fire.</p>
+			<p class="indent">If Mizu attempts to fling the Lotus at a group of enemies, make a <em>Ranged Spell Attack</em> with her Utsuwa's Spell Attack to hit. This attack has a range of 30ft, and detonates with a range of 10 ft around the target, dealing 3d12 fire damage, and 1d8 cold damage to Mizu.</p>
+			<p class="indent">Once this action is used, Mizu is considered no longer immersed in steam until the end of her next turn. If the steam was a semi-permanent source (natural geyser or hotspring), the steam returns. Otherwise any temporary or conjured source is exhausted by this attack.</p>
+		</description>
+		<sheet alt="Thousand-Petal Lotus-Bloom" usage="Recharge 6">
+			<description>Requires Steam Princess. Explode on self: 4d12 fire damage to enemies within 15 ft, 2d12 fire damage to Mizu (ignores fire resistance). OR Fling: Ranged Spell Attack (30 ft range, 10 ft blast radius). Hit: 3d12 fire damage, 1d8 cold damage to Mizu. Exhausts the steam source temporarily or permanently.</description>
+		</sheet>
+	</element>
+	
+	<element name="Drowning Embrace (Recharge 5-6)" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_DROWNING_EMBRACE">
+		<description>
+			<p><em>Melee Weapon Attack:</em> Utsuwa's Spell Attack to hit, reach 5 ft., one target of small or medium size. <em>Hit:</em> 1d6 fire, 1d6 cold damage, and the target is grappled, and is subject to the effects of Vapor Step, if Mizu chooses. Additionally, the target is temporarily stripped of any non-permanent resistance to fire and cold damage, gains a weakness to lightning damage, and counts as underwater for the duration of the grapple.</p>
+		</description>
+		<sheet alt="Drowning Embrace" usage="Recharge 5-6">
+			<description>Melee Weapon Attack: Utsuwa's Spell Attack to hit, reach 5 ft., one Small/Medium target. Hit: 1d6 fire + 1d6 cold damage. Target is grappled, subject to Vapor Step teleportation, loses non-permanent fire/cold resistance, gains lightning vulnerability, and counts as underwater.</description>
+		</sheet>
+	</element>
+
+	<element name="Vapor-Step (Bonus Action)" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_MIZU_KAGAMI_VAPOR_STEP">
+		<description>
+			<p>Mizu collapses into a cloud of mist and teleports up to 40 feet to an unoccupied space. Additionally, she creates a 10 ft cloud of fog in the space she arrives in, until the start of her next turn. This counts as a heavily obscured space. If the space she teleports onto is hot enough to be considered hazardous to enter (causes damage or burns, think lava or otherwise), this fog becomes steam, and can enable the ability Steam Princess until her next turn. Additionally, if an enemy is currently under the effects of "Drowning Embrace", Mizu can teleport them with her.</p>
+		</description>
+		<sheet alt="Vapor-Step" action="Bonus Action" usage="Recharge 3-6">
+			<description>Teleport up to 40 ft. Leaves a 10 ft cloud of heavily obscured fog where she lands until her next turn. If the landing space is hot/hazardous, the fog becomes steam and activates Steam Princess. Can teleport a grappled enemy from Drowning Embrace.</description>
+		</sheet>
+	</element>
+
+	<element name="Mistborne Reprise (Recharge 6)" type="Companion Reaction" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_REACTION_MIZU_KAGAMI_MISTBORNE_REPRISE">
+		<description>
+			<p>While Mizu is manifested, the moisture on your blade is but another mirror for her to strike through. Upon landing an attack on an enemy, Mizu can manifest at the point of your blade, and make a Drowning Embrace action on the enemy you successfully struck. Immediately upon resolving this action, Mizu Vapor-Steps back to her previous location, no matter the distance, and brings the target with her. If the enemy is too large to be affected by the embrace, Mizu deals 1d12 fire damage, and 1d12 cold damage to them, but they are not teleported with her.</p>
+		</description>
+		<sheet alt="Mistborne Reprise" action="Reaction" usage="Recharge 6">
+			<description>Trigger: You land an attack while Mizu is manifested. Mizu appears at your blade and uses Drowning Embrace on the target. She immediately Vapor-Steps back to her original location, dragging the target. If target is Large+, they take 1d12 fire + 1d12 cold instead of being embraced/teleported.</description>
+		</sheet>
+	</element>
+</elements>

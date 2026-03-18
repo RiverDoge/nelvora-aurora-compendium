@@ -47,6 +47,7 @@
 			<set name="slot">ring</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
+			<set name="charges">3</set>
 		</setters>
 	</element>
 
@@ -107,9 +108,9 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
-			<set name="slot">onehand</set>
 			<set name="attunement" addition="by a bard">true</set>
 			<set name="rarity">Very Rare</set>
+			<set name="charges">5</set>
 		</setters>
 		<rules>
 			<stat name="spellcasting:attack" value="2" />
@@ -150,6 +151,7 @@
 			<set name="slot">neck</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
+			<set name="charges">6</set>
 		</setters>
 	</element>
 	
@@ -243,7 +245,6 @@
 
 	<!-- light armor -->
 	<element name="Chiton of Caeplithias" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_CHITON_OF_CAEPLITHIAS">
-		<supports>ID_INTERNAL_ARMOR_GROUP_LIGHT</supports>
 		<description>
 			<p>Elegant chiton imbued with the power of Caeplithias. When under the Wet effect, gains increased durability.</p>
 			<p class="indent">While wearing this chiton, your base AC becomes 15 + your Dex Modifier. While wet this is increased to a base AC of 16 + your dex modifier.</p>
@@ -263,10 +264,28 @@
 			<stat name="ac:armored:armor" value="15" />
 		</rules>
 	</element>
+
+	<element name="Empryean Squid Skin" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_EMPRYEAN_SQUID_SKIN">
+		<description>
+			<p>This armor is fashioned from a base of Chimeric Hide, a leather harvested from experimental monstrosities that shifts its texture and color to match the environment. It is reinforced with Marrow-Steel bracers and studding, a white-veined alloy of pulverized bone and steel that is shockingly lightweight and porous. The Marrow-Steel components are etched with the Rune of the Unyielding Core, which hums faintly, dormant.</p>
+			<p class="indent"><strong>Chimeric Adaptation.</strong> While wearing this armor, you have advantage on Dexterity (Stealth) checks made to hide in environments that match the hide's current texture or color. Roll a 1d10; on an even number your armor matches the terrain, on an odd it instead contrasts, giving you disadvantage.</p>
+			<p class="indent"><strong>Marrow-Steel Resonance.</strong> The lightweight nature of the Marrow-Steel allows this armor to be worn without a Strength requirement, and it does not impose disadvantage on Dexterity (Stealth) checks despite its metallic studding. Additionally, it provides a +1 bonus to AC, and an additional +1 AC if you are surrounded entirely by bones.</p>
+			<p class="indent"><strong>Khar-gratt (Dormant).</strong> ????</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="type" addition="studded leather">Armor</set>
+			<set name="armor">Light</set>
+			<set name="armorClass">12 + Dex modifier</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+		<rules>
+			<stat name="ac:magic" value="1" />
+		</rules>
+	</element>
 	
 	<!-- Medium Armor -->
 	<element name="Husk of the Storm-Eater" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_HUSK_OF_THE_STORM_EATER">
-		<supports>ID_INTERNAL_ARMOR_GROUP_MEDIUM</supports>
 		<description>
 			<p>This suit of scale mail is a heavy, imposing piece of craftsmanship that radiates a quiet menace. The upper breastplate is forged from a seamless, dark alloy where the Tempest-Vein ingot has fully integrated the steel of the consumed gauntlets. The surface is smooth but unnaturally cold, possessing a sheen that shifts between gunmetal grey and the deep blue of a bruised sky. It smells faintly of ozone and charred meat, the only lingering sign of the dragon-breath forge that birthed it.</p>
 			<p>The lower faulds are constructed from Scánarth scales, expertly cut and grafted into a flexible skirt of interlocking plates. They are laid with precision, creating a near-impenetrable barrier that moves fluidly with the wearer. Deliberate channels have been carved across the chest and shoulders, filled with dull Sirronium to form the shape of a "???? (TBD)" rune. These lines are clean and geometric, currently lying dormant and grey, waiting for the spark that will ignite their true purpose.</p>
@@ -292,7 +311,6 @@
 		</rules>
 	</element>
 	<element name="The Forgemaster's Legacy" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_FORGEMASTERS_LEGACY">
-		<supports>ID_INTERNAL_ARMOR_GROUP_MEDIUM</supports>
 		<description>
 			<p>This masterwork cuirass is a paradox of grim materials and profound care. It is composed of the slate-grey, stone-like chitinous plates of a Skordgur, yet it has been painstakingly shaped and articulated to fit a human frame, an act of incredible skill and empathy. The armor feels immensely solid and protective, a silent testament to the Forgemaster who sacrificed his own form to create it for his apprentice.</p>
 			<p>Etched into the surface are channels and mounting points, a clear framework designed to house arcane runes. While most are currently empty, a single, foundational Undorathi rune is inscribed upon the breastplate. Its groove is filled with a strange, unknown substance that pulses with a faint, contained light. This armor is not a finished masterpiece, but rather a perfect foundation, waiting for a new master to complete the work.</p>
@@ -313,6 +331,7 @@
 			<set name="attunement" addition="by Kadmon Keter">true</set>
 			<set name="rarity">PLACEHOLDER</set>
 			<set name="enhancement">1</set>
+			<set name="charges">3</set>
 		</setters>
 		<rules>
 			<stat name="ac:armored:armor" value="15" />
@@ -320,7 +339,6 @@
 	</element>
 	
 	<element name="Breastplate of the Forgotten King" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_BREASTPLATE_OF_THE_FORGOTTEN_KING">
-		<supports>ID_INTERNAL_ARMOR_GROUP_MEDIUM</supports>
 		<description>
 			<p><strong>Imbued Plate.</strong> You have a +1 bonus to AC while wearing this armor.</p>
 			<p class="indent"><strong>Renowned Presence.</strong> While wearing this armor, you have advantage on Charisma checks when engaged with individuals knowledgeable on the "Forgotten King" (You need to discover who this is).</p>
@@ -347,7 +365,6 @@
 	
 	<!-- one-handed weapons -->
 	<element name="The Sky-Flash Javelin" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_SKY_FLASH_JAVELIN">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_JAVELIN</supports>
 		<description>
 			<p>A javelin crackling with contained storm energy. It counts as a magical weapon for any attack purposes.</p>
 			<p class="indent"><strong>Stats.</strong> You gain a +2 bonus to attack rolls made with this magic weapon. It deals Lightning damage instead of piercing or any other damage type added to the attack. Immediately after you make a ranged attack with this javelin, it vanishes in a flash of lightning and reappears in your hand.</p>
@@ -358,7 +375,6 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="2">2 lb.</set>
-			<set name="slot">onehand</set>
 			<set name="type" addition="javelin">Weapon</set>
 			<set name="weapon">Javelin</set>
 			<set name="attunement">true</set>
@@ -370,7 +386,6 @@
 	</element>
 	
 	<element name="Heran's Axe" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_HERANS_AXE">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_BATTLEAXE</supports>
 		<description>
 			<p>Won as a reward in an arena by Aurea, this weapon was left behind in the Abomination lair.</p>
 			<p class="indent"><strong>Cursed.</strong> Upon death, your body will guard this weapon, and force whoever wishes to claim it from you to succeed in a difficult trial. The trial will vary based upon how you die, and the condition your body is in.</p>
@@ -380,11 +395,9 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="4">4 lb.</set>
-			<set name="slot">onehand</set>
 			<set name="type" addition="battleaxe">Weapon</set>
 			<set name="weapon">Battleaxe</set>
 			<set name="damage" type="slashing">1d10</set>
-			<set name="properties">Versatile (1d12)</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
 			<set name="enhancement">2</set>
@@ -393,8 +406,8 @@
 			<stat name="weapon:attack" value="2" />
 		</rules>
 	</element>
+
 	<element name="Providence" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_PROVIDENCE">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_LONGSWORD</supports>
 		<description>
 			<p>Also known as "Mother's Sword", this weapon seems to gain power from each plight you slay, perhaps requiring more than one kill to fully awaken its potential. It can be used as a spellcasting focus.</p>
 			<p class="indent"><strong>Stats.</strong> This weapon's base damage is 1d10 Piercing damage. On a hit, it deals an additional 2 force damage and 2 psychic damage.</p>
@@ -407,12 +420,10 @@
 		</description>
 		<setters>
 			<set name="category">Magic Weapons</set>
-			<set name="keywords">focus</set>
 			<set name="weight" lb="3">3 lb.</set>
-			<set name="slot">onehand</set>
 			<set name="type" addition="longsword">Weapon</set>
+			<set name="weapon">Longsword</set>
 			<set name="damage" type="piercing">1d10</set>
-			<set name="properties">Versatile (1d12)</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Artifact</set>
 		</setters>
@@ -423,7 +434,6 @@
 	</element>
 
 	<element name="Sunsplitter" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_SUNSPLITTER">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_RAPIER</supports>
 		<description>
 			<p>Said to be the favored weapon of King Brect of Dothoren, Sunsplitter played a pivotal role in the founding of what would later be recognized as the Kingdom of Dothoren. It is believed to have been blessed by the Blazing Jewel, a radiant deity who represents the Sun, and formerly justice. While not the subject of worship, being chosen by such a divine entity is considered an extraordinary honor. Legends speak of how Sunsplitter was wielded in the legendary Battle of Dawn's Light, where King Brect vanquished a dark army threatening his kingdom. Formerly, it was passed down through the royal lineage as a symbol of hope and courage in times of darkness. Now it finds itself in the hands of a new paragon, and potential competitor for the throne.</p>
 			<p class="indent"><strong>Stats.</strong> This weapon deals 2d8 Piercing damage and possesses the finesse property. It grants a +4 bonus to attack rolls made with it, and its damage rolls gain a +4 Radiant damage bonus.</p>
@@ -436,7 +446,6 @@
 		</description>
 		<setters>
 			<set name="category">Magic Weapons</set>
-			<set name="slot">onehand</set>
 			<set name="type" addition="rapier">Weapon</set>
 			<set name="weapon">Rapier</set>
 			<set name="damage" type="piercing">2d8</set>
@@ -449,10 +458,27 @@
 			<grant type="Spell" id="ID_PHB_SPELL_SUNBEAM" />
 		</rules>
 	</element>
+
+	<element name="Whispsickle" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_WHISPSICKLE">
+		<description>
+			<p>Borne from the material laden mind, this sickle is forged from a mixed alloy of Blister-Steel and Ghost-Steel. Crafted for the purpose of rending enemies gaunt, it excels in strikes made from the shadows. With a Serum-Soaked Plank handle, wrapped in Vessel-Cloth, it also provides a satisfying flexibility when swung harshly.</p>
+			<p class="indent"><strong>Properties.</strong> Nick, Light</p>
+			<p class="indent"><strong>Flexible Grip.</strong> You gain a +1 bonus to attack rolls made with this weapon.</p>
+			<p class="indent"><strong>Shadow-Stich.</strong> This weapon is elusive to unsuspecting opponents. When striking from stealth, the jagged blades bite and gnaw at exposed flesh, leaving a vicious wound behind. The target takes 1d4 necrotic damage at the start of each turn. Any additional strike with advantage continues to tear away at their vulnerability, causing an additional 1d4 necrotic damage for each hit received by this weapon before their next turn. After 1 minute, or upon receiving a healing spell that would close wounds, this effect ends.</p>
+			<p class="indent"><strong>Rat Rune.</strong> You can communicate simple ideas to rodents, and will be seen slightly more favorable for each true rune you have on your person.</p>
+			<p class="indent"><strong>!Krell-Valak (Dormant).</strong> ????</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="sickle">Weapon</set>
+			<set name="weapon">Sickle</set>
+			<set name="rarity">Uncommon</set>
+			<set name="enhancement">1</set>
+		</setters>
+	</element>
 	
 	<!-- two-handed weapons -->
 	<element name="Enochian Maul" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_ENOCHIAN_MAUL">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_MAUL</supports>
 		<description>
 			<p>This massive, heavy mace consists of a dense, matte black iron core wrapped in intricate silver bands that hum with latent energy. The head is connected to a sturdy staff by a length of reddish, hell-forged chain. Jagged spikes made of a volatile, unstable metal protrude from the striking surface, while the handle is carved from a single piece of dark, violet glass.</p>
 			<p>When left unattended, it is said that the screams of those who fell victim to one of the weapon's components can still be heard... the red glow of the spikes illuminating the hellish chain attached to it.</p>
@@ -465,15 +491,14 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="10">10 lb.</set>
-			<set name="slot">twohand</set>
 			<set name="type" addition="maul">Weapon</set>
 			<set name="weapon">Maul</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
 		</setters>
 	</element>
+
 	<element name="Ovidia's Blood-Glass Scythe" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_OVIDIAS_BLOOD_GLASS_SCYTHE">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_GLAIVE</supports>
 		<description>
 			<p>Forged from the crystallized, corrupted blood of Lady Ovidia Morvelle, this magnificent two-handed scythe features an impossibly sharp, crimson glass blade. It is unnervingly heavy, cold to the touch, and hums with a faint pressure that seems to swallow all ambient noise in the room.</p>
 			<p class="indent">You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit a creature with it, the target takes an extra 1d6 necrotic damage.</p>
@@ -485,21 +510,16 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="6">6 lb.</set>
-			<set name="slot">twohand</set>
 			<set name="type" addition="scythe">Weapon</set>
 			<set name="weapon">Glaive</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Legendary</set>
 			<set name="enhancement">2</set>
+			<set name="charges">3</set>
 		</setters>
-		<rules>
-			<stat name="weapon:attack" value="2" />
-			<stat name="weapon:damage" value="2" />
-		</rules>
 	</element>
 
 	<element name="Staff of the Twin Serpents" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_STAFF_OF_THE_TWIN_SERPENTS">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_QUARTERSTAFF</supports>
 		<description>
 			<p>This heavy staff is carved from the petrified root of a primordial tree. Two metallic serpents, one forged of tarnished silver and the other of dull gold, are coiled tightly around the ancient wood. The metal is cold to the touch, yet the serpents occasionally shift and slide along the shaft of their own accord. At the base, the petrified wood splinters into jagged, dormant tendrils that hum faintly when pressed against the earth.</p>
 			<p class="indent"><strong>Primordial Focus.</strong> You gain a +2 bonus to attack and damage rolls made with this magic quarterstaff. While holding it, you also gain a +2 bonus to spell attack rolls and to the saving throw DCs of your spells. The staff holds 5 charges and regains 1d4 expended charges daily at dawn.</p>
@@ -518,23 +538,20 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="4">4 lb.</set>
-			<set name="slot">onehand</set>
 			<set name="type" addition="quarterstaff">Weapon</set>
 			<set name="weapon">Quarterstaff</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Legendary</set>
 			<set name="enhancement">2</set>
+			<set name="charges">5</set>
 		</setters>
 		<rules>
-			<stat name="weapon:attack" value="2" />
-			<stat name="weapon:damage" value="2" />
 			<stat name="spellcasting:attack" value="2" />
 			<stat name="spellcasting:dc" value="2" />
 		</rules>
 	</element>
 
 	<element name="Hauke's Reach" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_HAUKES_REACH">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_GLAIVE</supports>
 		<description>
 			<p>Hauke's Reach has been passed down through generations of the Hauke noble family, said to be blessed by the spirit of the dragon Ice Yterin. Legend claims that the first wielder, Lady Arisel Hauke, defeated a terrible beast that plagued her lands by channeling the ancestral powers through this very glaive. Its legacy lives on as a symbol of honor and protection for those who wield it. Stories of its use in heroic deeds circulate among the bards, inspiring many to seek out its power. Only those who have had this weapon directly passed down to them may wield it, typically as a transfer from parent to child.</p>
 			<p class="indent"><strong>Stats.</strong> This weapon functions as a standard glaive, but on a hit, it deals an additional 2 piercing damage and 2 cold damage.</p>
@@ -543,7 +560,6 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="6">6 lb.</set>
-			<set name="slot">twohand</set>
 			<set name="type" addition="glaive">Weapon</set>
 			<set name="weapon">Glaive</set>
 			<set name="attunement" addition="by a direct heir of the Hauke family">true</set>
@@ -557,7 +573,6 @@
 	</element>
 
 	<element name="Aethelgard, Last Light of The Forgotten Sky" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_AETHELGARD">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_GREATSWORD</supports>
 		<description>
 			<p>This weapon appears to be an exquisitely crafted longsword, forged from a single piece of luminous white steel that seems to possess its own internal light. In stark contrast, its hilt is an ornate yet purposeful work of a seamless, matte black metal, cool to the touch. The material's light-absorbing quality and immense density are reminiscent of the mythical ore Argenox, leading some to wonder if this is a purer, more primal form of the material, created outside of Nelvora before the "Heaven's Tear" was ever shaped by this world's influence.</p>
 			<p>At the very center of the crossguard is one standout symbol: a circular sigil depicting the life rings of a great tree, sundered by a clean crack down the middle. On one half, the rings are perfect and symmetrical, glowing with a faint, internal light. On the other, the rings are warped into chaotic knots and whorls from which a single, dark, thorny shape grows. The weapon's true nature is betrayed by its impossible mass; while shaped like a longsword, its weight is immense, far exceeding that of even a mundane greatsword. Found within the ruins of a forgotten sanctum in Salusare, it is a vestige that has been long orphaned from its true home and true purpose.</p>
@@ -584,7 +599,6 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="18">18 lb.</set>
-			<set name="slot">twohand</set>
 			<set name="type" addition="greatsword">Weapon</set>
 			<set name="weapon">Greatsword</set>
 			<set name="properties">Heavy, Two-Handed, Reach</set>
@@ -594,8 +608,27 @@
 		</setters>
 	</element>
 
+	<element name="Zerik's Sword (Chaos Blade)" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_ZERIKS_SWORD_CHAOS_BLADE">
+		<description>
+			<p>Officially titled the Chaos Blade (Blade of Friendship) or the Abyssal Cleaver Reforged, this bizarre weapon is best known simply as "Zerik's Sword." When you are distracted or resting, the sword will constantly try to descend into the ground. It might be seeking comfort, or perhaps seeking something else entirely.</p>
+			<p class="indent"><strong>Abyssal Magnet.</strong> The blade attracts Abyssal enemies, but grants great prowess against them as well. Weaker Abyssal creatures must make a Charisma check to even approach you, or become charmed if they start their turn within 30 feet.</p>
+			<p class="indent"><strong>Chaotic Strikes.</strong> This weapon uses Charisma for its attack rolls, regardless of your class. It deals a base 2d8 slashing damage, plus an additional 2 fire damage on a hit. However, its combat logic is completely inverted. You take a -2 penalty to attack rolls against standard AC, and you have disadvantage on attacks against Abyssal creatures.</p>
+			<p class="indent"><strong>Inverted Reality.</strong> In order to successfully hit an enemy, your attack roll must equal or be lower than 0 minus the enemy's Charisma modifier.</p>
+			<p class="indent"><strong>Catastrophic Criticals.</strong> You score a critical hit against Abyssal creatures on a roll of 2 or 3. If you roll a natural 1, the sword repeats your critical damage a second time as a balanced mixture of lightning and fire damage. If this attack kills the target, the additional damage courses to adjacent Abyssal creatures.</p>
+			<p class="indent"><strong>Haukr's Forgeheart.</strong> Thanks to the pommel's heavy grounding, you have advantage on saving throws or ability checks against being displaced forcefully.</p>
+			<p class="indent"><strong>Earthshatter.</strong> Once per long rest, as an action, you can slam the pommel into the ground. This unleashes a shockwave of force and splintered earth. Each creature in a 15-foot cone originating from you must make a Dexterity saving throw. A creature takes 3d8 bludgeoning damage on a failed save, and half as much damage on a successful one. The area of the cone becomes difficult terrain until cleared. This ability may also affect you: roll a d20. On an even number, you are affected by the shockwave; on an odd number, you are unaffected.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="type" addition="greatsword">Weapon</set>
+			<set name="damage" type="slashing">2d8</set>
+			<set name="attunement" addition="by Ameren">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+
 	<element name="Aethelgard (Withdrawn Light)" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_AETHELGARD_WITHDRAWN_LIGHT">
-		<supports>ID_INTERNAL_WEAPON_CATEGORY_GREATSWORD</supports>
 		<description>
 			<p>For the 30 days that Aethelgard's Radiant Awakening is on cooldown, the weapon's nature changes. The matte black metal of the hilt creeps over the blade in a protective, light-absorbing shell. It retains its impossible mass and reach, but its divine light is replaced by a sorrowful, parasitic hunger.</p>
 			<p class="indent"><strong>White-Steel Blade (Dimmed).</strong> You retain the +4 bonus to attack and damage rolls made with this magic weapon.</p>
@@ -611,7 +644,6 @@
 		<setters>
 			<set name="category">Magic Weapons</set>
 			<set name="weight" lb="18">18 lb.</set>
-			<set name="slot">twohand</set>
 			<set name="type" addition="greatsword">Weapon</set>
 			<set name="weapon">Greatsword</set>
 			<set name="properties">Heavy, Two-Handed, Reach</set>
@@ -623,7 +655,6 @@
 
 	<!-- Shields -->
 	<element name="The Aegis of the Twin Lions" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_AEGIS_OF_THE_TWIN_LIONS">
-		<supports>ID_INTERNAL_ARMOR_GROUP_SHIELD</supports>
 		<description>
 			<p>This magnificent heater shield of ancient Fiscathian design is crafted from dark ironwood faced with burnished steel, its front dominated by a masterfully sculpted bas-relief of two roaring silver lions, the ancient symbols of House Rochefort. It is said to have been borne by Lord Theron Rochefort, "The Unyielding," during the legendary Siege of the Crimson Ford. Despite its size, the Aegis feels remarkably balanced.</p>
 			<p class="indent"><strong>Armor Class.</strong> You have a +1 bonus to your Armor Class while you are wielding this shield. This is in addition to the shield's normal +2 bonus.</p>
@@ -634,7 +665,6 @@
 		<setters>
 			<set name="category">Magic Armor</set>
 			<set name="weight" lb="6">6 lb.</set>
-			<set name="slot">onehand</set>
 			<set name="type" addition="shield">Armor</set>
 			<set name="armor">Shield</set>
 			<set name="armorClass">2</set>
