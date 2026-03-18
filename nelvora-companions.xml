@@ -421,5 +421,94 @@
 			<description>Melee Weapon Attack: Waelin's Spell Casting Mod to hit, reach 5 ft. Hit: 1d12 + PB force damage.</description>
 		</sheet>
 	</element>
+	
+	<element name="Fishy" type="Companion" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_FISHY">
+		<supports>Familiar,Variant Familiar</supports>
+		<prerequisite>Chosen of Caeplithias</prerequisite>
+		<requirements>ID_NELVORA_SUB_RACE_CHOSEN_CAEPLITHIAS</requirements>
+		<description>
+			<p>A Small dragon serving as a lovable, bizarrely durable familiar.</p>
+		</description>
+		<setters>
+			<set name="size">Small</set>
+			<set name="type">Dragon</set>
+			<set name="alignment">Chaotic Good</set>
+			<set name="ac">14</set>
+			<set name="hp">65 (10d6 + 30)</set>
+			<set name="speed">35 ft., fly 10 ft. (hover), swim 50 ft.</set>
+			<set name="strength">16</set>
+			<set name="dexterity">12</set>
+			<set name="constitution">16</set>
+			<set name="intelligence">8</set>
+			<set name="wisdom">20</set>
+			<set name="charisma">14</set>
+			<set name="savingThrows">Str +5, Con +5</set>
+			<set name="conditionImmunities">blinded, charmed, frightened</set>
+			<set name="senses">truesight 10 ft., passive Perception 15</set>
+			<set name="languages">understands its creator but cannot speak</set>
+			<set name="challenge">3</set>
+			<set name="traits">ID_NELVORA_COMPANION_TRAIT_FISHY_AMPHIBIOUS,ID_NELVORA_COMPANION_TRAIT_FISHY_INNOCENT_PRESENCE,ID_NELVORA_COMPANION_TRAIT_FISHY_AIR_SWIMMER,ID_NELVORA_COMPANION_TRAIT_FISHY_UNFATHOMABLE_STARE</set>
+			<set name="actions">ID_NELVORA_COMPANION_ACTION_FISHY_CLOMP,ID_NELVORA_COMPANION_ACTION_FISHY_ENCOURAGING_BUBBLE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="14" />
+			<stat name="companion:hp:max" value="65" bonus="base" />
+			<stat name="companion:speed" value="35" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Amphibious" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_FISHY_AMPHIBIOUS">
+		<description>
+			<p>Fishy can breathe air and water.</p>
+		</description>
+		<sheet>
+			<description>Fishy can breathe air and water.</description>
+		</sheet>
+	</element>
+
+	<element name="Innocent Presence" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_FISHY_INNOCENT_PRESENCE">
+		<description>
+			<p>Fishy exudes a lovable, harmless aura. Any creature who targets Fishy with an attack or a harmful spell must first make a DC 13 Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. Additionally, the universe itself seems to protect Fishy; they automatically succeed on all saving throws against area of effect spells and abilities, and they take no damage from them.</p>
+		</description>
+		<sheet>
+			<description>Any creature targeting Fishy with an attack or harmful spell must make a DC 13 Wis save or choose a new target/lose the attack. Fishy automatically succeeds on all saves against area of effect spells and abilities, and takes no damage from them.</description>
+		</sheet>
+	</element>
+
+	<element name="Air Swimmer" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_FISHY_AIR_SWIMMER">
+		<description>
+			<p>Fishy's flight is clumsy and involves swimming through the air. Fishy can hover in place, but if they are knocked prone while flying, they gently float to the ground instead of taking falling damage.</p>
+		</description>
+		<sheet>
+			<description>Fishy hovers in place. If knocked prone while flying, they gently float to the ground instead of taking falling damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Unfathomable Stare" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_FISHY_UNFATHOMABLE_STARE">
+		<description>
+			<p>Fishy's high wisdom allows them to passively sense things others miss, though they do not fully understand what they are looking at. If a hidden danger, illusion, or invisible creature is within 10 feet of Fishy, they will stop moving and stare blankly at it, gently blowing bubbles.</p>
+		</description>
+		<sheet>
+			<description>If a hidden danger, illusion, or invisible creature is within 10 feet, Fishy stops moving and stares blankly at it, gently blowing bubbles.</description>
+		</sheet>
+	</element>
+
+	<element name="Fishy Clomp" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_FISHY_CLOMP">
+		<description>
+			<p><em>Melee Spell Attack:</em> +7 to hit, reach 10 ft., one target. <em>Hit:</em> 20 (3d10 + 4) radiant damage, and the target must succeed on a DC 13 Strength saving throw or be knocked prone by the clumsy impact.</p>
+		</description>
+		<sheet>
+			<description>Melee Spell Attack: +7 to hit, reach 10 ft., one target. Hit: 20 (3d10 + 4) radiant damage, and target makes DC 13 Str save or is knocked prone.</description>
+		</sheet>
+	</element>
+
+	<element name="Encouraging Bubble (Recharge 5-6)" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_FISHY_ENCOURAGING_BUBBLE">
+		<description>
+			<p>Fishy blows a shimmering, magical bubble that pops over an allied creature within 30 feet. The target gains 5 (1d4 + 3) temporary hit points and has advantage on their next saving throw for the next minute.</p>
+		</description>
+		<sheet action="Action" usage="Recharge 5-6">
+			<description>Blows a magical bubble on an ally within 30 ft. Target gains 5 (1d4 + 3) THP and has advantage on their next saving throw for the next minute.</description>
+		</sheet>
+	</element>
 
 </elements>
