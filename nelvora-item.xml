@@ -16,6 +16,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="rarity">Rare</set>
 		</setters>
 		<rules>
@@ -267,7 +268,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
-			<set name="cost" currency="gp">250</set>
+			<set name="cost" currency="gp">99999</set>
 			<set name="weight" lb="2">2 lb.</set>
 			<set name="slot">body</set>
 			<set name="armor">Light</set>
@@ -614,7 +615,7 @@
 		</description>
 		<setters>
 			<set name="category">Magic Weapons</set>
-			<set name="weight" lb="18">18 lb.</set>
+			<set name="weight" lb="18">100 lb.</set>
 			<set name="type" addition="greatsword">Weapon</set>
 			<set name="weapon">Greatsword</set>
 			<set name="properties">Heavy, Two-Handed, Reach</set>
@@ -659,7 +660,7 @@
 		</description>
 		<setters>
 			<set name="category">Magic Weapons</set>
-			<set name="weight" lb="18">18 lb.</set>
+			<set name="weight" lb="18">120 lb.</set>
 			<set name="type" addition="greatsword">Weapon</set>
 			<set name="weapon">Greatsword</set>
 			<set name="properties">Heavy, Two-Handed, Reach</set>
