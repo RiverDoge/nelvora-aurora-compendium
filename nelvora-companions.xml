@@ -4,7 +4,7 @@
 		<name>Nelvora Companions</name>
 		<description>Custom companions, familiars, and Magatsu for the Nelvora setting.</description>
 		<author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-		<update version="1.0.2">
+		<update version="1.0.3">
 			<file name="nelvora-companions.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-companions.xml" />
 		</update>
 	</info>	
