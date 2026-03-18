@@ -4,10 +4,113 @@
         <name>Nelvora Items</name>
         <description>Custom items for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.0">
+        <update version="1.0.1>
             <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-item.xml" />
         </update>
     </info>
+
+	<!-- Rings -->
+	<element name="Signet of the Phantom Ember" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_SIGNET_OF_THE_PHANTOM_EMBER">
+		<description>
+			<p>This ring is crafted from a band of dark, matte metal. A tiny, intricately detailed silver serpent wraps around the band, its jaws stretched wide. Clutched within the serpent's fangs is a pale, glowing gemstone that flickers erratically, perfectly mimicking the light of a dying torch. The metal is warm to the touch and hums with a faint, deceptive heartbeat.</p>
+			<p class="indent"><strong>Veil of False Hope.</strong> As a reaction when you are targeted by an attack, you can command the gemstone to flare with a blinding flash. You instantly turn invisible, reappearing 5 feet adjacent to your current position, and a perfect, tangible illusory duplicate of yourself takes your original place to absorb the blow. The attack automatically hits the duplicate instead of you, causing the illusion to shatter into a cloud of glowing, harmless sparks. You remain invisible until the start of your next turn, or until you make an attack or cast a spell. Once you use this reaction, you cannot use it again until a week has passed.</p>
+			<p class="indent"><strong>Warped Truth.</strong> When a creature attempts to read your thoughts, determine your alignment, or force you to tell the truth, you may make a Charisma roll to contest this attempt. On a success, you can choose to feed them only fragments of information, slightly shifting information like alignment over one step (Good to neutral). The greater you bend the truth, the more likely they are to know what you have done. You may make this roll even if you fail any other saving throw related to these former effects (zone of truth for instance).</p>
+			<p class="indent"><strong>The Shifting Path.</strong> The ring allows you to twist the environment to reflect a different version of events. You can use an action to cast Pass without Trace or Nystul's Magic Aura from the ring without providing components. Once you cast either spell, you cannot do so again until a week has passed.</p>
+		</description>
+		<setters>
+			<set name="category">Rings</set>
+			<set name="slot">ring</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+
+	<!-- Wondrous Items -->
+	<element name="Fillet of the Pure" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_FILLET_OF_THE_PURE">
+		<description>
+			<p>This simple hairband is woven from a silken, alabaster fabric that remains unnervingly pristine. No matter how much blood, mud, or ash touches it, the material sheds the filth instantly and returns to a stark, blinding white. The fabric is cool and damp, as if it has been soaked in holy water that never dries.</p>
+			<p>It was found binding the eyes of a statue in the tomb's inner sanctum, a statue whose face was worn smooth as if eroded by centuries of weeping.</p>
+			<p class="indent"><strong>Transcendent Reach.</strong> While wearing this fillet, your ki projects outward as visible, spectral limbs of pale light. The range of your Hands of Healing and Hands of Harm features increases to 30 feet.</p>
+			<p class="indent"><strong>Anoint the Wounded.</strong> Your touch carries the potent, ancient authority of purification. When you use Hands of Healing, you can choose to maximize the roll of your Martial Arts die instead of rolling it. Additionally, if you use your Physician’s Touch feature to end a disease or a condition on a creature, you also grant that creature Temporary Hit Points equal to your Wisdom modifier + your Monk level + the spell level of whatever was afflicting them.</p>
+			<p class="indent"><strong>The Vessel of Filth (Curse).</strong> This fillet belonged to a healer who believed that sickness could not be destroyed, only moved. This item is cursed. Attuning to it extends the curse to you. As long as you remain cursed, you cannot remove the fillet unless you are targeted by a Remove Curse spell or similar magic. The item demands that you become a vessel for the corruption you purge.</p>
+			<p class="indent"><strong>The Sin-Eater.</strong> Whenever you use Hands of Healing to restore hit points to a creature, you take Necrotic damage equal to one roll of your Martial Arts die. This damage cannot be reduced or prevented in any way.</p>
+			<p class="indent"><strong>Sympathetic Agony.</strong> Whenever you use your Physician’s Touch feature to end a condition (such as blinded, deafened, paralyzed, poisoned, or stunned) on a creature, you immediately contract that condition yourself. The condition lasts on you until the end of your next turn, regardless of its original duration.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">head</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	
+	<element name="Palette of the First Hue" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_PALETTE_OF_THE_FIRST_HUE">
+		<description>
+			<p>This smoothly polished, teardrop-shaped slab is carved from an impossible, opalescent stone. Instead of ordinary paints, the mixing wells constantly swirl with liquid, glowing light in impossible, shifting spectrums. When you hold it, the air around you faintly smells of ozone, fresh rain, and crushed minerals.</p>
+			<p class="indent"><strong>Properties.</strong> When you attune to this primordial palette, you tap into the lingering colors of creation. You gain a +2 bonus to spell attack rolls and +1 to saving throw DCs of your spells while holding it. The palette holds 5 charges and regains 1d4 charges daily at dawn.</p>
+			<p class="indent"><strong>The Master's Pigment.</strong> When you use your Performance of Creation feature, you can expend 2 charges to paint a true masterpiece into reality. The item you create is flawlessly detailed, and the gold piece limit for the item is quadrupled. Furthermore, the item has resistance to all damage, and if you create a tool or a weapon, any creature using it gains a +1 bonus to ability checks or attack rolls made with it. Because of the sheer creative toll this takes, once you use this property, you cannot use it again until seven days have passed.</p>
+			<p class="indent"><strong>Animated Masterpiece.</strong> When you use your Animating Performance feature, you can expend 1 charge to drip primordial, starlit ink onto your creation. When your creation hits a creature with any attack, the target takes an extra 1d8 acid or radiant damage (your choice of color upon animating it). Additionally, the target is splashed with glowing paint, granting advantage on the next attack roll made against it before the start of your creations next turn.</p>
+			<p class="indent"><strong>Splash of Potential.</strong> When a creature rolls your Bardic Inspiration die and triggers your Mote of Potential feature, you can use your reaction and expend 1 charge to cause the mote to violently burst like a paint bomb. In addition to the normal Mote effect, choose one of the following:</p>
+			<ul>
+				<li>The creature rolling the die gains hit points equal to the number rolled.</li>
+				<li>One enemy within 5 feet of them must succeed on a Dexterity saving throw against your spell DC or be blinded until the start of its next turn.</li>
+			</ul>
+			<p class="indent"><strong>The World in Strokes.</strong> As an action, you can hurl the palette's colors into the air, turning the battlefield into your canvas. You create a 30-foot-radius sphere of magical paint centered on a point you can see within 60 feet. For 1 minute (requires concentration), the ground in the area is covered in thick, wet paint, making it difficult terrain for your enemies. While you are concentrating on this effect, you have advantage on Constitution saving throws made to maintain your concentration. While the sphere persists, you can use your bonus action on each of your turns to manipulate the paint in one of the following ways:</p>
+			<ul>
+				<li><strong>Highlight:</strong> You paint a bright, glowing outline every target of your choice that you can see within the sphere. The targets must succeed on a Dexterity saving throw against your spell save DC. On a failure, attack rolls against them have advantage until the end of your next turn.</li>
+				<li><strong>Illustrate:</strong> You quickly sketch solid barriers around all allies within the sphere. They gain +2 AC until the end of this feature, and have the benefits of half-cover.</li>
+				<li><strong>Splatter:</strong> You cause the paint on the ground to violently burst upward. Each enemy in the sphere must make a Constitution saving throw against your spell save DC, taking 4d6 acid or radiant damage (your choice) on a failed save, or half as much damage on a successful one. Targets affected by Highlight have disadvantage on this spell save. Additionally, on a failed save, targets are marked with paint and take an additional 1d6 acid or radiant (based on previous choice) damage from all attacks, stacking for each failed save until the end of this feature.</li>
+				<li><strong>Refinish:</strong> You erase a creature from the canvas and quickly paint them elsewhere. Choose one creature within the sphere, or choose everyone affected by highlight. An unwilling target must succeed on a Charisma saving throw against your spell save DC. On a failure (or if the creature is willing), the target is instantly teleported up to 30 feet to an unoccupied space you can see within the sphere.</li>
+			</ul>
+			<p class="indent"><strong>Dormancy.</strong> Once the minute passes, or if your concentration is broken, the magic rapidly dries and flakes away into dust. The palette immediately goes dormant. For exactly seven days, it becomes a mundane stone slab. It loses its +2 bonus to spell attacks and save DCs, its remaining charges vanish, and it cannot regain charges or be used for any magical properties until the seventh dawn has passed.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">onehand</set>
+			<set name="attunement" addition="by a bard">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="2" />
+			<stat name="spellcasting:dc" value="1" />
+		</rules>
+	</element>
+	
+	<element name="Shroud of the Justiciar" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_SHROUD_OF_THE_JUSTICIAR">
+		<description>
+			<p>This light strip of ash-grey silk feels cool to the touch. In the very center of the fabric rests the image of a closed eye, meticulously crafted from intertwining threads of bright silver and dull gold. When you tie the cloth across your face, the magic within activates. To anyone looking at you, the metallic threads of the eye seem to slowly open, shifting to depict an endless, spiraling void that weaves endlessly inward.</p>
+			<p class="indent"><strong>Properties.</strong> When you tie this shroud over your eyes, the world around you goes black, subjecting you to the Blinded condition. However, as the cold silk settles against your skin, a new and unerring perception blooms in your mind.</p>
+			<p class="indent"><strong>The Sightless Gaze.</strong> You gain Blindsight out to a range of 60 feet. Within this radius, you navigate non-magical darkness perfectly, and you can clearly see invisible creatures or hidden objects.</p>
+			<p class="indent"><strong>Dull Horizon.</strong> While you can see at a range of 60 feet, that is the absolute limit of your vision. Anything beyond that range is effectively lost to the void at the edge of your vision. Additionally, any enemy attacking from beyond that range does so with advantage, and you automatically fail any purely sight based perception checks beyond 60 feet.</p>
+			<p class="indent"><strong>Blind to the Mundane and Benevolent.</strong> The woven eye seeks to reveal that which is born of deception, and those of a magical nature. Beings that are entirely mundane, either due to a severed connection to the arcane, or merely the complete lack of potential for it, are invisible to this sight. This of course also extends to reading books, or any other form of mundane writing; as you can only read text woven from magic, or non-mundane origins. Furthermore, this silken shroud turns a blind-eye towards beings of immense good. Namely this sight is incapable of perceiving overtly good beings, with the exception of a blinding radiance engulfing those of divine origin, or immensely good alignment (usually servants of deities, or those who have done an overwhelming amount of good in their life).</p>
+			<p class="indent"><strong>The Shroud of Magic.</strong> When you enter an area of magical darkness, the heavy weave of the spell creates static in your mind. You can still see through the magical darkness, but the world appears hazy and blurred. You treat areas of magical darkness as lightly obscured.</p>
+			<p class="indent"><strong>Piercing the Veil.</strong> You strike with absolute certainty against those who hide their true nature. Any attack roll against a creature that is magically disguised, shape changed, or under the effects of an illusion is made with advantage, provided you are aware of their deception with any knowledge of their true identity.</p>
+			<p class="indent"><strong>Decree of the Nameless.</strong> Once per week, you can use an action to speak a single word of absolute law. You cast the Zone of Truth spell (Save DC 16) centered on yourself. Furthermore, any creature within the zone that fails its Charisma saving throw instantly drops any illusion magic disguising its appearance.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">head</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+
+	<element name="Pendant of the Final Grasp" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_PENDANT_OF_THE_FINAL_GRASP">
+		<description>
+			<p>This heavy pendant is forged from dark, purplish iron and framed by a pristine golden trim. At its center rests a polished obsidian core that beats with a slow, rhythmic thrum. Six distinct, limb like tendrils wrap around the iron frame. All six point inward, their sharp tips digging into the obsidian as if dragging something into the depths.</p>
+			<p class="indent"><strong>Properties.</strong> When you wear this necklace, you become a locus for the magic of a forgotten God. The pendant holds up to 6 charges, represented by the six dark-iron tendrils. It begins each day 0 charges and loses all stored charges daily at dawn.</p>
+			<p class="indent"><strong>The Soul Tithe.</strong> Whenever a hostile creature of Challenge Rating 1 or higher dies within 60 feet of you, the obsidian core pulses. One of the iron tendrils glows with a faint, golden heat, and the pendant gains 1 charge. If this effect triggers while there is already 6 charges, you instead regain 1d10 hit points.</p>
+			<p class="indent"><strong>Fetter of the Grave.</strong> You can expend 1 charges as a bonus action to command the stone. A spectral iron tendril erupts from the ground beneath a creature you can see within 30 feet of you. The target must succeed on a DC 16 Strength saving throw or be restrained until the end of your next turn. While restrained in this way, the heavy necrotic magic prevents the creature from regaining hit points. This ability can be used three times per short-rest.</p>
+			<p class="indent"><strong>Weight of the Fallen.</strong> You can use an action and expend 2 charges to unleash the crushing pressure of the grave. Each creature of your choice within 20 feet of you must make a DC 16 Strength saving throw. On a failure, a creature takes 5d8 necrotic damage and is violently pulled up to 15 feet directly toward you. On a successful save, the creature takes half as much damage and is not pulled. This ability can be used once per short-rest.</p>
+			<p class="indent"><strong>Deny the Abyss.</strong> The sovereign of death claims their due only when they choose. If you are reduced to 0 hit points and the pendant has at least 2 charges stored, you can command the stone to release its stolen essence in your final moments. The glowing tendrils detach from the stone and plunge into your chest. You expend all stored charges, instantly regaining 1d10 hit points per charge expended, and you remain conscious. Once you use this ability, the core goes completely cold, and you cannot use this specific property again until seven days have passed.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">neck</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
 
 	<!-- light armor -->
 	<element name="Chiton of Caeplithias" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_CHITON_OF_CAEPLITHIAS">
@@ -31,4 +134,110 @@
 			<stat name="ac:armored:armor" value="15" />
 		</rules>
 	</element>
+	
+	<!-- one-handed weapons -->
+	<element name="The Sky-Flash Javelin" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_SKY_FLASH_JAVELIN">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_JAVELIN</supports>
+		<description>
+			<p>A javelin crackling with contained storm energy. It counts as a magical weapon for any attack purposes.</p>
+			<p class="indent"><strong>Stats.</strong> You gain a +2 bonus to attack rolls made with this magic weapon. It deals Lightning damage instead of piercing or any other damage type added to the attack. Immediately after you make a ranged attack with this javelin, it vanishes in a flash of lightning and reappears in your hand.</p>
+			<p class="indent"><strong>Thunderous Arrival.</strong> Once per day, when you throw this javelin, you can speak its command word. Whether the attack hits or misses, the javelin erupts in a deafening peal of thunder upon reaching its target's location. The target and all creatures within 10 feet of it must make a Constitution saving throw or take 2d8 Thunder damage and be deafened for one minute.</p>
+			<p class="indent"><strong>Stormstruck.</strong> The javelin acts as a natural lightning rod. If you are targeted by an effect that deals lightning damage, you can use your reaction to hold the javelin aloft. You take no damage from the effect, and the javelin absorbs the entirety of the electrical charge. If within a storm, the property will still take effect, but you will take damage from the lightning strike. You may use the reactive portion of this effect once per long rest.</p>
+			<p class="indent"><strong>Tempest's Fury.</strong> If the javelin has absorbed a lightning effect using its Lightning Rod property, or if you are fighting in the midst of a natural thunderstorm and are struck by lightning, the weapon becomes supercharged. Its silvery-blue veins crackle audibly with contained power, and it sheds dim light in a 10-foot radius. While in this state, the javelin's bonus to attack and damage rolls increases to +4, and it deals an additional 1d10 lightning damage on every hit. This supercharged state lasts for 10 minutes after absorbing a spell, or as long as the natural storm rages. Y'volr is resistant to all lightning strike and lightning magic based effects during this ability.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="2">2 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="javelin">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+		<rules>
+			<stat name="weapon:attack" value="2" />
+		</rules>
+	</element>
+	
+	<element name="Heran's Axe" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_HERANS_AXE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_BATTLEAXE</supports>
+		<description>
+			<p>Won as a reward in an arena by Aurea, this weapon was left behind in the Abomination lair.</p>
+			<p class="indent"><strong>Cursed.</strong> Upon death, your body will guard this weapon, and force whoever wishes to claim it from you to succeed in a difficult trial. The trial will vary based upon how you die, and the condition your body is in.</p>
+			<p class="indent"><strong>Stats.</strong> You gain a +2 bonus to attack rolls made with this magic weapon. The weapon's base damage die is altered to 1d10 (or 1d12 if wielded with two hands). On a hit, the weapon deals an additional 2 necrotic damage and 2 cold damage. Additionally, you topple enemies on a critical hit.</p>
+			<p class="indent"><strong>Osseous Grasp.</strong> You gain 1 use of this ability per long rest. Up to 3 creatures within 60 feet of you must succeed an Intelligence saving throw, else they are restrained by skeletal hands that grasp them from all over. Any creature caught in this counts as grappled, and must succeed a saving throw in order to take their turn. Every subsequent failed saving throw drains 1d4 + your ability modifier cold damage from the target. The caster regains half this damage as HP. Each round the caster maintains this spell after the initial cast, they are required to also succeed a saving throw, else fall victim to their own spell. If the caster fails, they are trapped until they succeed a saving throw.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="battleaxe">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+			<set name="enhancement">2</set>
+		</setters>
+		<rules>
+			<stat name="weapon:attack" value="2" />
+		</rules>
+	</element>
+	
+	<!-- two-handed weapons -->
+	<element name="Ovidia's Blood-Glass Scythe" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_OVIDIAS_BLOOD_GLASS_SCYTHE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_GLAIVE</supports>
+		<description>
+			<p>Forged from the crystallized, corrupted blood of Lady Ovidia Morvelle, this magnificent two-handed scythe features an impossibly sharp, crimson glass blade. It is unnervingly heavy, cold to the touch, and hums with a faint pressure that seems to swallow all ambient noise in the room.</p>
+			<p class="indent">You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit a creature with it, the target takes an extra 1d6 necrotic damage.</p>
+			<p class="indent"><strong>Crescendo's End.</strong> The scythe holds 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with a melee weapon attack using this scythe, you can expend 1 charge to deal an additional 2d8 necrotic damage. The glass blade leaves a parasitic vibration on the target's throat. The first time the target attempts to cast a spell with a verbal component before the start of your next turn, they must make a DC 16 Charisma saving throw. On a failed save, the spell is entirely absorbed into the scythe. The spell fails, but the spell slot is still expended.</p>
+			<p class="indent"><strong>Thunderous Expulsion.</strong> If the scythe successfully absorbs a spell in this way, the glass blade glows with volatile kinetic energy. On your next successful melee attack with the scythe within 1 minute, it forcefully expels this trapped magic. The target takes an additional 1d8 thunder damage per level of the absorbed spell (or 1d8 for a cantrip), and the stored energy is cleared.</p>
+			<p class="indent"><strong>Tainted Vitality (Curse).</strong> The childhood poison that stunted Ovidia's magic still courses through the crystallized blood. While attuned to this weapon, your voice is supernaturally muffled. You cannot be heard from more than 30 feet away, and any attempt to shout or scream simply comes out at a normal, conversational volume. Furthermore, the corrupted blood violently rejects spoken magic. Whenever you cast a spell of 1st level or higher with a verbal component, you take 1d4 poison damage per level of the spell cast.</p>
+			<p class="indent"><strong>The Silent Sovereign (Sentience).</strong> Ovidia's Blood-Glass Scythe is a sentient weapon of neutral evil alignment. It shares the mental ability scores of its creator. The weapon cannot speak, but it communicates a chilling, silent pressure to its wielder. It possesses a lingering echo of Lady Morvelle's will, and it often feels as though the scythe is simply biding its time, quietly yearning to return to the hands that bled it into existence. It is fickle and judgmental; depending entirely on its inscrutable mood, the scythe has been known to mysteriously guide the wielder's swing to grant advantage on a crucial strike, or suddenly grow unnaturally heavy, imposing disadvantage when it feels displeased.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="slot">twohand</set>
+			<set name="type" addition="scythe">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="enhancement">2</set>
+		</setters>
+		<rules>
+			<stat name="weapon:attack" value="2" />
+			<stat name="weapon:damage" value="2" />
+		</rules>
+	</element>
+
+	<element name="Staff of the Twin Serpents" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_STAFF_OF_THE_TWIN_SERPENTS">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_QUARTERSTAFF</supports>
+		<description>
+			<p>This heavy staff is carved from the petrified root of a primordial tree. Two metallic serpents, one forged of tarnished silver and the other of dull gold, are coiled tightly around the ancient wood. The metal is cold to the touch, yet the serpents occasionally shift and slide along the shaft of their own accord. At the base, the petrified wood splinters into jagged, dormant tendrils that hum faintly when pressed against the earth.</p>
+			<p class="indent"><strong>Primordial Focus.</strong> You gain a +2 bonus to attack and damage rolls made with this magic quarterstaff. While holding it, you also gain a +2 bonus to spell attack rolls and to the saving throw DCs of your spells. The staff holds 5 charges and regains 1d4 expended charges daily at dawn.</p>
+			<p class="indent"><strong>The First Guide's Mercy.</strong> You have advantage on Wisdom (Medicine) checks. Furthermore, whenever you cast a spell of 1st level or higher that restores hit points to a creature, the golden serpent sheds a faint light, granting that creature temporary hit points equal to your spellcasting ability modifier.</p>
+			<p class="indent"><strong>The Silver Slumber.</strong> When you hit a creature with a melee attack using this staff, you can choose to forgo all damage from the strike and instead expend 1 charge to command the silver serpent to bite. The serpent injects a profound, magical anesthetic. The target must succeed on a DC 15 Constitution saving throw or fall completely unconscious for one minute. The creature wakes early if it takes any damage or if someone uses an action to shake or slap it awake. If the target was struck with advantage, they must make the saving throw with disadvantage.</p>
+			<p class="indent"><strong>The Golden Toll.</strong> As an action, you can expend 2 charges to press the golden serpent against the skin of a willing creature. The serpent bites the target, instantly curing it of one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned. However, this medicine requires a steep price. The target must immediately expend one of its own Hit Dice, rolling it and taking unavoidable necrotic damage equal to the result.</p>
+			<p class="indent"><strong>The Primordial Chrysalis.</strong> As an action, you can expend 5 charges to forcefully plant the base of the staff into the ground. Ethereal roots erupt from the wood, anchoring the staff in place and tightly wrapping around the corpse of a creature within 15 feet of you. The roots coil like massive twin serpents, forming a glowing, impenetrable chrysalis around the fallen ally. For the next minute, you must maintain concentration on this effect as if casting a spell, and you cannot let go of the staff, nor move it in any way. While channeling, you gain the following benefits:</p>
+			<ul>
+				<li><strong>Dedicated Latros:</strong> You have advantage on Constitution saving throws made to maintain concentration. You also have advantage on any saving throw or ability check made to resist being forcefully moved.</li>
+				<li><strong>Surging Vitality:</strong> The staff automatically radiates the magic of the Aura of Vitality spell. For the duration of the channel, you can use your bonus action on each of your turns to restore 2d6 hit points to one creature you choose within 30 feet of the staff. Additionally, you can cast Mass Healing Word as an action, at will.</li>
+				<li><strong>The Serpent's Ward:</strong> The creature resting inside the root chrysalis is completely immune to all damage and magical effects from anything other than the full might of the Divine.</li>
+			</ul>
+			<p class="indent"><strong>The Rebirth.</strong> If you successfully maintain concentration for the full minute, the roots dissolve into a lingering Aura of Life that wraps around the target. The creature is instantly brought back to life with all its hit points restored, and it is cured of all diseases and conditions (such as poisoned, blinded, or paralyzed). To protect the mind from the shock of resurrection, the creature immediately falls into a magical, coma-like stasis for 24 hours. If your concentration is broken, or if you are ever forcefully moved more than 5 feet away from the staff, the channeling shatters. The chrysalis turns to ash, and the target remains dead.</p>
+			<p class="indent"><strong>Dormancy.</strong> Whether the ritual succeeds or fails, invoking the First Guide's ultimate mercy drains the staff entirely. Once the minute passes or the channel breaks, the staff goes dormant. For exactly seven days, it becomes a mundane quarterstaff. It loses its +2 bonuses to attacks, damage, and spell save DCs, and it cannot regain charges until the seventh dawn has passed.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="quarterstaff">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="enhancement">2</set>
+		</setters>
+		<rules>
+			<stat name="weapon:attack" value="2" />
+			<stat name="weapon:damage" value="2" />
+			<stat name="spellcasting:attack" value="2" />
+			<stat name="spellcasting:dc" value="2" />
+		</rules>
+	</element>
+	
 </elements>
