@@ -4,7 +4,7 @@
         <name>Nelvora Items</name>
         <description>Custom items for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.2">
+        <update version="1.0.3">
             <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-item.xml" />
         </update>
     </info>
@@ -25,7 +25,48 @@
 		</setters>
 	</element>
 
+	<element name="Ring of Stolen Fate" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_RING_OF_STOLEN_FATE">
+		<description>
+			<p>This intricate ring is forged from an unknown, star-like metal that seems to absorb and hold light. It was found nestled in the silt at the bottom of a forgotten hamlet's lake, untouched by rust or time and radiating a faint, analytical chill. The three crystalline sockets set into the band are perfectly empty, yet flicker with a nervous, predictive potential, as if waiting to hold something they were always meant to contain.</p>
+			<p>The ring has 3 charges, which it uses for its Bestow Fate feature. It regains all expended charges daily at dawn.</p>
+			<p>The ring can store the distilled essence of fortune and misfortune. It can hold up to 3 Fateful Motes at one time, which are either Calamitous (captured from a natural 1) or Triumphant (captured from a natural 20). Any motes currently stored in the ring dissipate when you finish a long rest.</p>
+			<p class="indent"><strong>Capture Fate.</strong> As a reaction, when a creature (including yourself) you can see within 60 feet of you rolls a natural 1 or a natural 20 on an attack roll, saving throw, or ability check, you can attempt to capture the roll. You cannot use this reaction if the ring is already holding 3 Fateful Motes.</p>
+			<ul>
+				<li><strong>If the triggering roll was a natural 20:</strong> The creature's roll is nullified. That creature must immediately reroll the d20, and it does so with disadvantage. You then store one Triumphant Mote in the ring.</li>
+				<li><strong>If the triggering roll was a natural 1:</strong> The creature's roll is nullified. That creature must immediately reroll the d20, and it does so with advantage. You then store one Calamitous Mote in the ring.</li>
+			</ul>
+			<p class="indent"><strong>Bestow Fate.</strong> As a reaction, when a creature (including yourself) you can see within 60 feet of you makes an attack roll, saving throw, or ability check, you can expend 1 charge and one stored Fateful Mote (Calamitous or Triumphant) from the ring to replace that creature's d20 roll.</p>
+			<ul>
+				<li><strong>Willing Target:</strong> If the target is willing, their d20 roll is replaced by the outcome of the mote (a natural 1 for Calamitous, a natural 20 for Triumphant).</li>
+				<li><strong>Unwilling Target:</strong> If the target is unwilling, they must make a DC 18 Intelligence saving throw. On a failed save, their d20 roll is replaced with the outcome of the mote. On a successful save, the charge and the mote are both expended to no effect.</li>
+			</ul>
+			<p class="indent"><strong>Skew Fortune.</strong> As a reaction, when a creature (including yourself) you can see within 60 feet of you makes an attack roll, saving throw, or ability check, you can roll a 1d4. You choose to either add or subtract the number rolled from the creature's d20 roll. You can use this reaction after the creature's d20 is rolled, but before the DM determines the outcome. You can use this feature a number of times equal to your proficiency bonus. You regain all expended uses when you finish a long rest.</p>
+		</description>
+		<setters>
+			<set name="category">Rings</set>
+			<set name="slot">ring</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+
 	<!-- Wondrous Items -->
+	<element name="Wraps of the First Leaf" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_WRAPS_OF_THE_FIRST_LEAF">
+		<description>
+			<p>These are a pair of expertly crafted handwraps, made not from cloth or bark, but from the first shed leaves of Ormaldë, the World Tree, gathered in the season of your birth. Your mother wove them for you, painstakingly curing each leaf with the tree's own sacred sap, creating a material that is softer than silk yet stronger than cured leather.</p>
+			<p>They are a deep, living green, and they feel cool and vibrant to the touch. They are a piece of your very origin, a direct connection to the heart of Farangroth. When you channel your ki, the faint, golden veins in each leaf glow with a soft light, and the wraps rustle as if touched by a wind from Ormaldë's highest branches.</p>
+			<p class="indent"><strong>Súryanda's Swiftness.</strong> While wearing these wraps, you gain a +1 bonus to attack and damage rolls with your unarmed strikes. Your unarmed strikes are considered magical.</p>
+			<p class="indent"><strong>Wind's Embrace.</strong> Your Súryanda heritage and the wraps' connection to the winds of home make you unnaturally fast. While you are wearing these wraps and are not wearing any armor or using a shield, your base walking speed increases by 10 feet.</p>
+			<p class="indent"><strong>Whispering Gale.</strong> When you spend at least 1 Ki point as part of your action or bonus action on your turn, the wraps channel the winds of Farangroth around you. Until the end of that turn, your movement does not provoke opportunity attacks.</p>
+			<p class="indent"><strong>Sapling's Tenacity.</strong> Your bond to the World Tree provides you with a deep, resilient vitality. As a bonus action, you can spend 1 Ki point to awaken this energy, regaining a number of hit points equal to 1d10 + your Wisdom modifier. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">hands</set>
+			<set name="attunement" addition="by a monk">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
 	<element name="Fillet of the Pure" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_FILLET_OF_THE_PURE">
 		<description>
 			<p>This simple hairband is woven from a silken, alabaster fabric that remains unnervingly pristine. No matter how much blood, mud, or ash touches it, the material sheds the filth instantly and returns to a stark, blinding white. The fabric is cool and damp, as if it has been soaked in holy water that never dries.</p>
@@ -111,6 +152,94 @@
 			<set name="rarity">Very Rare</set>
 		</setters>
 	</element>
+	
+	<element name="Tabi of the Ink-Strider" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_TABI_OF_THE_INK_STRIDER">
+		<description>
+			<p>Black, split-toed socks with soles that always leave a faint, damp footprint, even on dry stone.</p>
+			<p class="indent"><strong>Surface Tension.</strong> You can move across fluid surfaces as if they were harmless solid ground, as long as you keep moving at a calm pace. This means you do not incur any effects such as poison, acid, or other types of hazards from moving through such surfaces, unless you fall through.</p>
+			<p class="indent"><strong>Sanctity of Self.</strong> If you are standing in an area created by a spell or effect you control, you ignore the Difficult Terrain and take no damage from the area's hazards. Additionally, you gain 10 feet of movement on any surface you create, and gain double benefit from any terrain or weather spell that improves movement.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">feet</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	
+	<element name="Sorrow's Guise" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_SORROWS_GUISE">
+		<description>
+			<p><strong>Enchanted Cloth.</strong> You gain a +1 bonus to your AC while wearing this garment.</p>
+			<p class="indent"><strong>Shroud of Sorrow.</strong> When you are reduced to half hit points or fewer, the cloth will emit a thick mist that cloaks you in a shadow, granting you +2 AC for one minute, as well as advantage on Dexterity saving throws. This effect can only occur once per week.</p>
+			<p class="indent"><strong>Wail of the Forgotten.</strong> Once per long rest, you can unleash a mournful wail as an action. Each creature of your choice that you can see within 30 feet must make a Wisdom saving throw against a DC of 16. On a failed save, the target takes 3d6 psychic damage and is frightened until the end of your next turn. On a successful save, they take half damage and suffer none of the negative effects.</p>
+			<p class="indent"><strong>Mortuary of the Forgotten.</strong> When in the presence of one beloved by the Forgotten King, you may be overwhelmed by an unwieldy force, and temporarily possessed. Once this occurs, it can never happen again, but Sorrow's Guise will be forever changed by this monumental event.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">body</set>
+			<set name="type" addition="clothing">Wondrous Item</set>
+			<set name="armorClass">11 + Dex modifier</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+		<rules>
+			<stat name="ac:misc" value="1" />
+		</rules>
+	</element>
+	
+	<element name="Gloves of the Shared Heart" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_GLOVES_OF_THE_SHARED_HEART">
+		<description>
+			<p>These fingerless gloves are knitted from a strange, wool-like yarn that feels perpetually warm and soft, smelling faintly of woodsmoke and dried lavender. Despite their delicate, home-spun appearance, the fibers are uncuttable and refuse to stain, hinting at a more grandeous nature. When worn, they create a subtle, comforting pressure around the hands, like the reassuring grip of a close friend.</p>
+			<p class="indent"><strong>Nurturing Bond.</strong> While you are attuned to these gloves, your magic acts as a conduit for your own warmth and comfort. Whenever you cast a conjuration spell that summons or creates creatures (such as Find Familiar, Conjure Animals, or Summon Beast), those creatures gain the following benefits.</p>
+			<p class="indent"><strong>Heart of the Hearth.</strong> You generate a pool of Temporary Hit Points equal to your level + 10 times the level of the spell slot used. You must divide these temporary hit points evenly among the creatures summoned by the spell (rounded down).</p>
+			<p class="indent"><strong>Unshakable Trust.</strong> The creatures have advantage on Wisdom saving throws and are immune to the Psychological conditions, as they constantly feel your reassuring presence in their minds.</p>
+			<p class="indent"><strong>Guided Hand.</strong> While a summoned creature is within 60 feet of you, it adds your Proficiency Bonus to its attack rolls and damage rolls, guided by your bond.</p>
+			<p class="indent"><strong>The Burden of Loss (Curse).</strong> These gloves were created by a soul who loved too deeply to let go. This item is cursed. Attuning to it extends the curse to you. As long as you remain cursed, you cannot remove the gloves unless you are targeted by a Remove Curse spell or similar magic. The gloves tie your physical and emotional state to the existence of your conjurations. This connection anchors you to reality, but leaves you vulnerable to heartbreak.</p>
+			<p class="indent"><strong>Anchored by Love.</strong> While you have at least one summoned creature active, your attachment to them helps you to persist. You have advantage on all Constitution saving throws. This protection extends to any effect that would forcefully end concentration, such as any effect that would result in an incapacitation.</p>
+			<p class="indent"><strong>The Price of Grief.</strong> Whenever a creature you summoned drops to 0 hit points, is banished, or disappears because the spell ended early (such as losing concentration), you are overwhelmed by sudden, sharp heartbreak. You take 3d6 psychic damage per creature lost. This damage ignores resistance and immunity.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">hands</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+
+	<element name="Torque of the Shared Step" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_TORQUE_OF_THE_SHARED_STEP">
+		<description>
+			<p>This rigid neck-ring is crafted from a matte, slate-grey metal that feels heavier than it looks. Suspended at the throat is a housing of clear, indestructible crystal containing a droplet of silvery liquid which defies gravity. It seems to swirl in complex, predictable orbits that match the pulse of the wearer.</p>
+			<p class="indent"><strong>The Shared Step.</strong> While attuned to this torque, you utilize the spatial bond between creator and creation to manipulate the battlefield.</p>
+			<p class="indent"><strong>Transposition.</strong> As a Bonus Action or reaction, you can teleport, swapping places with a creature you have summoned or created via a Conjuration spell, provided the creature is within 60 feet of you.</p>
+			<p class="indent"><strong>Far Becomes Close.</strong> When you cast a spell with a range of Touch, you can choose to have the spell originate from one of your summoned creatures as if you were standing in its space. Your summon acts as the conduit for your magic.</p>
+			<p class="indent"><strong>Constrained Ward.</strong> The bond that tethers you also sustains you. At the start of each of your turns, you and any of your summoned creatures within 60 feet of you gain Temporary Hit Points equal to 5 + your Proficiency Bonus.</p>
+			<p class="indent"><strong>The Invisible Chain (Curse).</strong> This torque was forged by a culture that believed the creator should never abandon their creation. This item is cursed. Attuning to it extends the curse to you. As long as you remain cursed, you cannot remove the torque unless you are targeted by a Remove Curse spell or similar magic.</p>
+			<p class="indent"><strong>Orbital Lock.</strong> While you have at least one summoned creature active, you cannot voluntarily move more than 60 feet away from your nearest summoned creature. An invisible force of gravity prevents you from stepping beyond this radius.</p>
+			<p class="indent"><strong>The Snap.</strong> If you start your turn more than 60 feet away from your nearest summoned creature (for example, if the creature was forcefully moved or you were teleported), you are instantly dragged up to 30 feet in a straight line toward them. This forced movement provokes attacks of opportunity. Additionally, you take 1d10 force damage for every 10 feet traveled as the spatial tether strains against your body.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="slot">neck</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	
+	<element name="Chains of Unspoken Penance" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_CHAINS_OF_UNSPOKEN_PENANCE">
+		<description>
+			<p>The artifact is a single, unadorned link of heavy, cold iron, its surface a dark, matte grey that seems to absorb the light. There is no visible seam or point of forging, and despite its apparent age, it bears no rust or corrosion. It feels unnervingly heavy in the hand, a weight that seems both physical and spiritual. This is not an item of overt power, but a devotional focus carried by the most dedicated followers of Letoria, the Chains of Judgement. It is said to serve as a constant reminder of the weight of the law and the burden of a just and merciful sentence. Legends claim such links are forged from the shackles of a truly repentant murderer or blessed in a secret rite that imbues the metal with the deity's unbending will for controlled, righteous judgment.</p>
+			<p class="indent"><strong>Weight of Conscience.</strong> While holding this link, the wielder can use a bonus action to present it and invoke Letoria's judgment upon one creature they can see within 60 feet. The target must succeed on a DC 16 Wisdom saving throw or be afflicted by the spiritual weight of their past transgressions. On a failed save, the creature takes 3d8 psychic damage and is Burdened by Penance until the end of its next turn. While burdened, the creature has disadvantage on all attack rolls and ability checks as its focus is shattered by guilt and self-recrimination. This property can be used once, and is regained daily at dawn.</p>
+			<p class="indent"><strong>Clarity of Judgment.</strong> While attuned to this item, the wielder has advantage on Wisdom (Insight) checks made to discern if a creature is lying or to ascertain its true intentions.</p>
+			<p class="indent"><strong>Final Penance.</strong> A creature of significant malice slain while under the effect of the Weight of Conscience finds its soul judged with immediate finality. Such a soul is irrevocably barred from being raised as any form of undead and resists all but the most powerful attempts at resurrection.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="keywords">holy symbol, focus</set>
+			<set name="slot">neck</set>
+			<set name="attunement" addition="by a paladin, cleric, or individual sworn to Letoria">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
 
 	<!-- light armor -->
 	<element name="Chiton of Caeplithias" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_CHITON_OF_CAEPLITHIAS">
@@ -134,6 +263,87 @@
 			<stat name="ac:armored:armor" value="15" />
 		</rules>
 	</element>
+	
+	<!-- Medium Armor -->
+	<element name="Husk of the Storm-Eater" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_HUSK_OF_THE_STORM_EATER">
+		<supports>ID_INTERNAL_ARMOR_GROUP_MEDIUM</supports>
+		<description>
+			<p>This suit of scale mail is a heavy, imposing piece of craftsmanship that radiates a quiet menace. The upper breastplate is forged from a seamless, dark alloy where the Tempest-Vein ingot has fully integrated the steel of the consumed gauntlets. The surface is smooth but unnaturally cold, possessing a sheen that shifts between gunmetal grey and the deep blue of a bruised sky. It smells faintly of ozone and charred meat, the only lingering sign of the dragon-breath forge that birthed it.</p>
+			<p>The lower faulds are constructed from Scánarth scales, expertly cut and grafted into a flexible skirt of interlocking plates. They are laid with precision, creating a near-impenetrable barrier that moves fluidly with the wearer. Deliberate channels have been carved across the chest and shoulders, filled with dull Sirronium to form the shape of a "???? (TBD)" rune. These lines are clean and geometric, currently lying dormant and grey, waiting for the spark that will ignite their true purpose.</p>
+			<p class="indent"><strong>The Cold Grip.</strong> The armor absorbed Kadmon's Cocytus gauntlets during the forging process. The metal retains an unnatural chill which seems to shield you from intense heat. You have Resistance to Fire Damage.</p>
+			<p class="indent"><strong>Fulminous Veins.</strong> The Tempest-Vein ore within the alloy acts as a greedy lightning rod, drawing electrical energy into the Sirronium veins and granting you Resistance to Lightning Damage. This protection is not infinite. The armor can absorb a total of 40 points of Lightning Damage (calculated by the amount of damage prevented by the resistance). If this threshold is exceeded, the Sirronium veins glow white-hot with contained energy, and the dampening field temporarily collapses, causing you to lose this Resistance until you finish a Long Rest to let the energy dissipate.</p>
+			<p class="indent"><strong>Grafted Scánarth Plating.</strong> The Scánarth scales grafted to the lower faulds are incredibly dense and have been layered to create a surface where no blade can find purchase. When a creature scores a Critical Hit against you, you can use your reaction to angle the armor, causing the blow to skitter harmlessly across the hardened scales and turning the Critical Hit into a Normal Hit. You can use this feature once, and you regain the ability to do so after finishing a Long Rest.</p>
+			<p class="indent"><strong>Latent Instability.</strong> The Sirronium rune is currently dormant. However, if the Fulminous Veins limit is reached, the armor sheds bright light in a 20-foot radius and dim light for an additional 20 feet. This light persists for one hour. Stealth is practically impossible while this effect is active, and you are vulnerable to lightning damage during this time, but gain +2 AC as your armor is on the cusp of something greater.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="weight" lb="45">45 lb.</set>
+			<set name="slot">body</set>
+			<set name="type" addition="scale mail">Armor</set>
+			<set name="armor">Medium</set>
+			<set name="stealth">Disadvantage</set>
+			<set name="armorClass">14 + Dex modifier (max 2)</set>
+			<set name="attunement">true</set>
+			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SCALE_MAIL</set>
+			<set name="rarity">Rare</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:armor" value="14" />
+		</rules>
+	</element>
+	<element name="The Forgemaster's Legacy" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_FORGEMASTERS_LEGACY">
+		<supports>ID_INTERNAL_ARMOR_GROUP_MEDIUM</supports>
+		<description>
+			<p>This masterwork cuirass is a paradox of grim materials and profound care. It is composed of the slate-grey, stone-like chitinous plates of a Skordgur, yet it has been painstakingly shaped and articulated to fit a human frame, an act of incredible skill and empathy. The armor feels immensely solid and protective, a silent testament to the Forgemaster who sacrificed his own form to create it for his apprentice.</p>
+			<p>Etched into the surface are channels and mounting points, a clear framework designed to house arcane runes. While most are currently empty, a single, foundational Undorathi rune is inscribed upon the breastplate. Its groove is filled with a strange, unknown substance that pulses with a faint, contained light. This armor is not a finished masterpiece, but rather a perfect foundation, waiting for a new master to complete the work.</p>
+			<p class="indent"><strong>Forgemaster's Resolve.</strong> You have a +1 bonus to AC while wearing this armor. The armor has a pool of 3 charges. When you are hit by an attack from a creature you can see, you can use your reaction to expend 1 charge and reduce the damage you take by 1d10 + your proficiency bonus. The armor regains all expended charges when you finish a short or long rest spent in the warmth of a significant heat source, such as a forge or a large bonfire. During this time, you must tend to the armor, as if maintaining a forge, to rekindle its protective spirit.</p>
+			<p class="indent"><strong>Runic Matrix.</strong> The armor was designed as a conduit for runic power. It currently has one active rune slot, which can be used to house any rune you know. A rune inscribed in this armor is more potent than normal; its passive effect is enhanced, as determined by the GM.</p>
+			<p class="indent"><strong>Foundational Rune.</strong> The armor bears a single, foundational Undorathi Rune of Shaping inscribed by its creator. This rune is not merely a carving; it is believed to be an echo of the forgemaster's own soul, a final lesson in creation and purpose. While this rune is active, you are proficient with smith's tools.</p>
+			<p class="indent"><strong>Awakening Legacy.</strong> This cuirass is an unfinished work of immense potential. Its true power is dormant and can be awakened through multiple stages of evolution. Unlocking these stages will require a combination of factors: infusing the armor with more of the strange substance used in its creation, which the forgemaster may have had imbued in himself, achieving personal mastery over new runic forms, and performing deeds of great significance worthy of its creator's sacrifice. Each new stage of its evolution will increase the number of runes the armor can hold and may unlock entirely new magical properties.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="weight" lb="40">40 lb.</set>
+			<set name="slot">body</set>
+			<set name="type" addition="half plate">Armor</set>
+			<set name="armor">Medium</set>
+			<set name="stealth">Disadvantage</set>
+			<set name="armorClass">15 + Dex modifier (max 2)</set>
+			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_HALF_PLATE</set>
+			<set name="attunement" addition="by Kadmon Keter">true</set>
+			<set name="rarity">PLACEHOLDER</set>
+			<set name="enhancement">1</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:armor" value="15" />
+		</rules>
+	</element>
+	
+	<element name="Breastplate of the Forgotten King" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_BREASTPLATE_OF_THE_FORGOTTEN_KING">
+		<supports>ID_INTERNAL_ARMOR_GROUP_MEDIUM</supports>
+		<description>
+			<p><strong>Imbued Plate.</strong> You have a +1 bonus to AC while wearing this armor.</p>
+			<p class="indent"><strong>Renowned Presence.</strong> While wearing this armor, you have advantage on Charisma checks when engaged with individuals knowledgeable on the "Forgotten King" (You need to discover who this is).</p>
+			<p class="indent"><strong>Memory of Resilience.</strong> Once per long rest, you can conjure a shimmering shield that grants you resistance to one type of magical or elemental damage as a reaction for one minute. When using this feature make a DC 20 Constitution saving throw. On a success, you fully negate the damage type, but can never attempt to resist or negate that type again. The armor will change to reflect this success. On a failure, you just take regular resisted damage.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="weight" lb="20">20 lb.</set>
+			<set name="slot">body</set>
+			<set name="type" addition="breastplate">Armor</set>
+			<set name="armor">Medium</set>
+			<set name="armorClass">14 + Dex modifier (max 2)</set>
+			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_BREASTPLATE</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+			<set name="enhancement">1</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:armor" value="14" />
+		</rules>
+	</element>
+
+	<!-- Heavy-Armor -->
 	
 	<!-- one-handed weapons -->
 	<element name="The Sky-Flash Javelin" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_SKY_FLASH_JAVELIN">
@@ -173,6 +383,8 @@
 			<set name="slot">onehand</set>
 			<set name="type" addition="battleaxe">Weapon</set>
 			<set name="weapon">Battleaxe</set>
+			<set name="damage" type="slashing">1d10</set>
+			<set name="properties">Versatile (1d12)</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
 			<set name="enhancement">2</set>
@@ -181,8 +393,85 @@
 			<stat name="weapon:attack" value="2" />
 		</rules>
 	</element>
+	<element name="Providence" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_PROVIDENCE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_LONGSWORD</supports>
+		<description>
+			<p>Also known as "Mother's Sword", this weapon seems to gain power from each plight you slay, perhaps requiring more than one kill to fully awaken its potential. It can be used as a spellcasting focus.</p>
+			<p class="indent"><strong>Stats.</strong> This weapon's base damage is 1d10 Piercing damage. On a hit, it deals an additional 2 force damage and 2 psychic damage.</p>
+			<p class="indent"><strong>Unworthy.</strong> If wielded while unworthy, you have disadvantage on all attacks made with this weapon, and you may randomly combust.</p>
+			<p class="indent"><strong>Augments.</strong> The sword gains more powers and modifiers as you complete your plights. Currently active augments:</p>
+			<ul>
+				<li><strong>Hilt:</strong> You can cast the Eldritch Blast cantrip (manifesting as purple energy). You use your Wisdom modifier for this spell, and it includes the effects of the Grasp of Hadar invocation.</li>
+				<li><strong>Abyssal (Blade):</strong> Represents the completed Abyssal (Gilded) plight. Grants the blade its +2 Psychic Damage.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="keywords">focus</set>
+			<set name="weight" lb="3">3 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="longsword">Weapon</set>
+			<set name="damage" type="piercing">1d10</set>
+			<set name="properties">Versatile (1d12)</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ELDRITCH_BLAST" />
+			<grant type="Class Feature" id="ID_WOTC_XGTE_CLASS_FEATURE_ELDRITCH_INVOCATION_GRASP_OF_HADAR" />
+		</rules>
+	</element>
+
+	<element name="Sunsplitter" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_SUNSPLITTER">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_RAPIER</supports>
+		<description>
+			<p>Said to be the favored weapon of King Brect of Dothoren, Sunsplitter played a pivotal role in the founding of what would later be recognized as the Kingdom of Dothoren. It is believed to have been blessed by the Blazing Jewel, a radiant deity who represents the Sun, and formerly justice. While not the subject of worship, being chosen by such a divine entity is considered an extraordinary honor. Legends speak of how Sunsplitter was wielded in the legendary Battle of Dawn's Light, where King Brect vanquished a dark army threatening his kingdom. Formerly, it was passed down through the royal lineage as a symbol of hope and courage in times of darkness. Now it finds itself in the hands of a new paragon, and potential competitor for the throne.</p>
+			<p class="indent"><strong>Stats.</strong> This weapon deals 2d8 Piercing damage and possesses the finesse property. It grants a +4 bonus to attack rolls made with it, and its damage rolls gain a +4 Radiant damage bonus.</p>
+			<p class="indent"><strong>Divine Ward.</strong> While wielding this weapon, you gain a +2 bonus to your Armor Class.</p>
+			<p class="indent"><strong>Blazing Strike.</strong> On a hit, this weapon unleashes a wave of radiant energy. The target must make a DC 19 Constitution saving throw, taking an additional 2d8 radiant damage on a failed save, or half as much on a successful one. This can only occur when the sun is currently up. If the sun is down, the effect instead becomes Extinguishing Strike.</p>
+			<p class="indent"><strong>Extinguishing Strike.</strong> On a hit, this weapon unleashes a wave of radiant energy. The target must make a DC 19 Wisdom saving throw, taking an additional 2d8 necrotic damage on a failed save, or half as much on a successful one. This can only occur when the moon is currently up. If the sun is down, the effect instead becomes Blazing Strike.</p>
+			<p class="indent"><strong>Tempered Fervor.</strong> During absolute dusk or absolute dawn, neither Blazing Strike nor Extinguishing Strike can activate.</p>
+			<p class="indent"><strong>Jewel's Radiance.</strong> As a bonus action, the wielder can activate the Sun's Radiance feature once per long rest. This envelops the weapon in dazzling light for 1 minute, causing any creature that starts its turn within 10 feet of the wielder to make a DC 19 Dexterity saving throw, taking 4d6 radiant damage on a failed save and becoming blinded until the end of its next turn. Creatures that succeed on the save take half damage and are not blinded.</p>
+			<p class="indent"><strong>Radiant Crown.</strong> Once per day, you can invoke the power of Sunsplitter to cast the Sunbeam spell (spell save DC 19). When you do so, the area of effect shimmers with golden light, forcing all hostile creatures within the radius to make a Constitution saving throw or take 8d8 radiant damage and be blinded for one minute. A creature can repeat the saving throw at the end of each of its turns, ending the blindness on a success.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="rapier">Weapon</set>
+			<set name="weapon">Rapier</set>
+			<set name="damage" type="piercing">2d8</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">4</set>
+		</setters>
+		<rules>
+			<stat name="ac:misc" value="2" />
+			<grant type="Spell" id="ID_PHB_SPELL_SUNBEAM" />
+		</rules>
+	</element>
 	
 	<!-- two-handed weapons -->
+	<element name="Enochian Maul" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_ENOCHIAN_MAUL">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MAUL</supports>
+		<description>
+			<p>This massive, heavy mace consists of a dense, matte black iron core wrapped in intricate silver bands that hum with latent energy. The head is connected to a sturdy staff by a length of reddish, hell-forged chain. Jagged spikes made of a volatile, unstable metal protrude from the striking surface, while the handle is carved from a single piece of dark, violet glass.</p>
+			<p>When left unattended, it is said that the screams of those who fell victim to one of the weapon's components can still be heard... the red glow of the spikes illuminating the hellish chain attached to it.</p>
+			<p class="indent"><strong>Stats.</strong> You gain a bonus to your damage rolls with this magic weapon equal to 1d6 force damage.</p>
+			<p class="indent"><strong>Sundering Strikes.</strong> The weight of the black iron core combined with the corrosive nature of the spikes makes this weapon devastating against defenses. When you hit a creature wearing or carrying nonmagical metal armor or a nonmagical metal shield, the object takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. On a nat 20, your blow reduces the AC by -3 instead of -1.</p>
+			<p class="indent"><strong>Kinetic Extension.</strong> The hell-metal chain allows the maul head to be swung with increased momentum. Once per turn, you can extend the reach of an attack with this weapon to 10 feet. If you hit a creature with an extended attack, they must succeed on a DC 15 Strength saving throw or be knocked prone.</p>
+			<p class="indent"><strong>Unstable Flare (Dormant).</strong> ????</p>
+			<p class="indent"><strong>#%#$ %^&amp;## !@#!#.</strong> ????</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="10">10 lb.</set>
+			<set name="slot">twohand</set>
+			<set name="type" addition="maul">Weapon</set>
+			<set name="weapon">Maul</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
 	<element name="Ovidia's Blood-Glass Scythe" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_OVIDIAS_BLOOD_GLASS_SCYTHE">
 		<supports>ID_INTERNAL_WEAPON_CATEGORY_GLAIVE</supports>
 		<description>
@@ -241,6 +530,122 @@
 			<stat name="weapon:damage" value="2" />
 			<stat name="spellcasting:attack" value="2" />
 			<stat name="spellcasting:dc" value="2" />
+		</rules>
+	</element>
+
+	<element name="Hauke's Reach" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_HAUKES_REACH">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_GLAIVE</supports>
+		<description>
+			<p>Hauke's Reach has been passed down through generations of the Hauke noble family, said to be blessed by the spirit of the dragon Ice Yterin. Legend claims that the first wielder, Lady Arisel Hauke, defeated a terrible beast that plagued her lands by channeling the ancestral powers through this very glaive. Its legacy lives on as a symbol of honor and protection for those who wield it. Stories of its use in heroic deeds circulate among the bards, inspiring many to seek out its power. Only those who have had this weapon directly passed down to them may wield it, typically as a transfer from parent to child.</p>
+			<p class="indent"><strong>Stats.</strong> This weapon functions as a standard glaive, but on a hit, it deals an additional 2 piercing damage and 2 cold damage.</p>
+			<p class="indent"><strong>Breathe of Yterin.</strong> Once per day, when you hit a creature with this glaive, you can choose to unleash the force of Yterin's breath upon your foe. This creates a 30-foot cone of ice, dealing 6d6 cold damage. The affected creature must make a DC 19 Dexterity saving throw, taking half damage on a success. If they fail the save, they are chilled to the bone, causing them to lose half their movement speed for 1 minute.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="slot">twohand</set>
+			<set name="type" addition="glaive">Weapon</set>
+			<set name="weapon">Glaive</set>
+			<set name="attunement" addition="by a direct heir of the Hauke family">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="enhancement">2</set>
+		</setters>
+		<rules>
+			<stat name="weapon:attack" value="2" />
+			<stat name="weapon:damage" value="2" />
+		</rules>
+	</element>
+
+	<element name="Aethelgard, Last Light of The Forgotten Sky" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_AETHELGARD">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_GREATSWORD</supports>
+		<description>
+			<p>This weapon appears to be an exquisitely crafted longsword, forged from a single piece of luminous white steel that seems to possess its own internal light. In stark contrast, its hilt is an ornate yet purposeful work of a seamless, matte black metal, cool to the touch. The material's light-absorbing quality and immense density are reminiscent of the mythical ore Argenox, leading some to wonder if this is a purer, more primal form of the material, created outside of Nelvora before the "Heaven's Tear" was ever shaped by this world's influence.</p>
+			<p>At the very center of the crossguard is one standout symbol: a circular sigil depicting the life rings of a great tree, sundered by a clean crack down the middle. On one half, the rings are perfect and symmetrical, glowing with a faint, internal light. On the other, the rings are warped into chaotic knots and whorls from which a single, dark, thorny shape grows. The weapon's true nature is betrayed by its impossible mass; while shaped like a longsword, its weight is immense, far exceeding that of even a mundane greatsword. Found within the ruins of a forgotten sanctum in Salusare, it is a vestige that has been long orphaned from its true home and true purpose.</p>
+			<p>In the hands of one with a true divine calling, Aethelgard forms a powerful bond. When the wielder channels their will into the weapon, the physical blade acts as the core, erupting in a sheath of semi-translucent, solid light that forms its true shape: a shimmering, vibrant extension that brings the weapon to its full greatsword size and reach. It is theorized that this projected blade is a memory of the weapon's possible original form, its immense mass finally aligning with its awakened purpose. To wield it is to carry fragments of a legacy long lost to time... or simply erased. There may exist some who would scorn the burden enshrined within this weapon, or even those who would seek to destroy it.</p>
+			<p class="indent"><strong>Before Attunement.</strong> To a creature not attuned to it, Aethelgard is treated as a masterwork longsword. Due to its impossible mass, any attack roll made with it has disadvantage. It is considered a non-magical weapon in this state. Attuning to the weapon is a process that requires a full day of meditation and communion with the weapon's dormant will, after which its other properties are unlocked for you. This meditation must be conducted in a place of divine significance, or amidst the carnage of a battlefield.</p>
+			<p class="indent"><strong>White-Steel Blade.</strong> The otherworldly material of this weapon is exceptionally forged. You have a +4 bonus to attack and damage rolls made with this magic weapon. This bonus increases by an additional +2 during the effects of Radiant Awakening.</p>
+			<p class="indent"><strong>Awakened Form.</strong> Upon attuning to this weapon, its dormant power partially awakens. The physical blade acts as the core for a blade of semi-translucent, solid light that extends its form. For you, Aethelgard is always treated as a magical greatsword with the following properties:</p>
+			<ul>
+				<li>It has the reach property.</li>
+				<li>It sheds bright light in a 20-foot radius and dim light for an additional 20 feet.</li>
+				<li>It deals an extra 2d4 radiant damage to any target it hits.</li>
+			</ul>
+			<p class="indent"><strong>Radiant Awakening.</strong> The weapon's deepest protective instincts are its own and cannot be commanded. If you are reduced to 0 hit points but not killed outright while holding this weapon, Aethelgard unleashes a burst of furious light. You are immediately restored to 1 hit point. In addition, each hostile creature within 30 feet of you must make a DC 18 Constitution saving throw. On a failed save, a creature takes 10d8 radiant damage and is blinded until the end of your next turn. On a successful save, a creature takes half as much damage and is not blinded. This property cannot be used again for at least 30 days. It may take longer for it to recover, depending on conditions outside your current knowledge.</p>
+			<p class="indent"><strong>The Withdrawn Light.</strong> For the 30 days that Radiant Awakening is on cooldown, the weapon's nature changes. The matte black metal of the hilt seems to creep over the blade in a protective, light-absorbing shell. During this time, the weapon has the following properties:</p>
+			<ul>
+				<li>The extra damage it deals changes from 2d4 radiant to 2d8 necrotic damage. When you deal this necrotic damage to a target, you take necrotic damage equal to the amount dealt. You cannot reduce the damage taken to yourself by any means.</li>
+				<li>The light it sheds is replaced by a 10-foot radius of magical darkness. This darkness blinds you and any other creature that starts its turn within it.</li>
+				<li>As a bonus action, you can draw upon the weapon's sorrow to see. You take 10d8 necrotic damage that cannot be reduced by any means, and in exchange, you can see through this magical darkness for 1 hour. You can use this feature once per long rest.</li>
+				<li>While the weapon is in this state, you are constantly afflicted with feelings of paranoia and violent emotions. You have disadvantage on Wisdom (Insight) checks and Charisma (Persuasion) checks. Any other creature that ends its turn within the weapon's magical darkness must succeed on a DC 17 Wisdom saving throw or feel their sanity begin to fray, the creature has disadvantage on all Intelligence, Wisdom, and Charisma saving throws for the next minute.</li>
+			</ul>
+			<p class="indent"><strong>Dormant Sigils.</strong> The grey sigils along the blade's fuller are currently inert. Their purpose is unknown, but they glow with a soft, white light when Radiant Awakening is active, suggesting they are tied to an even greater, undiscovered power.</p>
+			<p class="indent"><strong>The Unspoken Name.</strong> The true name of the weapon, or a command that would unlock its full potential, is lost to time. You have a persistent, intuitive sense that discovering this name and speaking it would awaken the dormant sigils, transforming the weapon into its final, most powerful form and perhaps granting you control over its light and shadow aspects.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="18">18 lb.</set>
+			<set name="slot">twohand</set>
+			<set name="type" addition="greatsword">Weapon</set>
+			<set name="weapon">Greatsword</set>
+			<set name="properties">Heavy, Two-Handed, Reach</set>
+			<set name="attunement" addition="by a creature with a divine blessing or calling">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">4</set>
+		</setters>
+	</element>
+
+	<element name="Aethelgard (Withdrawn Light)" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_AETHELGARD_WITHDRAWN_LIGHT">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_GREATSWORD</supports>
+		<description>
+			<p>For the 30 days that Aethelgard's Radiant Awakening is on cooldown, the weapon's nature changes. The matte black metal of the hilt creeps over the blade in a protective, light-absorbing shell. It retains its impossible mass and reach, but its divine light is replaced by a sorrowful, parasitic hunger.</p>
+			<p class="indent"><strong>White-Steel Blade (Dimmed).</strong> You retain the +4 bonus to attack and damage rolls made with this magic weapon.</p>
+			<p class="indent"><strong>The Withdrawn Light.</strong> While in this cursed state, the weapon has the following properties:</p>
+			<ul>
+				<li>The extra damage it deals is 2d8 necrotic damage. When you deal this necrotic damage to a target, you take necrotic damage equal to the amount dealt. You cannot reduce the damage taken to yourself by any means.</li>
+				<li>The weapon sheds a 10-foot radius of magical darkness. This darkness blinds you and any other creature that starts its turn within it.</li>
+				<li>As a bonus action, you can draw upon the weapon's sorrow to see. You take 10d8 necrotic damage that cannot be reduced by any means, and in exchange, you can see through this magical darkness for 1 hour. You can use this feature once per long rest.</li>
+				<li>You are constantly afflicted with feelings of paranoia and violent emotions. You have disadvantage on Wisdom (Insight) checks and Charisma (Persuasion) checks.</li>
+				<li>Any other creature that ends its turn within the weapon's magical darkness must succeed on a DC 17 Wisdom saving throw or feel their sanity begin to fray. A failing creature has disadvantage on all Intelligence, Wisdom, and Charisma saving throws for the next minute.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="weight" lb="18">18 lb.</set>
+			<set name="slot">twohand</set>
+			<set name="type" addition="greatsword">Weapon</set>
+			<set name="weapon">Greatsword</set>
+			<set name="properties">Heavy, Two-Handed, Reach</set>
+			<set name="attunement" addition="by a creature with a divine blessing or calling">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">4</set>
+		</setters>
+	</element>
+
+	<!-- Shields -->
+	<element name="The Aegis of the Twin Lions" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_AEGIS_OF_THE_TWIN_LIONS">
+		<supports>ID_INTERNAL_ARMOR_GROUP_SHIELD</supports>
+		<description>
+			<p>This magnificent heater shield of ancient Fiscathian design is crafted from dark ironwood faced with burnished steel, its front dominated by a masterfully sculpted bas-relief of two roaring silver lions, the ancient symbols of House Rochefort. It is said to have been borne by Lord Theron Rochefort, "The Unyielding," during the legendary Siege of the Crimson Ford. Despite its size, the Aegis feels remarkably balanced.</p>
+			<p class="indent"><strong>Armor Class.</strong> You have a +1 bonus to your Armor Class while you are wielding this shield. This is in addition to the shield's normal +2 bonus.</p>
+			<p class="indent"><strong>Lion's Guard.</strong> The Aegis seems to preternaturally deflect blows. When an attacker that you can see hits you with an attack roll, you can use your reaction to add your proficiency bonus to your AC for that attack, potentially causing the attack to miss you. The air around the shield often shimmers subtly when a strike is imminent. You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong>Unyielding Stance.</strong> When a creature you can see attacks an ally within 10 feet of you, you can use your reaction to redirect the attack to yourself, interposing the Aegis with uncanny effectiveness. You must choose to do so before the attack roll is made. This ability draws upon your deep focus and can be used once per short or long rest.</p>
+			<p class="indent"><strong>Echo of Courage (Rumored).</strong> Legends persist that the indomitable spirit within the Aegis can lend its resilience. If you are reduced to 0 hit points by an attacker you can see but not killed outright, the shield may flare with a brief, warm inner light. If this occurs, you drop to 1 hit point instead. Votary scholars believe this profound intervention is a rare and sacred occurrence, drawing deeply from the shield's ancient reserves of protective energy. (DM Note: This feature might activate once per long rest, or under specific narrative conditions of dire peril when upholding a protective vow.)</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="armor">Shield</set>
+			<set name="armorClass">2</set>
+			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS</set>
+			<set name="attunement" addition="by an individual dedicated to martial discipline or protective vows">true</set>
+			<set name="rarity">Very Rare</set>
+			<set name="enhancement">1</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="2" />
+			<stat name="ac:shield:magic" value="1" />
 		</rules>
 	</element>
 	
