@@ -4,7 +4,7 @@
 		<name>Nelvora Companions</name>
 		<description>Custom companions, familiars, and Magatsu for the Nelvora setting.</description>
 		<author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-		<update version="1.0.1">
+		<update version="1.0.2">
 			<file name="nelvora-companions.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-companions.xml" />
 		</update>
 	</info>	
@@ -240,6 +240,185 @@
 		</description>
 		<sheet alt="Warden's Rebuke" action="Reaction" usage="Recharge 4-6">
 			<description>Trigger: A creature within 10 ft hits you with an attack. Effect: The attacker must make a Str save vs your Spell Save DC or be knocked Prone.</description>
+		</sheet>
+	</element>
+
+	<element name="Inky" type="Companion" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_INKY">
+		<supports>Familiar,Variant Familiar</supports>
+		<description>
+			<p>A Small celestial, uniquely bound as Waelin's Pet, possessing a highly modular and adaptive physical form.</p>
+		</description>
+		<setters>
+			<set name="size">Small</set>
+			<set name="type">Celestial</set>
+			<set name="alignment">???? Alignment</set>
+			<set name="ac">19</set>
+			<set name="hp">34 (4d6 + 20)</set>
+			<set name="speed">50 ft.</set>
+			<set name="strength">8</set>
+			<set name="dexterity">17</set>
+			<set name="constitution">20</set>
+			<set name="intelligence">17</set>
+			<set name="wisdom">13</set>
+			<set name="charisma">16</set>
+			<set name="savingThrows">Dex +5, Con +7</set>
+			<set name="skills">Acrobatics +7, Perception +3, Stealth +7</set>
+			<set name="damageResistances">necrotic, radiant</set>
+			<set name="damageImmunities">poison</set>
+			<set name="conditionImmunities">charmed, frightened, paralyzed, poisoned, unconscious</set>
+			<set name="senses">passive Perception 13</set>
+			<set name="languages">Understands ????</set>
+			<set name="challenge">4</set>
+			<set name="traits">ID_NELVORA_COMPANION_TRAIT_INKY_ANIMATING_PERFORMANCE,ID_NELVORA_COMPANION_TRAIT_INKY_FORGED_FRAME,ID_NELVORA_COMPANION_TRAIT_INKY_BONE_STRUCTURE,ID_NELVORA_COMPANION_TRAIT_INKY_SPINE,ID_NELVORA_COMPANION_TRAIT_INKY_SKULL,ID_NELVORA_COMPANION_TRAIT_INKY_ADAPTIVE_FORM,ID_NELVORA_COMPANION_TRAIT_INKY_FLOWER_OF_WAELIN,ID_NELVORA_COMPANION_TRAIT_INKY_GOLD,ID_NELVORA_COMPANION_TRAIT_INKY_SPECIAL_INK,ID_NELVORA_COMPANION_TRAIT_INKY_STEEL,ID_NELVORA_COMPANION_TRAIT_INKY_WOOD</set>
+			<set name="actions">ID_NELVORA_COMPANION_ACTION_INKY_FORCE_EMPOWERED_SLAM</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="19" />
+			<stat name="companion:hp:max" value="34" bonus="base" />
+			<stat name="companion:speed" value="50" bonus="base" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Animating Performance" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_ANIMATING_PERFORMANCE">
+		<description>
+			<p>Inky can be activated using the Animating Performance Class feature. When doing so, their strength stat is elevated to 18, and they gain access to the Force Empowered Slam action.</p>
+		</description>
+		<sheet>
+			<description>When activated via Animating Performance, Strength becomes 18 and unlocks Force Empowered Slam.</description>
+		</sheet>
+	</element>
+
+	<element name="Forged Frame" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_FORGED_FRAME">
+		<description>
+			<p>Due to the efforts of Kadmon, the Aspiring Forgemaster, Inky has obtained a "skeleton" of sorts. Alongside adopting a more rigid and stable physique, Inky has also obtained some new abilities as well.</p>
+			<p><strong>Current Skeleton:</strong></p>
+			<ul>
+				<li><strong>Bone-Structure (Basic):</strong> Stone-Iron Ore</li>
+				<li><strong>Spine:</strong> Fiscathian Steel</li>
+				<li><strong>Skull (Orb):</strong> White-Pearl of the Dragon God</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Inky possesses a forged skeleton granting unique modular abilities.</description>
+		</sheet>
+	</element>
+
+	<element name="Bone-Structure: Stone-Iron Ore" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_BONE_STRUCTURE">
+		<description>
+			<p>Beneath their shadowy form, Inky's "bones" are made of a rough stone material, one laden with blackish veins of some darker material. These ridges are cold to the touch, and barely clash with the more ink-borne exterior.</p>
+			<p class="indent"><strong>Passive Form:</strong> With the advent of their bone-structure, Inky has now been given a more static and clear appearance. What was once leaning on the amalgamation side is now a keen feline resemblance. While far from the extravagance existing within their skull, the Stone gives Inky a firm foundation. Alongside their more approachable appearance, Inky has also gained +1 AC.</p>
+			<p class="indent"><strong>Active Form:</strong> While their shadow swirls and morphs into a more ferocious state, the Stone also partially exudes out of their "skin", forming a solid Carapace. Their passive AC bonus from this feature doubles to +2, and they can use a reaction to harden their "carapace", giving them resistance to all forms of non-magical attacks until the end of their next turn. This ability can be used once per short-rest.</p>
+			<p class="indent"><strong>Stats Gained:</strong> +2 Strength</p>
+		</description>
+		<sheet>
+			<description>Passive: +1 AC, feline shape. Active: +2 AC total, and can use a Reaction (1/Short Rest) to gain resistance to non-magical attacks until end of next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Spine: Fiscathian Steel" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_SPINE">
+		<description>
+			<p>Where the newly obtained Bone-Structure has given Inky "shape", this spine has completed the first stage of their Skeleton. As for a more standard being, Inky's spine allows them to move more freely, and has even granted them sturdiness beyond expected means. In the future, this piece will allow for even great additions to their being, but for now it's merely a sturdy foundation to be eventually grated upon.</p>
+			<p class="indent"><strong>Passive Form:</strong> Solid ridges press just below Inky's back, gently shifting as they walk around, and serving to connect their various parts to create a greater whole. While there is not a specific significant effect, Inky has gained a number of additional stats from this addition.</p>
+			<p class="indent"><strong>Active Form:</strong> Each blow from Inky has gained additional force, and their attacks have great reach as if their form has become more flexible. When transformed, Inky gains an additional +10 Walking Speed. Additionally, as a bonus action, Inky can extend their attack range to 10 ft until the start of their next turn. This ability can be used once per short-rest.</p>
+			<p class="indent"><strong>Stats Gained:</strong> +10 Walking Speed, +2 Strength, +1 Dexterity, +1 Constitution, +1 Challenge Rating, their Force-Empowered Slam is now a 1d12 instead of 1d10.</p>
+		</description>
+		<sheet>
+			<description>Active: +10 Speed. Bonus Action (1/Short Rest) to extend attack range to 10 ft until start of next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Skull: White-Pearl of the Dragon God" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_SKULL">
+		<description>
+			<p>Due to their current "frame", Inky has a magical "White-Pearl" in place of their skull. It's an ominous yet powerful artifact obtained during an escapade. Currently little is known about the pearl, but it has already begun to grant Inky some minor effects, with more to be unlocked.</p>
+			<p class="indent"><strong>Passive Form:</strong> Shining brightly through Inky's eyes, the pearl gives off a radiant light whenever it is in the presence of powerful evil. While Inky is in their passive state, and touching Waelin, he has immunity to a new fear effect from any evil entity. Additionally, Inky can cast protection from good and evil once per week.</p>
+			<p class="indent"><strong>Active Form:</strong> Purifying light shunts off of Inky's shadow, lashing at any ill-begotten beings nearby, and shielding allies nearby. As an action, Ink can exude radiant light and gain 27 (4d10 + 5) Temporary Hit Points for 1 minute. Additionally, Inky takes half of the damage any friendly target within 10 feet takes, halving it for them. This effect ends when the Temporary Hit Points are exhausted.</p>
+			<p class="indent"><strong>Stats Gained:</strong> +1 Constitution, +3 Intelligence, +3 Wisdom, +2 Charisma, +2 Challenge Rating.</p>
+		</description>
+		<sheet>
+			<description>Passive: Glows near evil. Grants Waelin fear immunity from evil if touching. Cast Protection from Evil/Good 1/week. Active: Action to gain 27 THP for 1 min; while THP lasts, Inky takes half damage for allies within 10 ft.</description>
+		</sheet>
+	</element>
+
+	<element name="Adaptive Form" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_ADAPTIVE_FORM">
+		<description>
+			<p>Inky can consume and integrate various materials into its form. The materials "accepted" by Inky seem to be linked to its own will, but it will consume practically anything it is given, regardless of taking on their traits or not.</p>
+			<p><strong>Current Materials Absorbed:</strong></p>
+			<ol>
+				<li>Waelin's Flower</li>
+				<li>Bag of Gold</li>
+				<li>Vial of Ink</li>
+				<li>Steel</li>
+				<li>Wood</li>
+			</ol>
+		</description>
+		<sheet>
+			<description>Inky can consume and integrate materials to gain new properties.</description>
+		</sheet>
+	</element>
+
+	<element name="Material: Flower of Waelin (Life)" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_FLOWER_OF_WAELIN">
+		<description>
+			<p>This material is a living flower from Waelin’s own body, imbued with a gentle, life-giving energy.</p>
+			<p class="indent"><strong>Passive Form:</strong> When this material is dominant, the inky swirls within Inky’s core take on the faint, shifting pattern of the flower’s petals, and it emits a subtle, pleasant floral scent. Its creator gains advantage on Wisdom (Medicine) checks made to stabilize a dying creature.</p>
+			<p class="indent"><strong>Active Form:</strong> Inky’s amorphous form is flecked with shimmering, petal-like motes of light. It gains the Soothing Touch action. Once per long rest, Inky can touch a creature and restore a number of hit points equal to 1d10 + its creator’s Charisma modifier.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>Passive: Creator gains adv. on Medicine to stabilize. Active: Touch to heal 1d10 + Creator's Cha Mod.</description>
+		</sheet>
+	</element>
+
+	<element name="Material: Gold (Kleptomania)" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_GOLD">
+		<description>
+			<p>Inky has assimilated a notable quantity of precious gold, absorbing its association with wealth and allure.</p>
+			<p class="indent"><strong>Passive Form:</strong> The surface of Inky’s core gains a brilliant, liquid-gold sheen. While carrying it, its creator has advantage on Charisma (Persuasion) checks when interacting with individuals who are motivated by wealth or status. Additionally, Inky has a penchant for stealing small bits and bobs.</p>
+			<p class="indent"><strong>Active Form:</strong> Inky’s body glitters with a distracting golden light. As a reaction when a creature Inky can see targets it with an attack, it can flash this light, imposing disadvantage on the attack roll. It can use this feature a number of times equal to its creator’s proficiency bonus, regaining all uses on a long rest.</p>
+		</description>
+		<sheet>
+			<description>Passive: Creator gains adv. on Persuasion vs greedy targets. Active: Reaction (PB/Long Rest) to impose disadvantage on an incoming attack.</description>
+		</sheet>
+	</element>
+
+	<element name="Material: Special Ink (Shadow)" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_SPECIAL_INK">
+		<description>
+			<p>This is not common ink, but a special blend used by Waelin, tying directly to the substance that helped give Inky life. It resonates with properties of shadow and secrecy.</p>
+			<p class="indent"><strong>Passive Form:</strong> Inky’s core becomes a deep, matte black that seems to absorb the light around it. Its creator gains a +3 bonus to Dexterity (Stealth) checks.</p>
+			<p class="indent"><strong>Active Form:</strong> Inky’s form is exceptionally dark and coalesces with nearby shadows. It can take the Hide action as a bonus action while in dim light or darkness.</p>
+		</description>
+		<sheet>
+			<description>Passive: Creator gains +3 Stealth. Active: Can Hide as a Bonus Action in dim light/darkness.</description>
+		</sheet>
+	</element>
+
+	<element name="Material: Steel (Forge)" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_STEEL">
+		<description>
+			<p>A simple but reliable material, steel imparts straightforward martial resilience.</p>
+			<p class="indent"><strong>Passive Form:</strong> The alloy core feels heavier and its surface takes on the appearance of hammered steel. While it's active, their creator gains +2 bonus to their Armor Class.</p>
+			<p class="indent"><strong>Active Form:</strong> Inky’s form hardens, and its slam attacks are now considered magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. It also gains resistance to physical damage from nonmagical attacks.</p>
+		</description>
+		<sheet>
+			<description>Passive: Creator gains +2 AC. Active: Slam attacks are magical; gains resistance to nonmagical physical damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Material: Wood (Resilience)" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_INKY_WOOD">
+		<description>
+			<p>This wood, whether common or rare, connects Inky to the steadfast and resilient nature of the wild.</p>
+			<p class="indent"><strong>Passive Form:</strong> A faint, shifting wood grain pattern appears across Inky’s surface. Its creator has advantage on Wisdom (Nature) checks.</p>
+			<p class="indent"><strong>Active Form:</strong> Inky’s body becomes fibrous and tough. Its walking and climbing speeds increase to 80 feet, and it cannot be knocked prone.</p>
+		</description>
+		<sheet>
+			<description>Passive: Creator gains adv. on Nature. Active: Speed becomes 80 ft, immune to prone.</description>
+		</sheet>
+	</element>
+
+	<element name="Force-Empowered Slam" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_INKY_FORCE_EMPOWERED_SLAM">
+		<description>
+			<p><em>Melee Weapon Attack:</em> Waelin's Spell Casting Modifier to hit, reach 5 ft. <em>Hit:</em> 1d12 + Waelin's Proficiency bonus force damage.</p>
+		</description>
+		<sheet>
+			<description>Melee Weapon Attack: Waelin's Spell Casting Mod to hit, reach 5 ft. Hit: 1d12 + PB force damage.</description>
 		</sheet>
 	</element>
 
