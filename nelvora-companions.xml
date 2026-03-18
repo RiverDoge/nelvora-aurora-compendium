@@ -7,8 +7,9 @@
 		<update version="1.0.0">
 			<file name="nelvora-companions.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-companions.xml" />
 		</update>
-	</info>
-	
+	</info>	
+
+	<!-- Magatsu -->
 	<element name="Mizu-Kagami (The Scalded Mirror)" type="Companion" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_MIZU_KAGAMI">
 		<supports>Magatsu</supports>
 		<description>
@@ -141,4 +142,105 @@
 			<description>Trigger: You land an attack while Mizu is manifested. Mizu appears at your blade and uses Drowning Embrace on the target. She immediately Vapor-Steps back to her original location, dragging the target. If target is Large+, they take 1d12 fire + 1d12 cold instead of being embraced/teleported.</description>
 		</sheet>
 	</element>
+
+	<element name="Sekka-Inu (Vermillion Sentinel)" type="Companion" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_SEKKA_INU">
+		<supports>Magatsu</supports>
+		<description>
+			<p>A Large Koma-Inu (Stone-Lion) originating from the Arakami (Fallen Temple Guardians).</p>
+		</description>
+		<setters>
+			<set name="size">Large</set>
+			<set name="type">Koma-Inu (Stone-Lion)</set>
+			<set name="alignment">Any alignment</set>
+			<set name="ac">16 + PB</set>
+			<set name="hp">42</set>
+			<set name="speed">30 ft.</set>
+			<set name="strength">16</set>
+			<set name="dexterity">10</set>
+			<set name="constitution">20</set>
+			<set name="intelligence">10</set>
+			<set name="wisdom">10</set>
+			<set name="charisma">10</set>
+			<set name="savingThrows">Str +5, Con +7</set>
+			<set name="damageVulnerabilities">force, thunder</set>
+			<set name="damageResistances">necrotic, radiant; bludgeoning, piercing, and slashing from nonmagical attacks</set>
+			<set name="damageImmunities">poison</set>
+			<set name="conditionImmunities">charmed, exhaustion, incapacitated, petrified, unconscious</set>
+			<set name="senses">darkvision 60 ft., passive Perception 10</set>
+			<set name="languages">Understands Utsuwa's Languages</set>
+			<set name="challenge">4</set>
+			<set name="traits">ID_NELVORA_COMPANION_TRAIT_SEKKA_INU_MAGATSU_SPELLS,ID_NELVORA_COMPANION_TRAIT_SEKKA_INU_STATUES_POISE,ID_NELVORA_COMPANION_TRAIT_SEKKA_INU_STONES_SILENCE</set>
+			<set name="actions">ID_NELVORA_COMPANION_ACTION_SEKKA_INU_CRUSHING_BITE,ID_NELVORA_COMPANION_ACTION_SEKKA_INU_STONE_POUNCE</set>
+			<set name="reactions">ID_NELVORA_COMPANION_REACTION_SEKKA_INU_WARDENS_REBUKE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="16" />
+			<stat name="companion:ac" value="companion:proficiency" />
+			<stat name="companion:hp:max" value="42" bonus="base" />
+			<stat name="companion:speed" value="30" bonus="base" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Magatsu's Spells" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_SEKKA_INU_MAGATSU_SPELLS">
+		<description>
+			<p>The Sekka-Inu (Vermillion Sentinel) provides their Utsuwa with the following spells:</p>
+			<ul>
+				<li><strong>Cantrips:</strong> <em>Mold Earth</em></li>
+				<li><strong>1st level:</strong> <em>Shield of Faith</em>, <em>Earth Tremor</em></li>
+				<li><strong>2nd level:</strong> <em>Warding Bond</em>, <em>Maximilian’s Earthen Grasp</em></li>
+				<li><strong>3rd level:</strong> <em>Erupting Earth</em>, <em>Meld into Stone</em></li>
+			</ul>
+		</description>
+		<sheet>
+			<description>Provides Utsuwa with: Cantrips (Mold Earth), 1st (Shield of Faith, Earth Tremor), 2nd (Warding Bond, Maximilian’s Earthen Grasp), 3rd (Erupting Earth, Meld into Stone).</description>
+		</sheet>
+	</element>
+	
+	<element name="Statue's Poise (Utsuwa's Passive)" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_SEKKA_INU_STATUES_POISE">
+		<description>
+			<p>You and your Utsuwa have Advantage on ability checks and saving throws to avoid being knocked Prone or moved against your will.</p>
+		</description>
+		<sheet>
+			<description>You and your Utsuwa have Advantage on ability checks and saving throws to avoid being knocked Prone or moved against your will.</description>
+		</sheet>
+	</element>
+	
+	<element name="Stone's Silence" type="Companion Trait" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_TRAIT_SEKKA_INU_STONES_SILENCE">
+		<description>
+			<p>While the Magatsu remains motionless, it is indistinguishable from an inanimate stone statue.</p>
+		</description>
+		<sheet>
+			<description>While motionless, it is indistinguishable from an inanimate stone statue.</description>
+		</sheet>
+	</element>
+
+	<element name="Crushing Bite" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_SEKKA_INU_CRUSHING_BITE">
+		<description>
+			<p><em>Melee Weapon Attack:</em> + Utsuwa's Spell Attack modifier to hit, reach 10 ft., one target. <em>Hit:</em> 1d8 + Proficiency bonus Force damage.</p>
+		</description>
+		<sheet>
+			<description>Melee Weapon Attack: + Utsuwa's Spell Attack mod to hit, reach 10 ft., one target. Hit: 1d8 + PB Force damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Stone Pounce (Bonus Action)" type="Companion Action" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_ACTION_SEKKA_INU_STONE_POUNCE">
+		<description>
+			<p>If the Sekka-Inu moves at least 15 feet straight toward a creature, it can use a Bonus Action to attempt to Shove that creature (knocking it Prone or pushing it 5 feet). It uses its Strength score for this check.</p>
+		</description>
+		<sheet alt="Stone Pounce" action="Bonus Action">
+			<description>If it moves at least 15 ft straight toward a creature, it can attempt to Shove them (Prone or push 5 ft) using its Strength score.</description>
+		</sheet>
+	</element>
+
+	<element name="Warden's Rebuke (Recharge 4-6)" type="Companion Reaction" source="Aurora: Nelvora" id="ID_NELVORA_COMPANION_REACTION_SEKKA_INU_WARDENS_REBUKE">
+		<description>
+			<p>When a creature within 10 feet of the Sekka-Inu hits you with an attack, it can use its Reaction to force the attacker to make a Strength Saving Throw against your Spell Save DC. On a failure, the attacker is knocked Prone.</p>
+		</description>
+		<sheet alt="Warden's Rebuke" action="Reaction" usage="Recharge 4-6">
+			<description>Trigger: A creature within 10 ft hits you with an attack. Effect: The attacker must make a Str save vs your Spell Save DC or be knocked Prone.</description>
+		</sheet>
+	</element>
+
 </elements>

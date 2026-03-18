@@ -18,8 +18,10 @@
 			<set name="category">Wondrous Items</set>
 			<set name="type">Wondrous Item</set>
 			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
 		</setters>
 		<rules>
+			<stat name="attunement:max" value="1" />
 			<select type="Companion" name="Magatsu (First)" supports="Magatsu" />
 			<select type="Companion" name="Magatsu (Second)" supports="Magatsu" />
 			<select type="Companion" name="Magatsu (Third)" supports="Magatsu" />
