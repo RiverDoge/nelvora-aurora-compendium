@@ -4,7 +4,7 @@
         <name>Nelvora Items</name>
         <description>Custom items for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.1>
+        <update version="1.0.1">
             <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-item.xml" />
         </update>
     </info>
