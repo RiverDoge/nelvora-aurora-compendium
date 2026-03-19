@@ -277,9 +277,6 @@
 			<p class="indent"><strong>The Final Toll.</strong> You learn the Toll the Dead cantrip, which counts as a bard cantrip for you but doesn't count against the number of bard cantrips you know. When you cast it, the spectral bell toll is replaced by a low, draconic hum that resonates with the finality of existence. The power of the Visage enhances this cantrip for you: when you cast it, the spell is instead a d10 radiant damage when undamaged, and an additional +1 d12 radiant damage when they are injured (effectively one tier cantrip higher).</p>
 			<p class="indent"><strong>Awakening the Visage.</strong> The Visage awakens when you act as an agent of causality, ensuring a final, irreversible outcome. This is not an act of passion, but one of grim necessity. This can include, but is not limited to: ending the unnatural existence of a creature that has cheated death, ensuring its story truly concludes; destroying a powerful artifact whose function is to defy consequence; or making a monumental choice that sets a people or a nation on an irreversible path, and fully embracing the consequences.</p>
 		</description>
-		<sheet>
-			<description>See magic item card for full artifact abilities and lore.</description>
-		</sheet>
 		<setters>
 			<set name="category">Wondrous Items</set>
 			<set name="type">Wondrous Item</set>
