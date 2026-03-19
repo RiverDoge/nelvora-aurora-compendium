@@ -202,7 +202,7 @@
 		<setters>
 			<set name="category">Wondrous Items</set>
 			<set name="type">Wondrous Item</set>
-			<set name="slot">body</set>
+			<set name="slot">shoulders</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
 		</setters>
@@ -372,13 +372,12 @@
 			<set name="category">Magic Armor</set>
 			<set name="weight" lb="40">40 lb.</set>
 			<set name="slot">body</set>
-			<set name="type" addition="half plate">Armor</set>
 			<set name="armor">Medium</set>
 			<set name="stealth">Disadvantage</set>
 			<set name="armorClass">15 + Dex modifier (max 2)</set>
 			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_HALF_PLATE</set>
 			<set name="attunement" addition="by Kadmon Keter">true</set>
-			<set name="rarity">PLACEHOLDER</set>
+			<set name="rarity">Rare</set>
 			<set name="enhancement">1</set>
 			<set name="charges">3</set>
 		</setters>
