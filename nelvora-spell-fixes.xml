@@ -4,7 +4,7 @@
         <name>Nelvora Spell Fixes</name>
         <description>Custom Spells for the Nelvora setting</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.1">
+        <update version="1.0.2">
             <file name="nelvora-spell-fixes.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-spell-fixes.xml" />
         </update>
     </info>
@@ -48,5 +48,23 @@
             <set name="isRitual">false</set>
         </setters>
     </element>
+
+	<element name="Toll the Dead (Visage)" type="Spell" source="Aurora: Nelvora" id="ID_NELVORA_SPELL_TOLL_THE_DEAD_VISAGE">
+		<supports>Bard</supports>
+		<description>
+			<p>You point at one creature you can see within range, and the sound of a low, draconic hum that resonates with the finality of existence fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d10 radiant damage. If the target is missing any of its hit points, it instead takes 2d12 radiant damage.</p>
+			<p class="indent">The spell's damage increases by one die when you reach 5th level (2d10 or 3d12), 11th level (3d10 or 4d12), and 17th level (4d10 or 5d12).</p>
+		</description>
+		<setters>
+			<set name="level">0</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="duration">Instantaneous</set>
+			<set name="isMagic">true</set>
+		</setters>
+	</element>
 
 </elements>

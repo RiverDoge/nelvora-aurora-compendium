@@ -4,7 +4,7 @@
         <name>Nelvora Items</name>
         <description>Custom items for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.4">
+        <update version="1.0.5">
             <file name="nelvora-item.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-item.xml" />
         </update>
     </info>
@@ -80,6 +80,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">hands</set>
 			<set name="attunement" addition="by a monk">true</set>
 			<set name="rarity">Very Rare</set>
@@ -97,6 +98,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">head</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Rare</set>
@@ -125,6 +127,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="attunement" addition="by a bard">true</set>
 			<set name="rarity">Very Rare</set>
 			<set name="charges">5</set>
@@ -148,6 +151,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">head</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
@@ -165,6 +169,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">neck</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
@@ -180,6 +185,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">feet</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Rare</set>
@@ -195,9 +201,8 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">body</set>
-			<set name="type" addition="clothing">Wondrous Item</set>
-			<set name="armorClass">11 + Dex modifier</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
 		</setters>
@@ -219,6 +224,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">hands</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
@@ -238,6 +244,7 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="slot">neck</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
@@ -253,11 +260,36 @@
 		</description>
 		<setters>
 			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
 			<set name="keywords">holy symbol, focus</set>
 			<set name="slot">neck</set>
 			<set name="attunement" addition="by a paladin, cleric, or individual sworn to Letoria">true</set>
 			<set name="rarity">Very Rare</set>
 		</setters>
+	</element>
+
+	<element name="Visage of Causality" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_VISAGE_OF_CAUSALITY">
+		<description>
+			<p>This palm-sized pendant is carved from a non-reflective, petrified draconic material that seems to absorb the light around it. It depicts a dragon's face, not in aggression, but in serene, ancient contemplation, with its eyes closed. Worn on a simple, dark cord, it hangs heavy with the weight of cause and effect.</p>
+			<p class="indent">The Visage of Causality is an evolving artifact that resonates with the bearer's actions, awakening new powers as they align their deeds with the fundamental axioms of the Unnamed Deity it represents.</p>
+			<p class="indent"><strong>Dormant State.</strong> While in its dormant state, the Visage grants the following benefits:</p>
+			<p class="indent"><strong>Wyrm's Resolve.</strong> The pendant grants you a sliver of the Unnamed Wyrm's absolute certainty, fortifying your mind. You have advantage on saving throws against being charmed or frightened.</p>
+			<p class="indent"><strong>The Final Toll.</strong> You learn the Toll the Dead cantrip, which counts as a bard cantrip for you but doesn't count against the number of bard cantrips you know. When you cast it, the spectral bell toll is replaced by a low, draconic hum that resonates with the finality of existence. The power of the Visage enhances this cantrip for you: when you cast it, the spell is instead a d10 radiant damage when undamaged, and an additional +1 d12 radiant damage when they are injured (effectively one tier cantrip higher).</p>
+			<p class="indent"><strong>Awakening the Visage.</strong> The Visage awakens when you act as an agent of causality, ensuring a final, irreversible outcome. This is not an act of passion, but one of grim necessity. This can include, but is not limited to: ending the unnatural existence of a creature that has cheated death, ensuring its story truly concludes; destroying a powerful artifact whose function is to defy consequence; or making a monumental choice that sets a people or a nation on an irreversible path, and fully embracing the consequences.</p>
+		</description>
+		<sheet>
+			<description>See magic item card for full artifact abilities and lore.</description>
+		</sheet>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="slot">neck</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_NELVORA_SPELL_TOLL_THE_DEAD_VISAGE" spellcasting="Bard" />
+		</rules>
 	</element>
 
 	<!-- light armor -->

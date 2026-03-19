@@ -4,7 +4,7 @@
 		<name>Nelvora Companions</name>
 		<description>Custom companions, familiars, and Magatsu for the Nelvora setting.</description>
 		<author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-		<update version="1.0.3">
+		<update version="1.0.4">
 			<file name="nelvora-companions.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-companions.xml" />
 		</update>
 	</info>	
@@ -337,7 +337,7 @@
 			<p class="indent"><strong>Stats Gained:</strong> +1 Constitution, +3 Intelligence, +3 Wisdom, +2 Charisma, +2 Challenge Rating.</p>
 		</description>
 		<sheet>
-			<description>Passive: Glows near evil. Grants Waelin fear immunity from evil if touching. Cast Protection from Evil/Good 1/week. Active: Action to gain 27 THP for 1 min; while THP lasts, Inky takes half damage for allies within 10 ft.</description>
+			<description>Passive: Glows near evil. Grants Waelin fear immunity from evil if touching. Cast Protection from Evil/Good 1/week. Active: Action to gain 27 (4d10 + 5) THP for 1 min; while THP lasts, Inky takes half damage for allies within 10 ft.</description>
 		</sheet>
 	</element>
 
