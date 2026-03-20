@@ -4,7 +4,7 @@
         <name>Nelvora Races</name>
         <description>All custom races for the Nelvora setting.</description>
         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
-        <update version="1.0.3">
+        <update version="1.0.4">
             <file name="nelvora-races.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-races.xml" />
         </update>
     </info>
@@ -389,9 +389,10 @@
     <element name="Amethyst Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_AMETHYST">
 		<supports>Ikhethagma Scale</supports>
 		<description>
-			<p><strong>Gaze of Antiquity.</strong> Those who bear this royal purple hue possess an unnatural awareness of their surroundings and a mind shielded by blessings lost to the deep. You gain expertise in the Perception skill, and you have a +2 bonus to History checks.</p>
-			<p class="indent"><strong>Severing Douse.</strong> Once per short rest, when you cast Douse, you can direct its flow to wash away the magical weave rather than physical forms. Instead of dealing damage, you use the action to cast Dispel Magic. If you successfully end a spell or magical effect in this way, you can instantly teleport up to 15 feet to an unoccupied space you can see.</p>
-			<p class="indent"><strong>Aegis of the Shattered Epoch.</strong> Once per long rest as a bonus action, you can manifest a barrier of crystalline force for 1 minute with HP equal to three rolls of your Douse damage die. The barrier takes damage instead of you. If an attack reduces it to 0, it absorbs the hit before shattering (unless damage exceeds twice max HP). Creatures hitting you with a melee attack while active make a Wis save (DC {{spellcasting:dc}}) or have disadvantage on their next attack roll before the end of their next turn.</p>
+			<p>A shimmering, royal purple scale that is often associated with ancient wisdom and the deep secrets of the ocean's history. These scales are believed to vibrate in harmony with the natural rhythms of the world.</p>
+			<p class="indent"><strong>Gaze of Antiquity.</strong> The amethyst scales resonate with the ancient history of lost seas. Those who bear this royal purple hue possess an unnatural awareness of their surroundings and a mind shielded by blessings lost to the deep. You gain expertise in the Perception skill, and you have a +2 bonus to History checks.</p>
+			<p class="indent"><strong>Severing Douse.</strong> Once per short rest, when you cast Douse, you can direct its flow to wash away the magical weave rather than physical forms. Instead of dealing damage, you use the action to cast Dispel Magic. If you successfully end a spell or magical effect in this way, the sudden snapping of the magical tether distorts space around you, allowing you to instantly teleport up to 15 feet to an unoccupied space you can see.</p>
+			<p class="indent"><strong>Aegis of the Shattered Epoch.</strong> Once per long rest as a bonus action, you can manifest a barrier of crystalline force that surrounds you for 1 minute. This barrier has a hit point maximum equal to three rolls of your Douse damage die. Whenever you take damage, the barrier takes that damage instead. If a single instance of damage would reduce the barrier to 0 hit points, it completely absorbs that entire hit before shattering. However, if the incoming attack deals catastrophic damage that exceeds twice the barrier's maximum hit points, the single blow absorption fails, and you take any overflow damage beyond that catastrophic threshold. While this barrier is active, the distorting amethyst light warps the minds of your attackers. Any creature that strikes you with a melee attack must make a Wisdom saving throw against your spell save DC or become disoriented, suffering disadvantage on their next attack roll before the end of their next turn.</p>
 		</description>
 		<sheet>
 			<description>Gaze of Antiquity: You gain expertise in Perception and a +2 bonus to History checks.</description>
@@ -404,25 +405,54 @@
 		</sheet>
 		<rules>
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<stat name="perception:proficiency" value="proficiency" bonus="double" />
 			<stat name="history:misc" value="2" />
 		</rules>
 	</element>
 
-    <element name="Emerald Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_EMERALD">
+	<element name="Diamond Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_DIAMOND">
 		<supports>Ikhethagma Scale</supports>
 		<description>
-			<p><strong>Verdant Resilience.</strong> You have resistance to poison damage, and advantage on saving throws against being poisoned. Additionally, your presence stimulates the stubborn life of this fading world. You know the Druidcraft cantrip, and as an action, you can cause normal, non-magical plant life within 10 feet of you to instantly bloom or grow thick and vigorous.</p>
-			<p class="indent"><strong>Restorative Douse.</strong> Once per short rest, when you cast Douse on a willing creature, you can direct its flow to purify their body rather than destroy it. Instead of dealing damage, the soothing waters wash over the target, instantly neutralizing most poisoned conditions.</p>
+			<p>A nearly translucent, incredibly hard scale that catches and refracts light in a dazzling display of colors. These scales are symbolic of an unyielding spirit and a purity that remains untainted by the murky depths.</p>
+			<p class="indent"><strong>Heir of the Frozen Summit.</strong> The biting, eternal winter that creeps across the fringes of the world cannot touch you. You have immunity to cold damage.</p>
+			<p class="indent"><strong>Rime Douse.</strong> When you cast Douse, you can freeze its heavy waters into piercing ice. The spell’s potency increases to a d10, and it deals an additional 2 damage plus your Constitution modifier.</p>
+			<p class="indent"><strong>Glacial Bulwark.</strong> An unyielding spirit resides within the diamond scales. Once per long rest, when an ally within 30 feet is targeted by an attack, you can use your reaction to cause a barrier of spectral ice to erupt from the ground around them. This grants the ally a +5 bonus to their Armor Class against that single attack. If the attack misses, the ice violently shatters outward. Every enemy of your choice within 15 feet of the barrier must make a Dexterity saving throw against your spell save DC. On a failed save, a target takes cold damage equal to your Douse damage die and has their movement speed halved until the end of their next turn. On a successful save, they take half as much damage and their speed is unaffected.</p>
+		</description>
+		<sheet>
+			<description>Heir of the Frozen Summit: You have immunity to cold damage.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Rime Douse: Douse deals 1d{{douse:die_size}} + 2 + {{constitution:modifier}} cold damage.</description>
+		</sheet>
+		<sheet action="Reaction" usage="1/Long Rest">
+			<description>Glacial Bulwark: When an ally within 30 ft is targeted by an attack, grant them a +5 bonus to AC against that attack. If the attack misses, chosen enemies within 15 ft make a Dex save (DC {{spellcasting:dc}}). On a fail, they take 1d{{douse:die_size}} cold damage and speed is halved until the end of their next turn. On a success, half damage and speed is unaffected.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
+			<stat name="douse:die_size" value="2" />
+			<stat name="douse:bonus" value="constitution:modifier" />
+		</rules>
+	</element>
+
+	<element name="Emerald Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_EMERALD">
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p>A lush, deep green scale that represents the resilient life force of the ocean's hidden gardens. Those with this scale are often seen as protectors of the natural world and possess a natural knack for nurturing life in all its forms.</p>
+			<p class="indent"><strong>Verdant Resilience.</strong> You have resistance to poison damage, and advantage on saving throws against being poisoned. Additionally, your presence stimulates the stubborn life of this fading world. You know the Druidcraft cantrip, and as an action, you can cause normal, non-magical plant life within 10 feet of you to instantly bloom or grow thick and vigorous.</p>
+			<p class="indent"><strong>Restorative Douse.</strong> When you cast Douse on a willing creature, you can direct its flow to purify their body rather than destroy it. Instead of dealing damage, the soothing waters wash over the target, instantly neutralizing most poisoned conditions.</p>
 			<p class="indent"><strong>Bramble of the Fading Grove.</strong> Once per long rest, you can channel the desperate, clinging life of the world into a defensive thicket. As an action, you designate a point within 30 feet of you. A 15-foot-radius sphere centered on that point erupts with pale, twisting vines and thorns for 1 minute. The area becomes difficult terrain for your enemies. Whenever a hostile creature enters the area for the first time on a turn or starts its turn there, it takes piercing damage equal to one roll of your Douse damage die. The vines are docile to you and your allies, gently parting to let you move freely and actively wrapping together to provide half cover (+2 bonus to AC and Dexterity saving throws) against attacks originating from outside the thicket.</p>
 		</description>
 		<sheet>
 			<description>Verdant Resilience: You have resistance to poison damage, and advantage on saving throws against being poisoned.</description>
 		</sheet>
+		<sheet action="Action">
+			<description>Verdant Resilience (Bloom): Cause non-magical plant life within 10 feet to instantly bloom or grow thick.</description>
+		</sheet>
 		<sheet action="Action" usage="1/Short Rest">
 			<description>Restorative Douse: Cast Douse on a willing creature to instantly neutralize most poisoned conditions instead of dealing damage.</description>
 		</sheet>
 		<sheet action="Action" usage="1/Long Rest">
-			<description>Bramble of the Fading Grove: Designate a point within 30 ft. A 15-ft-radius sphere erupts with vines for 1 min. Difficult terrain for enemies. Hostile creatures entering or starting their turn in the area take 1d{{douse:die_size}} piercing damage. Allies move freely and gain half cover (+2 AC/Dex saves) vs attacks from outside the thicket.</description>
+			<description>Bramble of the Fading Grove: 15-ft-radius sphere for 1 min. Difficult terrain for enemies. Hostile creatures entering or starting turn take 1d{{douse:die_size}} piercing damage. Allies move freely and gain half cover (+2 AC/Dex) vs attacks from outside the thicket.</description>
 		</sheet>
 		<rules>
 			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
@@ -430,96 +460,12 @@
 		</rules>
 	</element>
 
-    <element name="Diamond Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_DIAMOND">
+	<element name="Golden Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_GOLDEN">
 		<supports>Ikhethagma Scale</supports>
 		<description>
-			<p><strong>Heir of the Frozen Summit.</strong> The biting, eternal winter that creeps across the fringes of the world cannot touch you. You have immunity to cold damage.</p>
-			<p class="indent"><strong>Rime Douse.</strong> Once per short rest, when you cast Douse, you can freeze its heavy waters into piercing ice. The spell deals an additional 2 damage plus your Constitution modifier.</p>
-			<p class="indent"><strong>Glacial Bulwark.</strong> An unyielding spirit resides within the diamond scales. Once per long rest, when an ally within 30 feet is targeted by an attack, you can use your reaction to cause a barrier of spectral ice to erupt from the ground around them. This grants the ally a +5 bonus to their Armor Class against that single attack. If the attack misses, the ice violently shatters outward. Every enemy of your choice within 15 feet of the barrier must make a Dexterity saving throw against your spell save DC. On a failed save, a target takes cold damage equal to your Douse damage die and has their movement speed halved until the end of their next turn. On a successful save, they take half as much damage and their speed is unaffected.</p>
-		</description>
-		<sheet>
-			<description>Heir of the Frozen Summit: You have immunity to cold damage. Douse deals an additional 2 + {{constitution:modifier}} damage.</description>
-		</sheet>
-		<sheet action="Reaction" usage="1/Long Rest">
-			<description>Glacial Bulwark: When an ally within 30 ft is targeted by an attack, grant them a +5 bonus to AC against that attack. If the attack misses, chosen enemies within 15 ft make a Dex save (DC {{spellcasting:dc}}). On a fail, they take 1d{{douse:die_size}} cold damage and speed is halved until the end of their next turn. On a success, half damage and speed is unaffected.</description>
-		</sheet>
-		<rules>
-			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
-			<stat name="douse:bonus" value="2" />
-			<stat name="douse:bonus" value="constitution:modifier" />
-		</rules>
-	</element>
-
-    <element name="Ruby Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_RUBY">
-		<supports>Ikhethagma Scale</supports>
-		<description>
-			<p>A brilliant, deep crimson scale that pulses with the hidden geothermal heat of underwater volcanic vents. Those bearing this hue often exhibit fiery passions and an affinity for the raw, destructive forces of nature.</p>
-			<p class="indent"><strong>Ruby Luster.</strong> You have resistance to fire damage.</p>
-			<p class="indent"><strong>Searing Douse.</strong> Once per short rest, when you cast Douse, you can channel the blistering light of your ruby scales. The spell deals an additional die of Douse damage, and the damage type becomes fire.</p>
-			<p class="indent"><strong>Crystalline Inferno.</strong> Once per long rest, when you hit a creature with a melee attack, you can cause your ruby scales to flare with the trapped heat of this fading world. The attack channels the power of your Searing Douse, dealing its total fire damage to the target. Furthermore, the target is ignited by ethereal ruby flames. Until a creature takes an action to smother these flames, the target takes fire damage at the start of each of its turns equal to one roll of your Douse damage die.</p>
-		</description>
-		<sheet>
-			<description>Ruby Luster: You have fire resistance.</description>
-		</sheet>
-        <sheet action="Action" usage="1/Short Rest">
-			<description>Searing Douse: Douse deals an additional die of damage and becomes fire damage</description>
-		</sheet>
-		<sheet usage="1/Long Rest">
-			<description>Crystalline Inferno: When you hit with a melee attack, deal your Searing Douse fire damage to the target. The target is ignited, taking 1d{{douse:die_size}} fire damage at the start of its turns until a creature uses an action to smother the flames.</description>
-		</sheet>
-		<rules>
-			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
-		</rules>
-	</element>
-
-    <element name="Sapphire Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SAPPHIRE">
-		<supports>Ikhethagma Scale</supports>
-		<description>
-			<p>A pristine, ocean-blue scale that seems to capture the essence of a tranquil, sunlit sea. It is whispered that these scales grant unparalleled grace in the water and a serene, unclouded mind.</p>
-			<p class="indent"><strong>Sapphire Depths.</strong> Your scales shimmer with the sorrowful blues of the drowned world. You gain a swimming speed equal to your walking speed, and you can breathe water as easily as air. The immense pressure of the deep holds no sway over you, granting you immunity to the natural hazards of underwater environments.</p>
-			<p class="indent"><strong>Surging Douse.</strong> The crushing weight of the lightless tides permanently enhances your innate magic. Your Douse now deals one additional die of damage. Furthermore, when you strike a target with Douse, the heavy water crashes down upon them, forcing the creature to make a Strength saving throw or be knocked prone.</p>
-			<p class="indent"><strong>Grasp of the Ruined Tides.</strong> Once per long rest, you can unleash the crushing despair of the lost oceans. You target every enemy you can see within 30 feet, making a separate Douse attack against each of them. If the attack hits, the target takes your Douse damage and must make a Strength saving throw. On a failed save, the creature is restrained by swirling shards of heavy, localized water. A restrained creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>
-		</description>
-		<sheet>
-			<description>Sapphire Depths: Swim speed equals walking speed, water breathing, and immunity to underwater hazards. Surging Douse: Douse deals an additional die of damage. On a hit, the target must make a Str save (DC {{spellcasting:dc}}) or be knocked prone.</description>
-		</sheet>
-		<sheet action="Action" usage="1/Long Rest">
-			<description>Grasp of the Ruined Tides: Make a separate Douse attack against every enemy you can see within 30 ft. On a hit, target takes Douse damage and must make a Str save (DC {{spellcasting:dc}}) or be restrained (save ends).</description>
-		</sheet>
-		<rules>
-			<stat name="innate speed:swim" value="innate speed" bonus="base" />
-		</rules>
-	</element>
-
-    <element name="Silver Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SILVER">
-		<supports>Ikhethagma Scale</supports>
-		<description>
-			<p><strong>Legacy of the Argent Protector.</strong> The enduring spirit of Caeplithias fortifies your physical form. You have immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't made with obsidian weapons.</p>
-			<p class="indent"><strong>Luminous Douse.</strong> The radiant power of the silver scales empowers your core magic. Once per short rest, when you cast Douse, you can target a second creature within range. Additionally, the spell's normal range is doubled, and you can choose to have it deal radiant damage instead of its normal type.</p>
-			<p class="indent"><strong>Beacon of the Fallen.</strong> The silver hue acts as a flawless conduit, amplifying the specific mechanics of your other gem scales. You gain a +1 bonus to your spell save DC for any ability granted by your scales. Furthermore, whenever an ability from another scale uses your Douse damage die, you can reroll any 1s on those dice and must use the new roll.</p>
-			<p class="indent"><strong>Hope's Companions.</strong> Once per long rest, as a bonus action, you can flare the silver energy within you to instantly regain the use of one of your other scale features.</p>
-		</description>
-		<sheet>
-			<description>Legacy of the Argent Protector: Immunity to nonmagical B/P/S (not made with obsidian). Beacon of the Fallen: +1 to spell save DC for scale abilities. Reroll 1s on Douse damage dice used for scale abilities.</description>
-		</sheet>
-		<sheet action="Action" usage="1/Short Rest">
-			<description>Luminous Douse: Target a second creature. Range is doubled. Can deal radiant damage.</description>
-		</sheet>
-		<sheet action="Bonus Action" usage="1/Long Rest">
-			<description>Hope's Companions: Instantly regain the use of one of your other scale features.</description>
-		</sheet>
-		<rules>
-			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_BLUDGEONING" />
-            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_PIERCING" />
-            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_SLASHING" />
-		</rules>
-	</element>
-
-    <element name="Golden Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_GOLDEN">
-		<supports>Ikhethagma Scale</supports>
-		<description>
-			<p><strong>Spark of the Weeping Storm.</strong> The lightning of Nelvora's turbulent, mournful skies courses through this scale. You have resistance to lightning damage, and you know the Shocking Grasp cantrip. When you cast it, the energy manifests as jagged, sorrowful arcs of golden light.</p>
-			<p class="indent"><strong>Arcing Douse.</strong> Once per short rest, when you cast Douse, you can infuse the magic with volatile electricity. The spell deals an additional die of Douse damage, and the damage type becomes lightning. Additionally, if your Douse successfully hits its target, the golden energy arcs to one other creature of your choice within 10 feet, dealing lightning damage equal to one roll of your Douse damage die.</p>
+			<p>A radiant, sun-touched scale that glimmers even in the darkest depths. Highly sought after, this scale is often associated with the majestic power of the surface dawn and a charismatic, inspiring presence.</p>
+			<p class="indent"><strong>Spark of the Weeping Storm.</strong> The lightning of Nelvora's turbulent, mournful skies courses through this scale. You have resistance to lightning damage, and you know the Shocking Grasp cantrip. When you cast it, the energy manifests as jagged, sorrowful arcs of golden light.</p>
+			<p class="indent"><strong>Arcing Douse.</strong> When you cast Douse, you can infuse the magic with volatile electricity. The spell deals an additional die of Douse damage, and the damage type becomes lightning. Additionally, if your Douse successfully hits its target, the golden energy arcs to one other creature of your choice within 10 feet, dealing lightning damage equal to one roll of your Douse damage die.</p>
 			<p class="indent"><strong>Mantle of the Golden Tempest.</strong> Once per long rest, you can unleash the erratic power of a fading storm. As a bonus action, you wreathe yourself in a swirling aura of golden lightning for 1 minute. While enveloped in this energy, your movement speed increases by 10 feet, and any hostile creature that starts its turn within 10 feet of you takes lightning damage equal to one roll of your Douse damage die. Furthermore, the violent arcs of electricity obscure your physical form, imposing disadvantage on attack rolls made against you by creatures within 10 feet.</p>
 		</description>
 		<sheet>
@@ -529,7 +475,7 @@
 			<description>Arcing Douse: Douse deals an additional die of damage and becomes lightning damage. On a hit, golden energy arcs to one other creature within 10 ft for 1d{{douse:die_size}} lightning damage.</description>
 		</sheet>
 		<sheet action="Bonus Action" usage="1/Long Rest">
-			<description>Mantle of the Golden Tempest: Wreathe yourself in lightning for 1 min. Speed increases by 10 ft. Hostile creatures starting their turn within 10 ft take 1d{{douse:die_size}} lightning damage. Attacks against you from within 10 ft have disadvantage.</description>
+			<description>Mantle of the Golden Tempest: For 1 min, speed +10 ft, and hostile creatures starting turn within 10 ft take 1d{{douse:die_size}} lightning damage. Attacks against you from within 10 ft have disadvantage.</description>
 		</sheet>
 		<rules>
 			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
@@ -537,23 +483,94 @@
 		</rules>
 	</element>
 
-    <element name="Obsidian Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_OBSIDIAN">
+	<element name="Obsidian Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_OBSIDIAN">
 		<supports>Ikhethagma Scale</supports>
 		<description>
-			<p><strong>Vestige of the Deep.</strong> Your consciousness is intricately linked to the horrors of the abyss. You can communicate telepathically with any creature you can see within 30 feet. When you do, your mental presence feels like a heavy shadow pressing against their thoughts, granting you advantage on Intimidation checks made against them.</p>
-			<p class="indent"><strong>Void Douse.</strong> The oppressive emptiness of the deep permanently enhances your innate magic. Whenever you deal damage with your Douse, it deals an additional 2 damage. You can also choose to have your Douse deal psychic damage instead of its normal damage type.</p>
+			<p>A dark, light-absorbing scale born from the rapid cooling of magma in the deep sea. It represents absolute finality, offering its bearer a connection to shadows and the unseen aspects of the world.</p>
+			<p class="indent"><strong>Vestige of the Deep.</strong> Your consciousness is intricately linked to the horrors of the abyss. You can communicate telepathically with any creature you can see within 30 feet. When you do, your mental presence feels like a heavy shadow pressing against their thoughts, granting you advantage on Intimidation checks made against them.</p>
+			<p class="indent"><strong>Void Douse.</strong> The oppressive emptiness of the deep permanently enhances your innate magic. Your Douse spell potency increases to a d10. You can also choose to have your Douse deal psychic damage instead of its normal damage type.</p>
 			<p class="indent"><strong>Malediction of the Abhorrent.</strong> Once per long rest, your obsidian scales act as a dark mirror to channel the silent, crushing malice of an ancient terror. As an action, an unnatural, suffocating nightmare rolls outward from you to a range of 60 feet. Every creature caught in this embrace must make an Intelligence saving throw against your spell save DC. On a failed save, the creature loses memory and capacity to use any specific actions used since the end of your last turn for 1 minute, and loses its reaction. On a success, they only lose access until the end of your next turn. Fails can repeat the save at the end of their turns. Activating this costs your bonus actions, reactions, and scale benefits until the end of your next turn.</p>
 		</description>
 		<sheet>
 			<description>Vestige of the Deep: Telepathy within 30 ft. Advantage on Intimidation checks against those you communicate with this way.</description>
 		</sheet>
 		<sheet action="Action" usage="1/Short Rest">
-			<description>Void Douse: Douse deals an additional 2 damage and can deal psychic damage instead of its normal type.</description>
+			<description>Void Douse: Douse deals 1d{{douse:die_size}} damage and can deal psychic damage instead of its normal type.</description>
 		</sheet>
 		<sheet action="Action" usage="1/Long Rest">
 			<description>Malediction of the Abhorrent: 60-ft radius nightmare. Int save (DC {{spellcasting:dc}}). Fail: lose access to actions used since your last turn for 1 min (repeats save end of turn) and lose reaction. Success: lose access until end of your next turn. You lose bonus actions, reactions, and scale benefits until end of next turn.</description>
 		</sheet>
 		<rules>
+			<stat name="douse:die_size" value="2" />
+		</rules>
+	</element>
+
+	<element name="Ruby Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_RUBY">
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p>A brilliant, deep crimson scale that pulses with the hidden geothermal heat of underwater volcanic vents. Those bearing this hue often exhibit fiery passions and an affinity for the raw, destructive forces of nature.</p>
+			<p class="indent"><strong>Ruby Luster.</strong> You have resistance to fire damage.</p>
+			<p class="indent"><strong>Searing Douse.</strong> When you cast Douse, you can channel the blistering light of your ruby scales. The spell deals an additional die of Douse damage, and the damage type becomes fire.</p>
+			<p class="indent"><strong>Crystalline Inferno.</strong> Once per long rest, when you hit a creature with a melee attack, you can cause your ruby scales to flare with the trapped heat of this fading world. The attack channels the power of your Searing Douse, dealing its total fire damage to the target. Furthermore, the target is ignited by ethereal ruby flames. Until a creature takes an action to smother these flames, the target takes fire damage at the start of each of its turns equal to one roll of your Douse damage die.</p>
+		</description>
+		<sheet>
+			<description>Ruby Luster: You have fire resistance.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Searing Douse: Douse deals an additional die of damage and becomes fire damage.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>Crystalline Inferno: When you hit with a melee attack, deal your Searing Douse fire damage to the target. The target is ignited, taking 1d{{douse:die_size}} fire damage at the start of its turns until a creature uses an action to smother the flames.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+		</rules>
+	</element>
+
+	<element name="Sapphire Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SAPPHIRE">
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p>A pristine, ocean-blue scale that seems to capture the essence of a tranquil, sunlit sea. It is whispered that these scales grant unparalleled grace in the water and a serene, unclouded mind.</p>
+			<p class="indent"><strong>Sapphire Depths.</strong> Your scales shimmer with the sorrowful blues of the drowned world. You gain a swimming speed equal to your walking speed, and you can breathe water as easily as air. The immense pressure of the deep holds no sway over you, granting you immunity to the natural hazards of underwater environments.</p>
+			<p class="indent"><strong>Surging Douse.</strong> The crushing weight of the lightless tides permanently enhances your innate magic. Your Douse now deals one additional die of damage. Furthermore, when you strike a target with Douse, the heavy water crashes down upon them, forcing the creature to make a Strength saving throw or be knocked prone.</p>
+			<p class="indent"><strong>Grasp of the Ruined Tides.</strong> Once per long rest, you can unleash the crushing despair of the lost oceans. You target every enemy you can see within 30 feet, making a separate Douse attack against each of them. If the attack hits, the target takes your Douse damage and must make a Strength saving throw. On a failed save, the creature is restrained by swirling shards of heavy, localized water. A restrained creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>
+		</description>
+		<sheet>
+			<description>Sapphire Depths: Swim speed equals walking speed, water breathing, and immunity to underwater hazards.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Surging Douse: Douse deals an additional die of damage. On a hit, the target must make a Str save (DC {{spellcasting:dc}}) or be knocked prone.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>Grasp of the Ruined Tides: Make a separate Douse attack against every enemy you can see within 30 ft. On a hit, target takes Douse damage and must make a Str save (DC {{spellcasting:dc}}) or be restrained (save ends).</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Silver Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SILVER">
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p>A shining, metallic scale that resembles the flash of a predator darting through the water. Bearers of the silver scale are considered remarkably fortunate and are often seen as harbingers of good luck and survival.</p>
+			<p class="indent"><strong>Legacy of the Argent Protector.</strong> The enduring spirit of Caeplithias fortifies your physical form against mundane threats. You have immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't made with obsidian weapons.</p>
+			<p class="indent"><strong>Luminous Douse.</strong> The radiant power of the silver scales empowers your core magic. Once per short rest, when you cast Douse, you can target a second creature within range. Additionally, the spell's normal range is doubled, and you can choose to have it deal radiant damage instead of its normal type. Furthermore, your Douse deals an additional 2 damage.</p>
+			<p class="indent"><strong>Beacon of the Fallen.</strong> The silver hue acts as a flawless conduit, amplifying the specific mechanics of your other gem scales. You gain a +1 bonus to your spell save DC for any ability granted by your scales. Furthermore, whenever an ability from another scale uses your Douse damage die (such as the Diamond scale's counterattack or the Amethyst scale's barrier health), you can reroll any 1s on those dice and must use the new roll.</p>
+			<p class="indent"><strong>Hope's Companions.</strong> The protector's vigil is never truly finished. Once per long rest, as a bonus action, you can flare the silver energy within you to instantly regain the use of one of your other scale features.</p>
+		</description>
+		<sheet>
+			<description>Legacy of the Argent Protector: Immunity to nonmagical B/P/S (not made with obsidian). Beacon of the Fallen: +1 to spell save DC for scale abilities. Reroll 1s on Douse damage dice used for scale abilities.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Luminous Douse: Target a second creature. Range is doubled. Can deal radiant damage. Douse deals +2 damage.</description>
+		</sheet>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Hope's Companions: Instantly regain the use of one of your other scale features.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_BLUDGEONING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_PIERCING" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_SLASHING" />
 			<stat name="douse:bonus" value="2" />
 		</rules>
 	</element>

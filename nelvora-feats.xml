@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Nelvora Feats</name>
+        <description>Custom feats and divine awakenings for the Nelvora campaign setting.</description>
+        <author>Nelvora Worldbuilding</author>
+        <update version="1.0.0">
+            <file name="nelvora-feats.xml" url="" />
+        </update>
+    </info>
+
+
+<element name="Chosen of Caeplithias (Divine Awakening)" type="Feat" source="Aurora: Nelvora" id="ID_NELVORA_FEAT_CHOSEN_YVOLR">
+        <description>
+            <p>The divine spark within Y'volr has fully awakened, manifesting the true magnitude of Caeplithias’s blessing. This awakening grants unparalleled power over the dawn, the sky, and the very essence of hope.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_DRAGONFLIGHT" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_DIVINE_SIGHT" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_HOPES_VEIL" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_GODDESS_DAWN" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_GIFT_SILVER_RIVER" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_SUN_KISSED_SCALES" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_DRACONIC_KNOWLEDGE" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_DRACONIC_INSIGHT" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_WAILING_DEPTHS" />
+            <grant type="Feat Feature" id="ID_NELVORA_CHOSEN_BELOVED_PROTECTOR" />
+        </rules>
+    </element>
+
+    <element name="Dragonflight &amp; Silvered Wings" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_DRAGONFLIGHT">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p><strong>Dragonflight.</strong> Y'volr has begun to tap into their ability to fly. When your wings are active, not retracted, you lose 2 AC, but can fly at your normal walking speed. This is not gliding, but the actual ability to fly where you please. It takes a short rest to activate and deactivate your wings for now, but this feature will grow significantly stronger if you are able to acquire greater divinity and find your last additional scales.</p>
+            <p class="indent"><strong>Silvered Wings.</strong> Y'volr gains a bonus of +2 to their AC whenever their wings are deactivated. Once they obtain their last scales, this effect will be enabled even when their wings are active.</p>
+        </description>
+        <sheet action="Short Rest">
+            <description>Dragonflight: When wings are active, gain fly speed {{innate speed}} ft but -2 AC. Silvered Wings: +2 AC when wings are deactivated.</description>
+        </sheet>
+    </element>
+
+    <element name="Divine Sight" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_DIVINE_SIGHT">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>Darkvision. Ability to see through magical darkness, and a subtle effect similar to divine sense (has the passive portion of divine sense, except you perceive it through sight rather than smell and other senses.</p>
+        </description>
+        <sheet>
+            <description>You have darkvision and can see through magical darkness. You visually perceive the presence of celestials, fiends, or undead within 60 feet (perceived through sight, not smell).</description>
+        </sheet>
+        <rules>
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+        </rules>
+    </element>
+
+    <element name="Hope's Veil" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_HOPES_VEIL">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>Immunity to Radiant damage and Necrotic damage, but weakness to force and psychic damage as well as any damage form specifically borne of the abyss.</p>
+        </description>
+        <sheet>
+            <description>Immune: Radiant and Necrotic damage. Vulnerable: Force, Psychic, and damage specifically borne of the Abyss.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_RADIANT" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_NECROTIC" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_VULNERABILITY_FORCE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_VULNERABILITY_PSYCHIC" />
+        </rules>
+    </element>
+
+    <element name="Goddess of the Dawn" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_GODDESS_DAWN">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p><strong>Aura of Dawn.</strong> Y'volr's Charisma score is set to 22, and can only be increased by effects that ignore the charisma ceiling so normal charisma bonuses wont count unless explicitly considered to do so. You also have expertise in persuasion, as well as automatic success against your own race, if they aren't hostile, and your request is not insane or harmful. Any friendly creature within 10 feet of Y'volr, including himself, has advantage on saving throws against any psychological effect.</p>
+            <p class="indent"><strong>Aspect of Dawn.</strong> Once per long rest, Y'volr can partially tap into their true power. This changes their radius to 30 feet for the aura of their light, illuminating within that range with brilliant light, and dimmer light for an additional 30 feet. This illumination pushes back magical darkness within the range, but will not dispel it. Spells cast during this time deal an additional amount of radiant damage equal to Y'volr's Charisma modifier. Flying Speed, if wings are active, is doubled for the duration.</p>
+        </description>
+        <sheet>
+            <description>Aura of Dawn: Charisma is 22. Expertise in Persuasion. Auto-success on reasonable requests to non-hostile Ik’héthagma. Allies within 10ft have advantage on saves vs psychological effects.</description>
+        </sheet>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>Aspect of Dawn: 30ft bright/30ft dim light. Pushes back magical darkness. Spells deal +{{charisma:modifier}} radiant damage. Fly speed is doubled if wings are active.</description>
+        </sheet>
+        <rules>
+            <stat name="charisma" value="22" bonus="base" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            <stat name="persuasion:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+
+    <element name="Gift of the Silver River" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_GIFT_SILVER_RIVER">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>The divine blood grants them innate magical knowledge. They learn the following spells and can cast each one once per long rest without expending a spell slot:</p>
+            <ul>
+                <li>Daylight</li>
+                <li>Guardian of Faith (The guardian appears as a shimmering, silver, draconic form).</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Cast Daylight and Guardian of Faith (Silver Draconic form) once per long rest without expending a slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_DAYLIGHT" />
+            <grant type="Spell" id="ID_PHB_SPELL_GUARDIAN_OF_FAITH" />
+        </rules>
+    </element>
+
+    <element name="Sun-Kissed Scales" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_SUN_KISSED_SCALES">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>As a bonus action, Y'volr can cause their scales to shimmer with divine energy. For the next minute, their unarmed strikes or any weapon they hold becomes magical, and deals an extra 1d6 Radiant damage on a hit. They can use this ability a number of times equal to their proficiency bonus per long rest.</p>
+        </description>
+        <sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+            <description>For 1 minute, weapon/unarmed attacks are magical and deal +1d6 radiant damage.</description>
+        </sheet>
+    </element>
+
+    <element name="Draconic Knowledge" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_DRACONIC_KNOWLEDGE">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>The divine essence grants an innate understanding of the ancient language of dragons. Y'volr can now understand, speak, and read Draconic.</p>
+        </description>
+        <sheet>
+            <description>You can understand, speak, and read Draconic.</description>
+        </sheet>
+        <rules>
+            <grant type="Language" id="ID_LANGUAGE_DRACONIC" />
+        </rules>
+    </element>
+
+    <element name="Draconic Insight" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_DRACONIC_INSIGHT">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>The divinity awakens an echo of the Goddesses ancient knowledge and commanding presence. Y'volr gains proficiency in two skills from the following list: History, Insight, Persuasion, Intimidation or expertise in one that they are already proficient in.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Option" name="Draconic Insight (Choice 1)" supports="ID_NELVORA_CHOSEN_INSIGHT_OPTION" />
+            <select type="Option" name="Draconic Insight (Choice 2)" supports="ID_NELVORA_CHOSEN_INSIGHT_OPTION" />
+        </rules>
+    </element>
+
+    <element name="Wailing from the Depths" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_WAILING_DEPTHS">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>Y'volr no longer merely hears Caeplithias in fleeting moments. Her pained screams are ever-present, and have become to sound like discernable thoughts and feelings. This carries an immense emotional weight, but also serves as an ability to sometimes sense imminent, overwhelming, danger before it occurs. Particularly when that danger is derived from the Abyss.</p>
+        </description>
+        <sheet>
+            <description>You sense imminent, overwhelming danger, particularly when derived from the Abyss, through the discernable thoughts and feelings of Caeplithias.</description>
+        </sheet>
+    </element>
+
+    <element name="Beloved of the World - Protector of All" type="Feat Feature" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_BELOVED_PROTECTOR">
+        <supports>Chosen of Caeplithias</supports>
+        <description>
+            <p>Much as Caeplithias once shielded the world, Y'volr has become a bastion for all life. Beings that carry no direct malevolence towards Y'volr, will otherwise be extremely reluctant to attack him. Neutral animals and creatures will flock to your presence, and never strike without serious instigation. Likewise, Y'volr feels compelled to protect all life, and has even begun to see the Abyss as a sacred piece of the world that must be preserved albeit, if attacked, Y'volr will still be free to defend themselves. That said, not all creatures of the Abyss, are pieces of this world...</p>
+        </description>
+        <sheet>
+            <description>Non-malevolent beings are reluctant to attack you. Neutral animals flock to you and don't strike without instigation. You are compelled to protect life.</description>
+        </sheet>
+    </element>
+
+    <!-- Proficiency Options -->
+    <element name="History Proficiency" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_HISTORY">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <description>Gain proficiency in History.</description>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+        </rules>
+    </element>
+
+    <element name="Insight Proficiency" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_INSIGHT">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <description>Gain proficiency in Insight.</description>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+        </rules>
+    </element>
+
+    <element name="Persuasion Proficiency" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_PERSUASION">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <description>Gain proficiency in Persuasion.</description>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+        </rules>
+    </element>
+
+    <element name="Intimidation Proficiency" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_INTIMIDATION">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <description>Gain proficiency in Intimidation.</description>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+        </rules>
+    </element>
+
+    <element name="History Expertise" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_HISTORY_EXP">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <requirements>ID_PROFICIENCY_SKILL_HISTORY</requirements>
+        <description>Gain expertise in History.</description>
+        <rules>
+            <stat name="history:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+
+    <element name="Insight Expertise" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_INSIGHT_EXP">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <requirements>ID_PROFICIENCY_SKILL_INSIGHT</requirements>
+        <description>Gain expertise in Insight.</description>
+        <rules>
+            <stat name="insight:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+
+    <element name="Persuasion Expertise" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_PERSUASION_EXP">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <requirements>ID_PROFICIENCY_SKILL_PERSUASION</requirements>
+        <description>Gain expertise in Persuasion.</description>
+        <rules>
+            <stat name="persuasion:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+
+    <element name="Intimidation Expertise" type="Option" source="Aurora: Nelvora" id="ID_NELVORA_CHOSEN_OPTION_INSIGHT_INTIMIDATION_EXP">
+        <supports>ID_NELVORA_CHOSEN_INSIGHT_OPTION</supports>
+        <requirements>ID_PROFICIENCY_SKILL_INTIMIDATION</requirements>
+        <description>Gain expertise in Intimidation.</description>
+        <rules>
+            <stat name="intimidation:proficiency" value="proficiency" bonus="double" />
+        </rules>
+    </element>
+
+</elements>
