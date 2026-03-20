@@ -82,7 +82,7 @@
             <description>Aspect of Dawn: 30ft bright/30ft dim light. Pushes back magical darkness. Spells deal +{{charisma:modifier}} radiant damage. Fly speed is doubled if wings are active.</description>
         </sheet>
         <rules>
-            <stat name="charisma" value="22" bonus="base" />
+            <stat name="charisma:max" value="22" bonus="base" />
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
             <stat name="persuasion:proficiency" value="proficiency" bonus="double" />
         </rules>
