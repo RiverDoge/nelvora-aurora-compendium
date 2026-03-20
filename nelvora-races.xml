@@ -281,11 +281,11 @@
             <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet. You also have a swimming speed of 30 feet.</p>
             <p class="indent"><strong>Amphibious.</strong> You can breathe air and water.</p>
             <p class="indent"><strong>Ik’héthagma Scales.</strong> Your body is adorned with iridescent, gem-like scales that are living conduits of Nelvora's fading divinity. Your specific scale lineage grants you permanent passive traits linked to the scales adorning your body—such as damage resistances, environmental immunities, or enhanced sensory awareness. These scales also grant you the following innate magical abilities:</p>
-                <ul>
-                    <li><strong>Douse.</strong> You can manipulate ambient moisture to strike at your foes. You know the <em>Douse</em> cantrip. Charisma is your spellcasting ability for it. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</li>
-                    <li><strong>Lineage Augmentation.</strong> Your scales allow you to push your moisture manipulation beyond its normal limits. Once per short rest, when you cast <em>Douse</em>, you can apply a unique augmentation based on your scale color. This can alter the damage type, increase the number of targets, or add secondary effects like knocking enemies prone or teleporting.</li>
-                    <li><strong>Crystalline Manifestation.</strong> Once per long rest, you can fully ignite the energy within your scales to unleash a powerful, unique ability tied to your lineage, such as a protective barrier, a localized storm, or a devastating psychic malediction.</li>
-                </ul>
+            <ul>
+                <li><strong>Douse.</strong> You can manipulate ambient moisture to strike at your foes. You know the <em>Douse</em> cantrip. Charisma is your spellcasting ability for it. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</li>
+                <li><strong>Lineage Augmentation.</strong> Your scales allow you to push your moisture manipulation beyond its normal limits. Once per short rest, when you cast <em>Douse</em>, you can apply a unique augmentation based on your scale color. This can alter the damage type, increase the number of targets, or add secondary effects like knocking enemies prone or teleporting.</li>
+                <li><strong>Crystalline Manifestation.</strong> Once per long rest, you can fully ignite the energy within your scales to unleash a powerful, unique ability tied to your lineage, such as a protective barrier, a localized storm, or a devastating psychic malediction.</li>
+            </ul>
             <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Ik’héthagma.</p>
         </description>
         <sheet display="false" />
