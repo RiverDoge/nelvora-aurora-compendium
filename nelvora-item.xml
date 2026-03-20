@@ -711,15 +711,14 @@
 			<set name="category">Magic Armor</set>
 			<set name="weight" lb="6">6 lb.</set>
 			<set name="type" addition="shield">Armor</set>
-			<set name="armor">Shield</set>
-			<set name="armorClass">2</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
 			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS</set>
-			<set name="attunement" addition="by an individual dedicated to martial discipline or protective vows">true</set>
+			<set name="attunement" addition="Recognized by the Rocheforts">true</set>
 			<set name="rarity">Very Rare</set>
 			<set name="enhancement">1</set>
 		</setters>
 		<rules>
-			<stat name="ac:shield" value="2" bonus="shield" />
+			<stat name="ac:shield" value="1" bonus="enhancement" />
 		</rules>
 	</element>
 	
