@@ -275,25 +275,27 @@
             <p>It is spoken of in legends, and recorded in the most sacred of their sea-chants, that some Ik’héthagma are born marked for an extraordinary destiny by their Goddess Caeplithias. These chosen individuals may, over time or through great trials, develop wings. While these majestic appendages typically grant the ability to glide with unparalleled grace and speed across the ocean's surface and to descend safely from perilous heights, true sustained flight is another matter. The legends further tell that the most exceptionally blessed among the winged, those whose scales shimmer with an entire rainbow of colours, a breathtakingly rare sight, might reclaim the power of true, albeit limited, flight. This ability would echo the capabilities of their most ancient, sky-dwelling ancestors. Such individuals, especially if winged, are revered as living embodiments of Caeplithias's will and hope. Their vibrant scales are considered more valuable than any earthly treasure.</p>
             <h4>Ik’héthagma Traits</h4>
             <p>Your connection to the ancient seas grants you the following abilities.</p>
-            <p class="indent"><strong>Ability Score Increase.</strong> Your Dexterity score increases by 2, and your Charisma score increases by 1.</p>
+            <p class="indent"><strong>Ability Score Increase.</strong> Your Charisma score increases by 2, your Dexterity score increases by 1, and your Wisdom score increases by 1.</p>
             <p class="indent"><strong>Age.</strong> Ik’héthagma possess notably long lifespans and retain a striking youthfulness even into their venerable years.</p>
             <p class="indent"><strong>Size.</strong> Your size is Medium.</p>
             <p class="indent"><strong>Speed.</strong> Your base walking speed is 30 feet. You also have a swimming speed of 30 feet.</p>
             <p class="indent"><strong>Amphibious.</strong> You can breathe air and water.</p>
             <p class="indent"><strong>Douse.</strong> You have an innate connection to the sea, allowing you to manipulate localized moisture. You know the custom Douse cantrip. Further augments to this ability are dictated by your scale colors.</p>
+            <p class="indent"><strong>Ik’héthagma Lineage.</strong> Your iridescent scales grant you an innate connection to the sea, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
             <p class="indent"><strong>Languages.</strong> You can speak, read, and write Common and Ik’héthagma.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <stat name="dexterity" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
-            <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="dexterity" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="wisdom" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            
             <stat name="innate speed" value="30" />
             <stat name="innate speed:swim" value="30" />
             <grant type="Size" id="ID_SIZE_MEDIUM" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
             <grant type="Language" id="ID_NELVORA_LANGUAGE_IKHETHAGMA" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_AMPHIBIOUS" />
-
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE" />
         </rules>
     </element>
@@ -319,16 +321,25 @@
     <element name="Ik’héthagma Lineage" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_IKHETHAGMA_LINEAGE">
         <supports>Klirsaer Hybrid Trait</supports>
         <description>
-            <p>Your iridescent scales grant you an innate connection to the sea, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage.</p>
+            <p>Your iridescent scales grant you an innate connection to the sea, allowing you to manipulate moisture and manifesting it as unique magical affinities based on your scale lineage. The colors of your scales dictate the nature of your power:</p>
+            <ul>
+                <li><strong>Amethyst:</strong> Unnatural awareness, force barriers, and dispelling magic.</li>
+                <li><strong>Diamond:</strong> Immunity to cold, glacial bulwarks, and piercing ice.</li>
+                <li><strong>Emerald:</strong> Restorative energy, poison resilience, and defensive thickets.</li>
+                <li><strong>Golden:</strong> Lightning resistance, shocking arcs, and storm auras.</li>
+                <li><strong>Obsidian:</strong> Telepathy, psychic enhancements, and abyssal nightmares.</li>
+                <li><strong>Ruby:</strong> Fire resistance, searing heat, and ethereal flames.</li>
+                <li><strong>Sapphire:</strong> Deep sea adaptation, crushing pressure, and localized tides.</li>
+                <li><strong>Silver:</strong> Physical fortitude, radiant magic, and scale amplification.</li>
+            </ul>
         </description>
 		<sheet action="Action">
             <description>You know the Douse cantrip. Your scale colors provide unique damage bonuses and utility augments to this spell. Douse (Spell Attack): +{{spellcasting:attack}} to hit. Hit: 1d{{douse:die_size}} + {{douse:bonus}} cold damage, adding additional dice at levels 5, 11, and 17. Quenches flames.</description>
         </sheet>
         <rules>
             <grant type="Spell" id="ID_NELVORA_SPELL_DOUSE" />
-            <stat name="douse:die_size" value="8" />
-            <stat name="douse:bonus" value="0" />
-
+            <stat name="douse:die_size" value="8" bonus="base" />
+            <stat name="douse:bonus" value="0" bonus="base" />
             <select type="Sub Race" name="Scale Lineage" supports="Ikhethagma Lineage" />
         </rules>
     </element>
@@ -376,97 +387,176 @@
     </element>
 
     <element name="Amethyst Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_AMETHYST">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>The Amethyst scale resonates with the deep, crushing pressure of the abyssal trenches and the ancient history of the seas. Those who bear this royal purple hue possess an unnatural awareness of their surroundings and a mind shielded by the weight of the ocean.</p>
-            <p><strong>Passive:</strong> You have Expertise in Perception, and a +2 bonus to History checks.</p>
-            <p><strong>Active (Force Barrier):</strong> Once per long rest, you can create a barrier of force. It has its own health pool, which scales up with your level, but can absorb one whole hit at minimum. Some abilities and beings can penetrate it, but that would be rare. While this is active, anyone who strikes you needs to make a Wisdom check, or become disoriented.</p>
-            <p><strong>Augment (Douse):</strong> You can now dispel certain magical effects instead of dealing damage. At higher levels, casting this allows you to displace yourself to a new location.</p>
-        </description>
-        <sheet action="Action" usage="1/Long Rest">
-            <description>Force Barrier: Create a scaling health pool barrier. Attackers must make a Wisdom check or become disoriented.</description>
-        </sheet>
-        <sheet action="Action">
-            <description>Douse (Amethyst Augment): Instead of dealing damage, target a magical effect to dispel it (DM discretion on level/potency). At 11th level, casting Douse in any form allows you to instantly teleport up to 30 feet to an unoccupied space you can see.</description>
-        </sheet>
-        <rules>
-            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
-            <stat name="perception:proficiency:multiplier" value="2" />
-            <stat name="history" value="2" />
-        </rules>
-    </element>
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p><strong>Gaze of Antiquity.</strong> Those who bear this royal purple hue possess an unnatural awareness of their surroundings and a mind shielded by blessings lost to the deep. You gain expertise in the Perception skill, and you have a +2 bonus to History checks.</p>
+			<p class="indent"><strong>Severing Douse.</strong> Once per short rest, when you cast Douse, you can direct its flow to wash away the magical weave rather than physical forms. Instead of dealing damage, you use the action to cast Dispel Magic. If you successfully end a spell or magical effect in this way, you can instantly teleport up to 15 feet to an unoccupied space you can see.</p>
+			<p class="indent"><strong>Aegis of the Shattered Epoch.</strong> Once per long rest as a bonus action, you can manifest a barrier of crystalline force for 1 minute with HP equal to three rolls of your Douse damage die. The barrier takes damage instead of you. If an attack reduces it to 0, it absorbs the hit before shattering (unless damage exceeds twice max HP). Creatures hitting you with a melee attack while active make a Wis save (DC {{spellcasting:dc}}) or have disadvantage on their next attack roll before the end of their next turn.</p>
+		</description>
+		<sheet>
+			<description>Gaze of Antiquity: You gain expertise in Perception and a +2 bonus to History checks.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Severing Douse: Instead of dealing damage, cast Dispel Magic. If you successfully end an effect, you can teleport up to 15 ft.</description>
+		</sheet>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Aegis of the Shattered Epoch: Force barrier for 1 min with HP equal to three rolls of 1d{{douse:die_size}}. Barrier takes damage first. Absorbs one hit that breaks it unless damage is twice max HP. Melee attackers must make a Wis save (DC {{spellcasting:dc}}) or have disadvantage on their next attack.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<stat name="history:misc" value="2" />
+		</rules>
+	</element>
 
     <element name="Emerald Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_EMERALD">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>The Emerald scale hums with the vibrant, restorative energy of the ocean's blooming flora. Bearers of this bright green mantle are naturally resilient to toxins and carry the revitalizing breath of the sea wherever they walk.</p>
-            <p><strong>Passive:</strong> You have resistance to poison damage.</p>
-            <p><strong>Augment (Douse):</strong> Your douse ability has healing properties now and can potentially remove the poisoned status. Additionally, you can cause plants and other life to grow more quickly and vigorously.</p>
-        </description>
-        <sheet action="Action">
-            <description>You have poison resistance. Douse (Emerald Augment): Instead of dealing damage, you can cleanse the poisoned condition, and accelerate plant growth.</description>
-        </sheet>
-        <rules>
-            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
-        </rules>
-    </element>
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p><strong>Verdant Resilience.</strong> You have resistance to poison damage, and advantage on saving throws against being poisoned. Additionally, your presence stimulates the stubborn life of this fading world. You know the Druidcraft cantrip, and as an action, you can cause normal, non-magical plant life within 10 feet of you to instantly bloom or grow thick and vigorous.</p>
+			<p class="indent"><strong>Restorative Douse.</strong> Once per short rest, when you cast Douse on a willing creature, you can direct its flow to purify their body rather than destroy it. Instead of dealing damage, the soothing waters wash over the target, instantly neutralizing most poisoned conditions.</p>
+			<p class="indent"><strong>Bramble of the Fading Grove.</strong> Once per long rest, you can channel the desperate, clinging life of the world into a defensive thicket. As an action, you designate a point within 30 feet of you. A 15-foot-radius sphere centered on that point erupts with pale, twisting vines and thorns for 1 minute. The area becomes difficult terrain for your enemies. Whenever a hostile creature enters the area for the first time on a turn or starts its turn there, it takes piercing damage equal to one roll of your Douse damage die. The vines are docile to you and your allies, gently parting to let you move freely and actively wrapping together to provide half cover (+2 bonus to AC and Dexterity saving throws) against attacks originating from outside the thicket.</p>
+		</description>
+		<sheet>
+			<description>Verdant Resilience: You have resistance to poison damage, and advantage on saving throws against being poisoned.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Restorative Douse: Cast Douse on a willing creature to instantly neutralize most poisoned conditions instead of dealing damage.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>Bramble of the Fading Grove: Designate a point within 30 ft. A 15-ft-radius sphere erupts with vines for 1 min. Difficult terrain for enemies. Hostile creatures entering or starting their turn in the area take 1d{{douse:die_size}} piercing damage. Allies move freely and gain half cover (+2 AC/Dex saves) vs attacks from outside the thicket.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+			<grant type="Spell" id="ID_PHB_SPELL_DRUIDCRAFT" />
+		</rules>
+	</element>
 
     <element name="Diamond Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_DIAMOND">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p><strong>Passive:</strong> You are immune to almost all cold damage sources.</p>
-            <p><strong>Active (Glacial Bulwark):</strong> As a Reaction when an ally within 30 feet is hit by an attack, you can cause a barrier of spectral ice to erupt, granting them +4 AC against that one attack.</p>
-            <p><strong>Augment (Douse):</strong> Your connection to the eternal ice makes your saltwater lethally cold. The damage die of your Douse spell increases, and you add your Constitution modifier to the damage.</p>
-        </description>
-        <sheet action="Reaction" usage="{{proficiency}}/Long Rest">
-            <description>Glacial Bulwark: When an ally within 30 feet is hit, cause a barrier of spectral ice to erupt, granting them +4 AC against that attack.</description>
-        </sheet>
-        <rules>
-            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
-            <stat name="douse:die_size" value="2" />
-            <stat name="douse:bonus" value="constitution:modifier" />
-        </rules>
-    </element>
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p><strong>Heir of the Frozen Summit.</strong> The biting, eternal winter that creeps across the fringes of the world cannot touch you. You have immunity to cold damage.</p>
+			<p class="indent"><strong>Rime Douse.</strong> Once per short rest, when you cast Douse, you can freeze its heavy waters into piercing ice. The spell deals an additional 2 damage plus your Constitution modifier.</p>
+			<p class="indent"><strong>Glacial Bulwark.</strong> An unyielding spirit resides within the diamond scales. Once per long rest, when an ally within 30 feet is targeted by an attack, you can use your reaction to cause a barrier of spectral ice to erupt from the ground around them. This grants the ally a +5 bonus to their Armor Class against that single attack. If the attack misses, the ice violently shatters outward. Every enemy of your choice within 15 feet of the barrier must make a Dexterity saving throw against your spell save DC. On a failed save, a target takes cold damage equal to your Douse damage die and has their movement speed halved until the end of their next turn. On a successful save, they take half as much damage and their speed is unaffected.</p>
+		</description>
+		<sheet>
+			<description>Heir of the Frozen Summit: You have immunity to cold damage. Douse deals an additional 2 + {{constitution:modifier}} damage.</description>
+		</sheet>
+		<sheet action="Reaction" usage="1/Long Rest">
+			<description>Glacial Bulwark: When an ally within 30 ft is targeted by an attack, grant them a +5 bonus to AC against that attack. If the attack misses, chosen enemies within 15 ft make a Dex save (DC {{spellcasting:dc}}). On a fail, they take 1d{{douse:die_size}} cold damage and speed is halved until the end of their next turn. On a success, half damage and speed is unaffected.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
+			<stat name="douse:bonus" value="2" />
+			<stat name="douse:bonus" value="constitution:modifier" />
+		</rules>
+	</element>
 
     <element name="Ruby Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_RUBY">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>A brilliant, deep crimson scale that pulses with the hidden geothermal heat of underwater volcanic vents. Those bearing this hue often exhibit fiery passions and an affinity for the raw, destructive forces of nature.</p>
-        </description>
-        <sheet display="false" />
-    </element>
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p>A brilliant, deep crimson scale that pulses with the hidden geothermal heat of underwater volcanic vents. Those bearing this hue often exhibit fiery passions and an affinity for the raw, destructive forces of nature.</p>
+			<p class="indent"><strong>Ruby Luster.</strong> You have resistance to fire damage.</p>
+			<p class="indent"><strong>Searing Douse.</strong> Once per short rest, when you cast Douse, you can channel the blistering light of your ruby scales. The spell deals an additional die of Douse damage, and the damage type becomes fire.</p>
+			<p class="indent"><strong>Crystalline Inferno.</strong> Once per long rest, when you hit a creature with a melee attack, you can cause your ruby scales to flare with the trapped heat of this fading world. The attack channels the power of your Searing Douse, dealing its total fire damage to the target. Furthermore, the target is ignited by ethereal ruby flames. Until a creature takes an action to smother these flames, the target takes fire damage at the start of each of its turns equal to one roll of your Douse damage die.</p>
+		</description>
+		<sheet>
+			<description>Ruby Luster: You have fire resistance.</description>
+		</sheet>
+        <sheet action="Action" usage="1/Short Rest">
+			<description>Searing Douse: Douse deals an additional die of damage and becomes fire damage</description>
+		</sheet>
+		<sheet usage="1/Long Rest">
+			<description>Crystalline Inferno: When you hit with a melee attack, deal your Searing Douse fire damage to the target. The target is ignited, taking 1d{{douse:die_size}} fire damage at the start of its turns until a creature uses an action to smother the flames.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+		</rules>
+	</element>
 
     <element name="Sapphire Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SAPPHIRE">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>A pristine, ocean-blue scale that seems to capture the essence of a tranquil, sunlit sea. It is whispered that these scales grant unparalleled grace in the water and a serene, unclouded mind.</p>
-        </description>
-        <sheet display="false" />
-    </element>
-
-    <element name="Golden Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_GOLDEN">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>A radiant, sun-touched scale that glimmers even in the darkest depths. Highly sought after, this scale is often associated with the majestic power of the surface dawn and a charismatic, inspiring presence.</p>
-        </description>
-        <sheet display="false" />
-    </element>
-
-    <element name="Obsidian Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_OBSIDIAN">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>A dark, light-absorbing scale born from the rapid cooling of magma in the deep sea. It represents absolute finality, offering its bearer a connection to shadows and the unseen aspects of the world.</p>
-        </description>
-        <sheet display="false" />
-    </element>
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p>A pristine, ocean-blue scale that seems to capture the essence of a tranquil, sunlit sea. It is whispered that these scales grant unparalleled grace in the water and a serene, unclouded mind.</p>
+			<p class="indent"><strong>Sapphire Depths.</strong> Your scales shimmer with the sorrowful blues of the drowned world. You gain a swimming speed equal to your walking speed, and you can breathe water as easily as air. The immense pressure of the deep holds no sway over you, granting you immunity to the natural hazards of underwater environments.</p>
+			<p class="indent"><strong>Surging Douse.</strong> The crushing weight of the lightless tides permanently enhances your innate magic. Your Douse now deals one additional die of damage. Furthermore, when you strike a target with Douse, the heavy water crashes down upon them, forcing the creature to make a Strength saving throw or be knocked prone.</p>
+			<p class="indent"><strong>Grasp of the Ruined Tides.</strong> Once per long rest, you can unleash the crushing despair of the lost oceans. You target every enemy you can see within 30 feet, making a separate Douse attack against each of them. If the attack hits, the target takes your Douse damage and must make a Strength saving throw. On a failed save, the creature is restrained by swirling shards of heavy, localized water. A restrained creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>
+		</description>
+		<sheet>
+			<description>Sapphire Depths: Swim speed equals walking speed, water breathing, and immunity to underwater hazards. Surging Douse: Douse deals an additional die of damage. On a hit, the target must make a Str save (DC {{spellcasting:dc}}) or be knocked prone.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>Grasp of the Ruined Tides: Make a separate Douse attack against every enemy you can see within 30 ft. On a hit, target takes Douse damage and must make a Str save (DC {{spellcasting:dc}}) or be restrained (save ends).</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+		</rules>
+	</element>
 
     <element name="Silver Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_SILVER">
-        <supports>Ikhethagma Scale</supports>
-        <description>
-            <p>A shining, metallic scale that resembles the flash of a predator darting through the water. Bearers of the silver scale are known for their blinding speed and elusive, fluid movements.</p>
-        </description>
-        <sheet display="false" />
-    </element>
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p><strong>Legacy of the Argent Protector.</strong> The enduring spirit of Caeplithias fortifies your physical form. You have immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't made with obsidian weapons.</p>
+			<p class="indent"><strong>Luminous Douse.</strong> The radiant power of the silver scales empowers your core magic. Once per short rest, when you cast Douse, you can target a second creature within range. Additionally, the spell's normal range is doubled, and you can choose to have it deal radiant damage instead of its normal type.</p>
+			<p class="indent"><strong>Beacon of the Fallen.</strong> The silver hue acts as a flawless conduit, amplifying the specific mechanics of your other gem scales. You gain a +1 bonus to your spell save DC for any ability granted by your scales. Furthermore, whenever an ability from another scale uses your Douse damage die, you can reroll any 1s on those dice and must use the new roll.</p>
+			<p class="indent"><strong>Hope's Companions.</strong> Once per long rest, as a bonus action, you can flare the silver energy within you to instantly regain the use of one of your other scale features.</p>
+		</description>
+		<sheet>
+			<description>Legacy of the Argent Protector: Immunity to nonmagical B/P/S (not made with obsidian). Beacon of the Fallen: +1 to spell save DC for scale abilities. Reroll 1s on Douse damage dice used for scale abilities.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Luminous Douse: Target a second creature. Range is doubled. Can deal radiant damage.</description>
+		</sheet>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Hope's Companions: Instantly regain the use of one of your other scale features.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_BLUDGEONING" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_PIERCING" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_SLASHING" />
+		</rules>
+	</element>
+
+    <element name="Golden Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_GOLDEN">
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p><strong>Spark of the Weeping Storm.</strong> The lightning of Nelvora's turbulent, mournful skies courses through this scale. You have resistance to lightning damage, and you know the Shocking Grasp cantrip. When you cast it, the energy manifests as jagged, sorrowful arcs of golden light.</p>
+			<p class="indent"><strong>Arcing Douse.</strong> Once per short rest, when you cast Douse, you can infuse the magic with volatile electricity. The spell deals an additional die of Douse damage, and the damage type becomes lightning. Additionally, if your Douse successfully hits its target, the golden energy arcs to one other creature of your choice within 10 feet, dealing lightning damage equal to one roll of your Douse damage die.</p>
+			<p class="indent"><strong>Mantle of the Golden Tempest.</strong> Once per long rest, you can unleash the erratic power of a fading storm. As a bonus action, you wreathe yourself in a swirling aura of golden lightning for 1 minute. While enveloped in this energy, your movement speed increases by 10 feet, and any hostile creature that starts its turn within 10 feet of you takes lightning damage equal to one roll of your Douse damage die. Furthermore, the violent arcs of electricity obscure your physical form, imposing disadvantage on attack rolls made against you by creatures within 10 feet.</p>
+		</description>
+		<sheet>
+			<description>Spark of the Weeping Storm: You have resistance to lightning damage. You know the Shocking Grasp cantrip.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Arcing Douse: Douse deals an additional die of damage and becomes lightning damage. On a hit, golden energy arcs to one other creature within 10 ft for 1d{{douse:die_size}} lightning damage.</description>
+		</sheet>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Mantle of the Golden Tempest: Wreathe yourself in lightning for 1 min. Speed increases by 10 ft. Hostile creatures starting their turn within 10 ft take 1d{{douse:die_size}} lightning damage. Attacks against you from within 10 ft have disadvantage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			<grant type="Spell" id="ID_PHB_SPELL_SHOCKING_GRASP" />
+		</rules>
+	</element>
+
+    <element name="Obsidian Scale" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_SCALE_OBSIDIAN">
+		<supports>Ikhethagma Scale</supports>
+		<description>
+			<p><strong>Vestige of the Deep.</strong> Your consciousness is intricately linked to the horrors of the abyss. You can communicate telepathically with any creature you can see within 30 feet. When you do, your mental presence feels like a heavy shadow pressing against their thoughts, granting you advantage on Intimidation checks made against them.</p>
+			<p class="indent"><strong>Void Douse.</strong> The oppressive emptiness of the deep permanently enhances your innate magic. Whenever you deal damage with your Douse, it deals an additional 2 damage. You can also choose to have your Douse deal psychic damage instead of its normal damage type.</p>
+			<p class="indent"><strong>Malediction of the Abhorrent.</strong> Once per long rest, your obsidian scales act as a dark mirror to channel the silent, crushing malice of an ancient terror. As an action, an unnatural, suffocating nightmare rolls outward from you to a range of 60 feet. Every creature caught in this embrace must make an Intelligence saving throw against your spell save DC. On a failed save, the creature loses memory and capacity to use any specific actions used since the end of your last turn for 1 minute, and loses its reaction. On a success, they only lose access until the end of your next turn. Fails can repeat the save at the end of their turns. Activating this costs your bonus actions, reactions, and scale benefits until the end of your next turn.</p>
+		</description>
+		<sheet>
+			<description>Vestige of the Deep: Telepathy within 30 ft. Advantage on Intimidation checks against those you communicate with this way.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Void Douse: Douse deals an additional 2 damage and can deal psychic damage instead of its normal type.</description>
+		</sheet>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>Malediction of the Abhorrent: 60-ft radius nightmare. Int save (DC {{spellcasting:dc}}). Fail: lose access to actions used since your last turn for 1 min (repeats save end of turn) and lose reaction. Success: lose access until end of your next turn. You lose bonus actions, reactions, and scale benefits until end of next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="douse:bonus" value="2" />
+		</rules>
+	</element>
 
     <element name="Klírsaer" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_KLIRSAER">
         <description>
@@ -924,7 +1014,7 @@
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_GRASP_OF_THE_USURPER" level="1" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_SUNDER_THE_SACRED" level="5" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HALTED_DIVINITY" level="7" />
-            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_TRUE_GLUTTONY" level="14" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_TRUE_GLUTTONY" />
         </rules>
     </element>
 
@@ -985,7 +1075,7 @@
             <p class="indent"><strong>Guise of the Kiyozumi (Level 1).</strong> You possess the elusive nature of the Sovereign. You can cast Disguise Self at will, without expending a spell slot. Furthermore, while disguised, your body is partially comprised of spirit-mist; you can move through other creatures and objects as if they were difficult terrain until the start of your next turn. If you end your turn inside an object, you take 1d10 force damage and are ejected to the nearest unoccupied space. You cannot pass through walls or dense objects, as well as anything made of iron. This feature can be used a number of times equal to your proficiency modifier, and refreshes on a long rest.</p>
             <p class="indent"><strong>Illusory Strike (Level 5).</strong> Through your heritage, you have obtained a fragment of the Queen’s spectral white-flame, used to conceal truth. When a creature misses you with an attack action, you can use your reaction to teleport up to 10 feet to an unoccupied space you can see. If you do, you can immediately make one spell attack or weapon attack (in range) against the triggering creature with Advantage.</p>
             <p class="indent"><strong>Queen’s Veil (Level 7).</strong> Your presence is that of a dream to those you encounter, both lowering their guard, and easing their memory of you. You gain proficiency in the Deception or Persuasion skill, or expertise if you are already proficient. Additionally, you can cast Mirror Image once per long rest. As a bonus action, you can send out one of your Mirror Images up to 10 feet away. If this provokes an opportunity attack, you can use Illusory Strike, treating the illusion as if it was you, and allowing you to attack in their place on the target, whether or not it successfully hits your illusion. If their attack misses, you can cast this strike for free, and teleport up to 10 feet away from your current position. If the attack is a success, you expend a use of Illusory Strike, and your reaction for that turn. Additionally, if the Illusion safely makes it the 10 feet you send it, you can choose to teleport to the new location. The Duplicate is expended regardless of outcome. You regain the use of this spell when you finish a Long Rest.</p>
-            <p class="indent"><strong>Hwan-Hee’s Final Grace (Level 14).</strong> You can trap a creature in a dreamlike state, granting them their heart's desire to remove them from the fight. As an Action, you force a creature you can see within 60 feet to make a Wisdom saving throw (DC 10 + your proficiency bonus + your Charisma modifier). On a failure, the target is Incapacitated, as they are lost in a blissful hallucination. The target can repeat the saving throw at the end of each of its turns, or whenever it takes damage. If the effect ends because the duration expires (but not if they take damage), they take 5d10 + your Charisma modifier Psychic damage as the beautiful lie shatters. If the effect expires because they succeed the saving throw, they take half as much damage. You can use this feature once per Long Rest.</p>
+            <p class="indent"><strong>Hwan-Hee’s Final Grace.</strong> You can trap a creature in a dreamlike state, granting them their heart's desire to remove them from the fight. As an Action, you force a creature you can see within 60 feet to make a Wisdom saving throw (DC 10 + your proficiency bonus + your Charisma modifier). On a failure, the target is Incapacitated, as they are lost in a blissful hallucination. The target can repeat the saving throw at the end of each of its turns, or whenever it takes damage. If the effect ends because the duration expires (but not if they take damage), they take 5d10 + your Charisma modifier Psychic damage as the beautiful lie shatters. If the effect expires because they succeed the saving throw, they take half as much damage. You can use this feature once per Long Rest.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -995,7 +1085,7 @@
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_GUISE_OF_THE_KIYOZUMI" level="1" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_ILLUSORY_STRIKE" level="5" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_QUEENS_VEIL" level="7" />
-            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HWAN_HEES_FINAL_GRACE" level="14" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_HWAN_HEES_FINAL_GRACE" />
         </rules>
     </element>
 
@@ -1046,7 +1136,7 @@
 
     <element name="Hwan-Hee’s Final Grace" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_HWAN_HEES_FINAL_GRACE">
         <description>
-            <p>Level 14: You can trap a creature in a dreamlike state, granting them their heart's desire to remove them from the fight.</p>
+            <p>You can trap a creature in a dreamlike state, granting them their heart's desire to remove them from the fight.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>Target within 60ft makes Wis save (DC 10+PB+Cha). Failure: Incapacitated (blissful hallucination). Repeat save end of turns/when taking damage. If duration expires without damage: take 5d10+{{charisma:modifier}} Psychic damage. If save successful: take half damage.</description>
@@ -1065,7 +1155,7 @@
             <p class="indent"><strong>Wind-Blessed (Level 1).</strong> Wherever you travel, the western-winds grace your step, as they owe eternal loyalty to Bae-Kho. Your walking speed is increased by 10 feet, and you ignore difficult terrain caused by wind or weather. Additionally, any such effect actually increases this bonus to 20 feet while you are afflicted.</p>
             <p class="indent"><strong>Thunderous-Judgement (Level 5).</strong> You can channel the storm into your momentum to crush your enemies. If you move at least 20 feet consecutively toward a creature and then hit it with a melee weapon attack on the same turn, the attack deals an extra 1d6 per 10 feet Thunder damage. Additionally, the target must succeed on a Strength saving throw (DC 10 + your proficiency bonus + your Strength modifier) or be knocked Prone. Against Magatsu or other evil-aligned creatures, the damage is half-radiant half-thunder.</p>
             <p class="indent"><strong>Sovereign's Roar (Level 7).</strong> Even in death, the Heavenly Tiger's roar scatters the wicked. As an Action, you let loose an earth-shattering roar. Each creature of your choice within 30 feet of you that can hear you must make a Wisdom saving throw (DC 10 + your proficiency bonus + your Strength modifier). On a failed save, a creature is Frightened of you until the end of your next turn. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can. Additionally, all terrain within 30 feet of you is treated as under the effects of the spell consecration. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
-            <p class="indent"><strong>Flash of the White-Fang (Level 14).</strong> Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+            <p class="indent"><strong>Flash of the White-Fang.</strong> Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -1076,7 +1166,7 @@
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_WIND_BLESSED" level="1" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_THUNDEROUS_JUDGEMENT" level="5" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_SOVEREIGNS_ROAR" level="7" />
-            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FLASH_OF_THE_WHITE_FANG" level="14" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_FLASH_OF_THE_WHITE_FANG" />
         </rules>
     </element>
 
@@ -1137,7 +1227,7 @@
 
     <element name="Flash of the White-Fang" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_FLASH_OF_THE_WHITE_FANG">
         <description>
-            <p>Level 14: Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+            <p>Bae-Kho's affinity for storms was so great, that it was said to descend as if with the power of a storm-ridden typhoon wherever it struck down evil. You can move with the speed of a lightning strike to deliver a killing blow. As an Action, you can teleport up to 60 feet to an unoccupied space adjacent to a creature you can see, appearing as if from a localized stormcloud. You then make a single melee weapon attack against that creature with Advantage. On a hit, the attack is a Critical Hit, and this also incurs the effects of Thunderous-Judgement, as if you moved 60 feet. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>Teleport up to 60 feet adjacent to a creature and make a melee weapon attack with Advantage. On a hit, it is a Critical Hit and incurs Thunderous-Judgement effects as if moving 60 feet (+6d6 Thunder).</description>
@@ -1155,7 +1245,7 @@
             <p class="indent"><strong>Ossified Armor (Level 1).</strong> Your bones are denser than iron, and in some places, they grow through the skin to form natural plating. When you aren't wearing armor, your AC equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit. Additionally, you cannot be critically hit by non-magical slashing or bludgeoning damage, as your reinforced skeletal structure absorbs the impact. For most armor, you can add your constitution modifier to the AC value.</p>
             <p class="indent"><strong>Withering Touch (Level 5).</strong> Your very presence accelerates entropy. When you hit a creature with a melee weapon attack, you can channel the rot of Muguro. The attack deals an extra 1d8 Necrotic damage. Additionally, the target must succeed on a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, the creature is inflicted with Necrosis until the end of your next turn. While affected, the creature cannot regain hit points, and if it takes damage, it takes an additional 1d4 Necrotic damage. You can use this feature a number of times equal to your proficiency modifier, and regain the use of it when you finish a Long Rest.</p>
             <p class="indent"><strong>Aura of the Yellow Spring (Level 7).</strong> You can exhale the miasma of death to choke the life from your surroundings. As an Action, you unleash a 15-foot radius aura choking grey mist, which permeates from your form, that lasts for 1 minute. The area is heavily obscured for creatures other than you. Any creature that starts its turn in the mist takes Necrotic damage equal to your Constitution modifier. Additionally, the ground within the aura is difficult terrain for all creatures other than you, as spectral hands claw at their ankles. You can use this feature once, and regain the use of it when you finish a Short or Long Rest.</p>
-            <p class="indent"><strong>Muguro's Vessel (Level 14).</strong> You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own. As an Action, you force all creatures within 30 feet of you to make a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, a creature takes 4d10 Necrotic damage, and you gain Temporary Hit Points equal to half the total damage dealt. On a successful save, they take half damage, and you gain no Temporary Hit Points. If this damage reduces a creature to 0 hit points, their body disintegrates into ash, preventing anything lesser than true resurrection. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
+            <p class="indent"><strong>Muguro's Vessel.</strong> You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own. As an Action, you force all creatures within 30 feet of you to make a Constitution saving throw (DC 10 + your proficiency bonus + your Constitution modifier). On a failed save, a creature takes 4d10 Necrotic damage, and you gain Temporary Hit Points equal to half the total damage dealt. On a successful save, they take half damage, and you gain no Temporary Hit Points. If this damage reduces a creature to 0 hit points, their body disintegrates into ash, preventing anything lesser than true resurrection. You can use this feature once, and regain the use of it when you finish a Long Rest.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -1166,7 +1256,7 @@
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_OSSIFIED_ARMOR" level="1" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_WITHERING_TOUCH" level="5" />
             <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_AURA_OF_THE_YELLOW_SPRING" level="7" />
-            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MUGUROS_VESSEL" level="14" />
+            <grant type="Racial Trait" id="ID_NELVORA_RACIAL_TRAIT_MUGUROS_VESSEL" />
         </rules>
     </element>
 
@@ -1217,7 +1307,7 @@
 
     <element name="Muguro's Vessel" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_RACIAL_TRAIT_MUGUROS_VESSEL">
         <description>
-            <p>Level 14: You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own.</p>
+            <p>You can briefly become a conduit of the Carrion Lord, demanding life from those around you to sustain your own.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>All creatures within 30 feet make a DC {{dc:constitution}} Con save. Fail: 4d10 Necrotic damage, you gain Temp HP equal to half total damage dealt. Success: half damage, no Temp HP. If reduced to 0 HP, target disintegrates to ash.</description>
