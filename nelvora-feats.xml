@@ -83,7 +83,7 @@
         </sheet>
         <rules>
             <stat name="charisma:max" value="4" />
-            <stat name="charisma:score:set:" value="22" bonus="base" />
+            <stat name="charisma:score:set" value="22" bonus="base" />
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
             <stat name="persuasion:proficiency" value="proficiency" bonus="double" />
         </rules>
