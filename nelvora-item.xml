@@ -719,8 +719,7 @@
 			<set name="enhancement">1</set>
 		</setters>
 		<rules>
-			<stat name="ac:shield" value="2" />
-			<stat name="ac:shield:magic" value="1" />
+			<stat name="ac:shield" value="2" bonus="shield" />
 		</rules>
 	</element>
 	
