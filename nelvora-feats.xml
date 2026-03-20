@@ -2,10 +2,10 @@
 <elements>
     <info>
         <name>Nelvora Feats</name>
-        <description>Custom feats and divine awakenings for the Nelvora campaign setting.</description>
-        <author>Nelvora Worldbuilding</author>
-        <update version="1.0.0">
-            <file name="nelvora-feats.xml" url="" />
+        <description>Custom feats and divine awakenings for the Nelvora setting.</description>
+         <author url="https://github.com/RiverDoge/nelvora-aurora-compendium">RiverDoge</author>
+        <update version="1.0.1">
+            <file name="nelvora-feats.xml" url="https://raw.githubusercontent.com/RiverDoge/nelvora-aurora-compendium/main/nelvora-feats.xml" />
         </update>
     </info>
 
