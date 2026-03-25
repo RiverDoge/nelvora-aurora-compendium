@@ -345,16 +345,10 @@
 			<set name="weight" lb="45">45 lb.</set>
 			<set name="slot">body</set>
 			<set name="type" addition="scale mail">Armor</set>
-			<set name="armor">Medium</set>
-			<set name="stealth">Disadvantage</set>
-			<set name="armorClass">14 + Dex modifier (max 2)</set>
+			<set name="armor">Scale Mail</set>
 			<set name="attunement">true</set>
-			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SCALE_MAIL</set>
 			<set name="rarity">Rare</set>
 		</setters>
-		<rules>
-			<stat name="ac:armored:armor" value="14" />
-		</rules>
 	</element>
 	<element name="The Forgemaster's Legacy" type="Magic Item" source="Aurora: Nelvora" id="ID_NELVORA_MAGIC_ITEM_THE_FORGEMASTERS_LEGACY">
 		<description>
@@ -369,17 +363,15 @@
 			<set name="category">Magic Armor</set>
 			<set name="weight" lb="40">40 lb.</set>
 			<set name="slot">body</set>
-			<set name="armor">Medium</set>
-			<set name="stealth">Disadvantage</set>
-			<set name="armorClass">15 + Dex modifier (max 2)</set>
-			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_HALF_PLATE</set>
+			<set name="type" addition="half plate">Armor</set>
+			<set name="armor">Half Plate</set>
 			<set name="attunement" addition="by Kadmon Keter">true</set>
 			<set name="rarity">Rare</set>
 			<set name="enhancement">1</set>
 			<set name="charges">3</set>
 		</setters>
 		<rules>
-			<stat name="ac:armored:armor" value="15" />
+			<stat name="ac:armored:enhancement" value="1" bonus="enhancement" />
 		</rules>
 	</element>
 	
@@ -394,15 +386,13 @@
 			<set name="weight" lb="20">20 lb.</set>
 			<set name="slot">body</set>
 			<set name="type" addition="breastplate">Armor</set>
-			<set name="armor">Medium</set>
-			<set name="armorClass">14 + Dex modifier (max 2)</set>
-			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_BREASTPLATE</set>
+			<set name="armor">Breastplate</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Very Rare</set>
 			<set name="enhancement">1</set>
 		</setters>
 		<rules>
-			<stat name="ac:armored:armor" value="14" />
+			<stat name="ac:armored:enhancement" value="1" bonus="enhancement" />
 		</rules>
 	</element>
 
