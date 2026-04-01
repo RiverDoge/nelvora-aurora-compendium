@@ -261,11 +261,79 @@
     </element>
 
     <element name="Dour" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_DOUR">
-        <description>
-            <p>A human group known most for being the founders of the diminishing Dothoren kingdom. Mechanics pending.</p>
-        </description>
-        <sheet display="false" />
-    </element>
+		<description>
+			<p>A human group that are known most for being the founders of the diminishing Dothoren kingdom, the Dour are most often noted to be a stoic and righteous people. Many of the Dour have already fallen to the great Aetherian Host to the south, that has been ravaging their lands for almost a century now. This has led to a significant dispersion of their people to other countries, as their current situation is quite dire.</p>
+			<p class="indent"><strong>Appearance.</strong> With little to separate their appearance from the other human groups, the Dour's only differentiating feature are the elaborate facial tattoos they receive during their coming of age ceremonies, which are often designed to depict the job, or role they are destined for.</p>
+			<h4>Racial Traits</h4>
+			<p><strong>Ability Score Increase.</strong> Your Constitution score increases by 1, and two other ability scores of your choice each increase by 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="constitution" value="1" />
+
+			<select type="Racial Trait" name="Ability Score Increase (Dour)" supports="Dour ASI" number="2" />
+		</rules>
+	</element>
+
+	<element name="Ability Score Increase (Strength)" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_DOUR_ASI_STRENGTH">
+		<compendium display="false" />
+		<supports>Dour ASI</supports>
+		<description>
+			<p>Your Strength score increases by 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="strength" value="1" alt="Dour" />
+		</rules>
+	</element>
+
+	<element name="Ability Score Increase (Dexterity)" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_DOUR_ASI_DEXTERITY">
+		<compendium display="false" />
+		<supports>Dour ASI</supports>
+		<description>
+			<p>Your Dexterity score increases by 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="dexterity" value="1" alt="Dour" />
+		</rules>
+	</element>
+
+	<element name="Ability Score Increase (Intelligence)" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_DOUR_ASI_INTELLIGENCE">
+		<compendium display="false" />
+		<supports>Dour ASI</supports>
+		<description>
+			<p>Your Intelligence score increases by 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="intelligence" value="1" alt="Dour" />
+		</rules>
+	</element>
+
+	<element name="Ability Score Increase (Wisdom)" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_DOUR_ASI_WISDOM">
+		<compendium display="false" />
+		<supports>Dour ASI</supports>
+		<description>
+			<p>Your Wisdom score increases by 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="wisdom" value="1" alt="Dour" />
+		</rules>
+	</element>
+
+	<element name="Ability Score Increase (Charisma)" type="Racial Trait" source="Aurora: Nelvora" id="ID_NELVORA_DOUR_ASI_CHARISMA">
+		<compendium display="false" />
+		<supports>Dour ASI</supports>
+		<description>
+			<p>Your Charisma score increases by 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="charisma" value="1" alt="Dour" />
+		</rules>
+	</element>
 
     <element name="Ik’héthagma" type="Race" source="Aurora: Nelvora" id="ID_NELVORA_RACE_IKHETHAGMA">
         <description>
