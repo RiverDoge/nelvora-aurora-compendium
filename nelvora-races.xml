@@ -264,14 +264,24 @@
 		<description>
 			<p>A human group that are known most for being the founders of the diminishing Dothoren kingdom, the Dour are most often noted to be a stoic and righteous people. Many of the Dour have already fallen to the great Aetherian Host to the south, that has been ravaging their lands for almost a century now. This has led to a significant dispersion of their people to other countries, as their current situation is quite dire.</p>
 			<p class="indent"><strong>Appearance.</strong> With little to separate their appearance from the other human groups, the Dour's only differentiating feature are the elaborate facial tattoos they receive during their coming of age ceremonies, which are often designed to depict the job, or role they are destined for.</p>
+			
 			<h4>Racial Traits</h4>
 			<p><strong>Ability Score Increase.</strong> Your Constitution score increases by 1, and two other ability scores of your choice each increase by 1.</p>
+			<p><strong>Age.</strong> Dour reach adulthood in their late teens and live less than a century, mirroring the lifespans of other human groups.</p>
+			<p><strong>Alignment.</strong> Rooted in a stoic and righteous culture, the Dour lean heavily toward lawful alignments. Their ongoing struggle against the demonic Aetherian Host often drives them toward good, though desperation and exile can sometimes push them toward neutral paths.</p>
+			<p><strong>Size.</strong> Dour vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.</p>
+			<p><strong>Speed.</strong> Your base walking speed is 30 feet.</p>
+			<p><strong>Languages.</strong> You can speak, read, and write Common and one extra language of your choice. Due to their recent dispersion to other countries, many Dour learn the languages of the lands that shelter them.</p>
 		</description>
 		<sheet display="false" />
 		<rules>
 			<stat name="constitution" value="1" />
-
 			<select type="Racial Trait" name="Ability Score Increase (Dour)" supports="Dour ASI" number="2" />
+
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<select type="Language" name="Language (Dour)" supports="Standard||Exotic" />
 		</rules>
 	</element>
 
